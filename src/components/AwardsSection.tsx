@@ -13,7 +13,7 @@ export default function AwardsSection() {
  <h2 className={`${headingFont.variable} text-4xl sm:text-5xl font-extrabold mb-2`}>
   Awards & Recognition
 </h2>
-<p className={`${bodyFont.variable} text-lg sm:text-xl max-w-2xl`}>
+<p className={`${bodyFont.variable} text-sm sm:text-xl max-w-2xl`}>
   Honored to receive the Golden Egg Award for Best Student Work in Front-end Development (2025). A testament to my dedication and passion for creating exceptional digital experiences.
 </p>
         </div>
