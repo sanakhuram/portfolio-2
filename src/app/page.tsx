@@ -12,6 +12,7 @@ import AwardsSection from "@/components/AwardsSection";
 import TechStackSection from "@/components/TechStackSection";
 import ContactSection from "@/components/ContactSection";
 import DotsBackground from "@/components/DotsBackground";
+import SectionNavArrows from "@/components/SectionNavArrows";
 
 export default function Portfolio() {
   const { index, setIndex } = useSectionNavigator(sections.length);
@@ -35,32 +36,40 @@ export default function Portfolio() {
     }
   };
 
+  // Handlers for arrows
+  const goToNext = () => setIndex((index + 1) % sections.length);
+  const goToPrev = () => setIndex((index - 1 + sections.length) % sections.length);
+
   return (
-<div
-  className="relative w-screen transition-colors duration-500"
-  style={{
-    backgroundColor: sections[index].bg,
-    minHeight: "100vh",
-  }}
->
-  <DotsBackground count={150} />
-
-  <Nav currentIndex={index} onSelect={setIndex} />
-
-  <AnimatePresence mode="wait">
-    <motion.div
-      key={sections[index].id}
-      initial={fadeSlide.initial}
-      animate={fadeSlide.animate}
-      exit={fadeSlide.exit}
-      transition={{ duration: 0.5 }}
+    <div
+      className="relative w-screen transition-colors duration-500"
+      style={{
+        backgroundColor: sections[index].bg,
+        minHeight: "100vh",
+      }}
     >
-      {renderSection()}
-    </motion.div>
-  </AnimatePresence>
+      <DotsBackground count={150} />
 
-  <Footer />
-</div>
+      {/* Section nav labels */}
+      <Nav currentIndex={index} onSelect={setIndex} />
 
+      {/* Section content with animation */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={sections[index].id}
+          initial={fadeSlide.initial}
+          animate={fadeSlide.animate}
+          exit={fadeSlide.exit}
+          transition={{ duration: 0.5 }}
+        >
+          {renderSection()}
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Floating arrows */}
+      <SectionNavArrows onPrev={goToPrev} onNext={goToNext} />
+
+      <Footer />
+    </div>
   );
 }

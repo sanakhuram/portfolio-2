@@ -1,9 +1,31 @@
-
 "use client";
 
 import { headingFont, bodyFont } from "../app/lib/fonts";
 
 export default function ContactSection() {
+
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const form = e.currentTarget as HTMLFormElement; // cast to HTMLFormElement
+  const formData = new FormData(form);
+  const payload = Object.fromEntries(formData.entries());
+
+  try {
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    // CLEAR FIELDS
+    form.reset();
+
+  } catch (err) {
+    console.error(err);
+  }
+};
+
   return (
     <section className="w-full min-h-screen flex items-center justify-center bg-teal-400 px-4 sm:px-6 md:px-20 py-20">
       <div className="relative flex flex-col md:flex-row w-full max-w-6xl bg-teal-500 rounded-lg shadow-lg border-4 border-dashed border-white overflow-hidden p-6 sm:p-8">
@@ -40,39 +62,47 @@ export default function ContactSection() {
 
         {/* Right side: Form */}
         <div className="md:w-1/2 flex flex-col gap-2 sm:gap-3 p-4 sm:p-6">
-          <label className="flex flex-col text-xs text-white font-semibold">
-            Name: *
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="mt-1 px-2 py-1 rounded-md text-white placeholder-white border border-white/50 bg-transparent w-70 text-xs"
-              required
-            />
-          </label>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+            <label className="flex flex-col text-xs text-white font-semibold">
+              Name: *
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="mt-1 px-2 py-1 rounded-md text-white placeholder-white border border-white/50 bg-transparent w-70 text-xs"
+                required
+              />
+            </label>
 
-          <label className="flex flex-col text-white text-xs font-semibold">
-            Email: *
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="mt-1 px-2 py-1  rounded-md  placeholder-white border border-white/50 bg-transparent w-70 text-xs"
-              required
-            />
-          </label>
+            <label className="flex flex-col text-xs text-white font-semibold">
+              Email: *
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className="mt-1 px-2 py-1 rounded-md placeholder-white border border-white/50 bg-transparent w-70 text-xs"
+                required
+              />
+            </label>
 
-          <label className="flex flex-col text-white text-xs font-semibold">
-            Message: * (max 1000 characters)
-            <textarea
-              placeholder="Your Message"
-              className="mt-1 px-2 py-2 rounded-md text-white placeholder-white border border-white/50 bg-transparent h-24 sm:h-32 resize-none w-70 text-xs"
-              maxLength={1000}
-              required
-            />
-          </label>
+            <label className="flex flex-col text-xs text-white font-semibold">
+              Message: * (max 1000 characters)
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className="mt-1 px-2 py-2 rounded-md text-white placeholder-white border border-white/50 bg-transparent h-24 sm:h-32 resize-none w-70 text-xs"
+                maxLength={1000}
+                required
+              />
+            </label>
 
-          <button className="self-end px-4 sm:px-6 py-2 sm:py-3 text-white font-bold rounded-md hover:bg-white/20 transition">
-            Send →
-          </button>
+            <button
+              type="submit"
+              className="self-end px-4 sm:px-6 py-2 sm:py-3 text-white font-bold rounded-md hover:bg-white/20 transition"
+            >
+              Send →
+            </button>
+          </form>
         </div>
       </div>
     </section>
