@@ -33,12 +33,14 @@ const educationSections = [
   { 
     title: "Education", 
     description: [
-      "Frontend Development Diploma, Noroff School, Trondheim",
-      "Master of Interior Design, National College of Arts, Lahore",
-      "Bachelor of Fine Arts (Miniature Painting), Kinnaird College, Lahore"
+      "Noroff School of Technology & Digital Media, Norway – Frontend Development <strong>Higher Professional Diploma</strong> (<strong> 2 years</strong>)",
+      "National College of Arts, Pakistan – Master of Interior Design (<strong>MA, 2 years</strong>)",
+      "Kinnaird College for Women, Pakistan – Bachelor of Fine Arts (<strong>BFA, 4 years</strong>)"
     ]
   },
 ];
+
+
 
 export default function AboutMeSlider() {
   const [mode, setMode] = useState<"about" | "education">("about");
@@ -119,11 +121,12 @@ export default function AboutMeSlider() {
                     <h2 className={`${headingFont.variable} text-2xl md:text-3xl font-bold mb-4 text-white`}>
                       {edu.title}
                     </h2>
-                    <ul className={`${bodyFont.variable} text-sm md:text-base text-white list-disc list-inside`}>
-                      {edu.description.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
+<ul className={`${bodyFont.variable} text-sm md:text-base text-white list-disc list-inside space-y-1`}>
+  {edu.description.map((item, i) => (
+    <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
+  ))}
+</ul>
+
                   </div>
                 ))}
               </motion.div>
