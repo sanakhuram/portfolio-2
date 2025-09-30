@@ -71,7 +71,7 @@ export default function TechStackSection() {
           </motion.div>
         )}
 {!skillData && (
-  <h1 className="text-gray-400/10 mb-12 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none">
+  <h1 className="text-gray-200/10 mb-12 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none">
     Skills
   </h1>
 )}
