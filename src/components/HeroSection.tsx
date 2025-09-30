@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { headingFont, bodyFont } from "../app/lib/fonts";
-import Image from "next/image";
+
 
 const slides = [
   {
@@ -58,13 +58,7 @@ export default function HeroSection() {
       style={{ backgroundColor: slides[current].bg }}
       className="h-screen w-screen flex flex-col items-center justify-center text-center relative transition-colors duration-700 px-4 md:px-0 overflow-hidden"
     >
-<Image
-  src="/images/pin.png"
-  alt="background"
-  width={600}       // adjust width
-  height={600}      // adjust height
-  className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-8 pointer-events-none filter-blur-lg "
-/>
+
 
 
       {/* Title */}
