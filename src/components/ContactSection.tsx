@@ -5,11 +5,11 @@ import { headingFont, bodyFont } from "../app/lib/fonts";
 
 export default function ContactSection() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-20 py-20 bg-teal-400 text-white">
-      <div className="relative flex flex-col md:flex-row w-full max-w-5xl bg-teal-500 rounded-lg shadow-lg border-4 border-dotted border-white overflow-hidden p-4 sm:p-6 md:p-8">
+    <section className="w-full min-h-screen flex items-center justify-center bg-teal-400 px-4 sm:px-6 md:px-20 py-20">
+      <div className="relative flex flex-col md:flex-row w-full max-w-6xl bg-teal-500 rounded-lg shadow-lg border-4 border-dashed border-white overflow-hidden p-6 sm:p-8">
 
         {/* SVG Stamp on Top-Right */}
-        <div className="absolute top-2 right-2 w-12 h-12 md:w-20 md:h-20 text-white">
+        <div className="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 text-white">
           <svg
             viewBox="0 0 24 24"
             fill="currentColor"
@@ -23,54 +23,54 @@ export default function ContactSection() {
         </div>
 
         {/* Left side: Info */}
-        <div className="md:w-1/2 flex flex-col items-start justify-center border-b md:border-b-0 md:border-r border-white relative z-10 p-4 sm:p-6">
-          <h2 className={`${headingFont.variable} text-2xl sm:text-3xl font-bold mb-2`}>
+        <div className="md:w-1/2 flex flex-col items-start justify-center border-b md:border-b-0 md:border-r border-white p-4 sm:p-6">
+          <h2 className={`${headingFont.variable} text-4xl sm:text-5xl text-white font-extrabold mb-4`}>
             Contact Me
           </h2>
-          <p className={`${bodyFont.variable} mb-2 text-sm sm:text-base`}>
-            If you'd like to make an enquiry, please feel free to get in touch.
+          <p className={`${bodyFont.variable} mb-3 text-sm sm:text-white`}>
+            I’m open for web development projects, collaborations, and UX/UI design work. Feel free to reach out!
           </p>
-          <p className={`${bodyFont.variable} mb-2 text-sm sm:text-base`}>
-            Email: <strong>your.email@example.com</strong>
+          <p className={`${bodyFont.variable} mb-2 text-sm sm:text-white`}>
+            Email: <strong>sana.khuram.baig@gmail.com</strong>
           </p>
-          <p className={`${bodyFont.variable} text-sm sm:text-base`}>
-            Phone: <strong>+123 456 7890</strong>
+          <p className={`${bodyFont.variable} text-sm sm:text-white`}>
+            Phone: <strong>Currently in Norway</strong>
           </p>
         </div>
 
         {/* Right side: Form */}
-        <div className="md:w-1/2 flex flex-col gap-3 sm:gap-4 relative z-10 p-4 sm:p-6">
-          <label className="flex flex-col text-sm sm:text-base font-semibold">
+        <div className="md:w-1/2 flex flex-col gap-2 sm:gap-3 p-4 sm:p-6">
+          <label className="flex flex-col text-xs text-white font-semibold">
             Name: *
             <input
               type="text"
               placeholder="Your Name"
-              className="mt-1 p-2 sm:p-3 rounded-md text-black w-full"
+              className="mt-1 px-2 py-1 rounded-md text-white placeholder-white border border-white/50 bg-transparent w-70 text-xs"
               required
             />
           </label>
 
-          <label className="flex flex-col text-sm sm:text-base font-semibold">
+          <label className="flex flex-col text-white text-xs font-semibold">
             Email: *
             <input
               type="email"
               placeholder="Your Email"
-              className="mt-1 p-2 sm:p-3 rounded-md text-black w-full"
+              className="mt-1 px-2 py-1  rounded-md  placeholder-white border border-white/50 bg-transparent w-70 text-xs"
               required
             />
           </label>
 
-          <label className="flex flex-col text-sm sm:text-base font-semibold">
+          <label className="flex flex-col text-white text-xs font-semibold">
             Message: * (max 1000 characters)
             <textarea
               placeholder="Your Message"
-              className="mt-1 p-2 sm:p-3 rounded-md text-black h-24 sm:h-32 resize-none w-full"
+              className="mt-1 px-2 py-2 rounded-md text-white placeholder-white border border-white/50 bg-transparent h-24 sm:h-32 resize-none w-70 text-xs"
               maxLength={1000}
               required
             />
           </label>
 
-          <button className="self-end px-4 sm:px-6 py-2 sm:py-3 text-white font-bold rounded-md hover:bg-gray-700 transition">
+          <button className="self-end px-4 sm:px-6 py-2 sm:py-3 text-white font-bold rounded-md hover:bg-white/20 transition">
             Send →
           </button>
         </div>
