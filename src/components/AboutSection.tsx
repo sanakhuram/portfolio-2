@@ -7,12 +7,28 @@ import { FiChevronLeft, FiChevronRight, FiRefreshCcw} from "react-icons/fi";
 import { headingFont, bodyFont } from "../app/lib/fonts";
 
 const aboutSections = [
-  { title: "New Media", description: "My work crosses a broad range of categories in the digital space, both from a design and a technical perspective. I believe in using the right tools for the job so don’t subscribe to following bandwagons. By analysing the job at hand for what it is, you can make informed decisions to ensure the right tools are used to solve the creative problem." },
-  { title: "Focus", description: "The focus of my work shifts as the need arises for certain skills in the working environment. This can be both a positive and negative experience; on one hand you can hone your skills in an in-demand area, but on the other hand you’re ready to explore different areas. This is why I explore ideas and concepts outside of my work so I always have something new to share." },
-  { title: "Side Projects", description: "At work I’m known for my love of extracurricular activity! I enjoy creating side projects outside of my working life to share and engage with others. This can be through competitions, websites or games. Work makes up such a big part of our lives and I believe in expanding my ideas and skills without needing it to be on a client brief." },
-  { title: "Design or Development?", description: "Design and development are both creative pursuits, and in digital, one couldn’t exist without the other. I find joy in development by bringing design to life, which is why I wouldn’t classify myself as a hardcore developer but as someone who can bridge two philosophies and ways of thinking." },
-  { title: "Above and Beyond", description: "My work doesn’t end with the brief. Going above and beyond the parameters that have been set out is essential, not only for your own personal achievement and development but it reflects back into the work you produce for clients." },
+  { 
+    title: "About Me", 
+    description: "I’m Sana, a frontend developer with a strong artistic background. I hold a BFA in Miniature Painting and a Master’s in Interior Design. I started as a freelance miniature artist, crafting detailed visuals, and eventually found my way into frontend development, where creativity meets code. For me, building a UI feels like painting on a canvas—balancing color, structure, and flow to create something engaging." 
+  },
+  { 
+    title: "Focus", 
+    description: "I’m deeply focused on crafting responsive, accessible, and visually engaging web experiences. I thrive on projects where design systems, UI/UX, and colors intersect with clean, efficient code. My approach is thoughtful and detail-oriented—I aim to create interfaces that feel intuitive and alive." 
+  },
+  { 
+    title: "Exploration & Side Projects", 
+    description: "I love exploring new ideas outside of client work—painting, experimenting with illustrations, or creating side projects that challenge my skills. This keeps my creativity fresh and often inspires innovative approaches in development." 
+  },
+  { 
+    title: "Design Meets Development", 
+    description: "I bridge the gap between design and code. I’m not a graphic designer or videographer; I’m a frontend developer who speaks the language of art and design. Bringing static designs to life and making them interactive is where I shine." 
+  },
+  { 
+    title: "Passions Beyond Code", 
+    description: "Outside of development, you’ll often find me painting, reading, or listening to music—always fueled by tea and coffee. My work is colored by curiosity, aesthetics, and a love for detail, whether it’s a miniature painting or a meticulously crafted interface." 
+  },
 ];
+
 
 const educationSections = [
   { title: "Education", description: `
