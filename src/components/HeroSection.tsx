@@ -10,27 +10,27 @@ const slides = [
   {
     title: "Hi, I’m Sana",
 subtitle: "Frontend Developer & UX/UI Designer blending creativity and code to craft interactive experiences",
-    bg: "#FFC300", // gold
+    bg: "#FFC300", 
   },
   {
     title: "User-Centric Design",
     subtitle: "I create experiences from start to finish that guide users through a journey full of surprises",
-    bg: "#333333", // dark gray
+    bg: "#333333", 
   },
   {
     title: "Art + Technology",
     subtitle: "I combine my painting and design skills with frontend technology to build unique experiences",
-    bg: "#E59FB6", // teal
+    bg: "#E59FB6", 
   },
   {
     title: "Constant Learner",
     subtitle: "Eager to explore new tools, trends, and ways to bring art into technology",
-    bg: "#DCDCDC", // yellow
+    bg: "#DCDCDC", 
   },
   {
     title: "Let’s Create",
     subtitle: "I merge design, illustration, and code to craft experiences that delight users",
-    bg: "#14B8A6", // teal
+    bg: "#14B8A6", 
   },
 ];
 
@@ -59,10 +59,9 @@ export default function HeroSection() {
   style={{ backgroundColor: slides[current].bg }}
   className="h-screen w-screen flex flex-col items-center justify-center text-center relative transition-colors duration-700 px-4 md:px-0 overflow-hidden"
 >
-  {/* Star dots background */}
+
   <DotsBackground count={700} />
 
-  {/* Title */}
   <AnimatePresence mode="wait">
     <motion.h1
       key={current}
@@ -76,7 +75,6 @@ export default function HeroSection() {
     </motion.h1>
   </AnimatePresence>
 
-  {/* Subtitle */}
   <AnimatePresence mode="wait">
     <motion.p
       key={`sub-${current}`}
@@ -91,7 +89,6 @@ export default function HeroSection() {
     </motion.p>
   </AnimatePresence>
 
-  {/* Dot navigation */}
   <div className="flex gap-3 mt-6 relative z-10">
     {slides.map((_, i) => (
       <motion.button

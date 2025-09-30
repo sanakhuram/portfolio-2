@@ -7,31 +7,31 @@ import { FiChevronLeft, FiChevronRight, FiRefreshCcw } from "react-icons/fi";
 import { headingFont, bodyFont } from "../app/lib/fonts";
 
 const aboutSections = [
-  { 
-    title: "About Me", 
-    description: "I’m Sana, a frontend developer with a strong artistic background. I hold a BFA in Miniature Painting and a Master’s in Interior Design. I started as a freelance miniature artist, crafting detailed visuals, and eventually found my way into frontend development, where creativity meets code. For me, building a UI feels like painting on a canvas—balancing color, structure, and flow to create something engaging." 
+  {
+    title: "About Me",
+    description: "I’m Sana, a frontend developer with a strong artistic background. I hold a BFA in Miniature Painting and a Master’s in Interior Design. I started as a freelance miniature artist, crafting detailed visuals, and eventually found my way into frontend development, where creativity meets code. For me, building a UI feels like painting on a canvas—balancing color, structure, and flow to create something engaging."
   },
-  { 
-    title: "Focus", 
-    description: "I’m deeply focused on crafting responsive, accessible, and visually engaging web experiences. I thrive on projects where design systems, UI/UX, and colors intersect with clean, efficient code. My approach is thoughtful and detail-oriented—I aim to create interfaces that feel intuitive and alive." 
+  {
+    title: "Focus",
+    description: "I’m deeply focused on crafting responsive, accessible, and visually engaging web experiences. I thrive on projects where design systems, UI/UX, and colors intersect with clean, efficient code. My approach is thoughtful and detail-oriented—I aim to create interfaces that feel intuitive and alive."
   },
-  { 
-    title: "Exploration & Side Projects", 
-    description: "I love exploring new ideas outside of client work—painting, experimenting with illustrations, or creating side projects that challenge my skills. This keeps my creativity fresh and often inspires innovative approaches in development." 
+  {
+    title: "Exploration & Side Projects",
+    description: "I love exploring new ideas outside of client work—painting, experimenting with illustrations, or creating side projects that challenge my skills. This keeps my creativity fresh and often inspires innovative approaches in development."
   },
-  { 
-    title: "Design Meets Development", 
-    description: "I bridge the gap between design and code. I’m not a graphic designer or videographer; I’m a frontend developer who speaks the language of art and design. Bringing static designs to life and making them interactive is where I shine." 
+  {
+    title: "Design Meets Development",
+    description: "I bridge the gap between design and code. I’m not a graphic designer or videographer; I’m a frontend developer who speaks the language of art and design. Bringing static designs to life and making them interactive is where I shine."
   },
-  { 
-    title: "Passions Beyond Code", 
-    description: "Outside of development, you’ll often find me painting, reading, or listening to music—always fueled by tea and coffee. My work is colored by curiosity, aesthetics, and a love for detail, whether it’s a miniature painting or a meticulously crafted interface." 
+  {
+    title: "Passions Beyond Code",
+    description: "Outside of development, you’ll often find me painting, reading, or listening to music—always fueled by tea and coffee. My work is colored by curiosity, aesthetics, and a love for detail, whether it’s a miniature painting or a meticulously crafted interface."
   },
 ];
 
 const educationSections = [
-  { 
-    title: "Education", 
+  {
+    title: "Education",
     description: [
       "Noroff School of Technology & Digital Media, Norway – Frontend Development <strong>Higher Professional Diploma</strong> (<strong> 2 years</strong>)",
       "National College of Arts, Pakistan – Master of Interior Design (<strong>MA, 2 years</strong>)",
@@ -39,8 +39,6 @@ const educationSections = [
     ]
   },
 ];
-
-
 
 export default function AboutMeSlider() {
   const [mode, setMode] = useState<"about" | "education">("about");
@@ -54,7 +52,6 @@ export default function AboutMeSlider() {
     <section className="w-full min-h-screen flex items-center justify-center px-4">
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 max-w-[600px] w-full">
 
-        {/* Image Container */}
         <div className="flex-shrink-0 relative w-32 sm:w-40 md:w-48 aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/images/sana.jpg"
@@ -65,7 +62,6 @@ export default function AboutMeSlider() {
           />
         </div>
 
-        {/* Right: Animated Text */}
         <div className="flex-1 flex flex-col items-start justify-center relative px-2 sm:px-4 md:px-0">
           <button
             onClick={() => setMode(mode === "about" ? "education" : "about")}
@@ -121,11 +117,11 @@ export default function AboutMeSlider() {
                     <h2 className={`${headingFont.variable} text-2xl md:text-3xl font-bold mb-4 text-white`}>
                       {edu.title}
                     </h2>
-<ul className={`${bodyFont.variable} text-sm md:text-base text-white list-disc list-inside space-y-1`}>
-  {edu.description.map((item, i) => (
-    <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
-  ))}
-</ul>
+                    <ul className={`${bodyFont.variable} text-sm md:text-base text-white list-disc list-inside space-y-1`}>
+                      {edu.description.map((item, i) => (
+                        <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
+                      ))}
+                    </ul>
 
                   </div>
                 ))}
