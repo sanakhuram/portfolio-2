@@ -2,28 +2,32 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {  bodyFont } from "../app/lib/fonts";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaFigma, FaGitAlt, FaCode,
-  FaPencilRuler, FaCogs, FaUniversalAccess, FaMobileAlt } from "react-icons/fa";
+import { bodyFont } from "../app/lib/fonts";
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaCode, FaFigma, FaPencilRuler, FaCogs, FaUniversalAccess, FaMobileAlt } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs, SiTailwindcss, SiVite, SiVitest, SiCanva, SiJest } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
-const skills = [
-  { name: "Git", icon: <FaGitAlt color="#F05032" className="w-16 h-16" />, description: "Version control and collaboration with Git." },
-  { name: "Vscode", icon: <VscVscode color="#0080FE" className="w-16 h-16" />, description: "IDE used for all coding projects." },
+// Primary / core tech (highlighted for recruiters)
+const mainSkills = [
   { name: "React", icon: <FaReact color="#61DAFB" className="w-16 h-16" />, description: "Built interactive UI components and single-page applications." },
   { name: "TypeScript", icon: <SiTypescript color="#3178C6" className="w-16 h-16" />, description: "Implemented type safety and scalable code." },
-  { name: "JavaScript", icon: <FaJs color="#F7DF1E" className="w-16 h-16" />, description: "Used for dynamic front-end behavior and logic." },
   { name: "Next.js", icon: <SiNextdotjs color="#000000" className="w-16 h-16" />, description: "Server-side rendering and routing for projects." },
   { name: "Tailwind CSS", icon: <SiTailwindcss color="#06B6D4" className="w-16 h-16" />, description: "Responsive and utility-first styling for websites." },
-  { name: "Vite", icon: <SiVite color="#646CFF" className="w-16 h-16" />, description: "Fast bundler and development tooling." },
-  { name: "Vitest", icon: <SiVitest color="#6E9F18" className="w-16 h-16" />, description: "Unit testing framework used in projects." },
-  { name: "Playwright", icon: <FaCode color="#2EAD33" className="w-16 h-16" />, description: "End-to-end testing automation." },
-  { name: "Jest", icon: <SiJest color="#FF6090" className="w-16 h-16" />, description: "JavaScript testing framework used for components." },
-  { name: "Figma", icon: <FaFigma color="#F24E1E" className="w-16 h-16" />, description: "UI/UX design, wireframes, and prototypes." },
-  { name: "Canva", icon: <SiCanva color="#00C4CC" className="w-16 h-16" />, description: "Quick graphic designs for presentations and assets." },
+  { name: "JavaScript", icon: <FaJs color="#F7DF1E" className="w-16 h-16" />, description: "Used for dynamic front-end behavior and logic." },
+  { name: "Git", icon: <FaGitAlt color="#F05032" className="w-16 h-16" />, description: "Version control and collaboration with Git." },
+  { name: "Vscode", icon: <VscVscode color="#0080FE" className="w-16 h-16" />, description: "IDE used for all coding projects." },
+];
+
+// Secondary / additional skills (nice-to-have)
+const secondarySkills = [
   { name: "HTML5", icon: <FaHtml5 color="#E34F26" className="w-16 h-16" />, description: "Semantic structure and markup for web pages." },
   { name: "CSS3", icon: <FaCss3Alt color="#1572B6" className="w-16 h-16" />, description: "Styling pages with responsive layouts." },
+  { name: "Vite", icon: <SiVite color="#646CFF" className="w-16 h-16" />, description: "Fast bundler and development tooling." },
+  { name: "Vitest", icon: <SiVitest color="#6E9F18" className="w-16 h-16" />, description: "Unit testing framework used in projects." },
+  { name: "Jest", icon: <SiJest color="#FF6090" className="w-16 h-16" />, description: "JavaScript testing framework used for components." },
+  { name: "Playwright", icon: <FaCode color="#2EAD33" className="w-16 h-16" />, description: "End-to-end testing automation." },
+  { name: "Figma", icon: <FaFigma color="#F24E1E" className="w-16 h-16" />, description: "UI/UX design, wireframes, and prototypes." },
+  { name: "Canva", icon: <SiCanva color="#00C4CC" className="w-16 h-16" />, description: "Quick graphic designs for presentations and assets." },
   { name: "UX/UI Design", icon: <FaPencilRuler color="#F59E0B" className="w-16 h-16" />, description: "User interface and experience design for projects." },
   { name: "Design Systems", icon: <FaCogs color="#00ADB5" className="w-16 h-16" />, description: "Created reusable UI components and patterns." },
   { name: "Accessibility", icon: <FaUniversalAccess color="#10B981" className="w-16 h-16" />, description: "Ensured WCAG compliance for web apps." },
@@ -32,7 +36,7 @@ const skills = [
 
 export default function TechStackSection() {
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
-  const skillData = skills.find(s => s.name === selectedSkill);
+  const skillData = [...mainSkills, ...secondarySkills].find(s => s.name === selectedSkill);
 
   return (
     <section className="w-full min-h-screen flex flex-col items-center justify-center relative text-white bg-gray-900 overflow-hidden px-6 md:px-20 py-20">
@@ -47,7 +51,6 @@ export default function TechStackSection() {
       </svg>
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl">
-  
 
         {/* Display icon and description */}
         {skillData && (
@@ -58,10 +61,7 @@ export default function TechStackSection() {
             transition={{ duration: 0.4 }}
             className="flex flex-col items-center gap-6 mb-12"
           >
-            <motion.div
-              whileHover={{ y: -5, scale: 1.1 }}
-              className="mb-4"
-            >
+            <motion.div whileHover={{ y: -5, scale: 1.1 }} className="mb-4">
               {skillData.icon}
             </motion.div>
             <h3 className="text-2xl font-semibold">{skillData.name}</h3>
@@ -70,16 +70,15 @@ export default function TechStackSection() {
             </p>
           </motion.div>
         )}
+{!skillData && (
+  <h1 className="text-gray-400/10 mb-12 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none">
+    Skills
+  </h1>
+)}
 
-        {!skillData && (
-          <p className="text-gray-400 mb-12">
-            Click a skill below to see how and where I used it.
-          </p>
-        )}
-
-        {/* Buttons with up-hover animation */}
+        {/* Buttons */}
         <div className="flex flex-wrap justify-center gap-3">
-          {skills.map(skill => (
+          {[...mainSkills, ...secondarySkills].map(skill => (
             <motion.button
               key={skill.name}
               whileHover={{ y: -4, backgroundColor: "#ffffff", color: "#111827" }}
