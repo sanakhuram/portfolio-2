@@ -11,6 +11,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import AwardsSection from "@/components/AwardsSection";
 import TechStackSection from "@/components/TechStackSection";
 import ContactSection from "@/components/ContactSection";
+import DotsBackground from "@/components/DotsBackground";
 
 export default function Portfolio() {
   const { index, setIndex } = useSectionNavigator(sections.length);
@@ -35,28 +36,31 @@ export default function Portfolio() {
   };
 
   return (
-    <div
-      className="relative w-screen transition-colors duration-500"
-      style={{
-        backgroundColor: sections[index].bg,
-        minHeight: "100vh",                 
-      }}
+<div
+  className="relative w-screen transition-colors duration-500"
+  style={{
+    backgroundColor: sections[index].bg,
+    minHeight: "100vh",
+  }}
+>
+  <DotsBackground count={150} />
+
+  <Nav currentIndex={index} onSelect={setIndex} />
+
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={sections[index].id}
+      initial={fadeSlide.initial}
+      animate={fadeSlide.animate}
+      exit={fadeSlide.exit}
+      transition={{ duration: 0.5 }}
     >
-      <Nav currentIndex={index} onSelect={setIndex} />
+      {renderSection()}
+    </motion.div>
+  </AnimatePresence>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={sections[index].id}
-          initial={fadeSlide.initial}
-          animate={fadeSlide.animate}
-          exit={fadeSlide.exit}
-          transition={{ duration: 0.5 }}
-        >
-          {renderSection()}
-        </motion.div>
-      </AnimatePresence>
+  <Footer />
+</div>
 
-      <Footer />
-    </div>
   );
 }

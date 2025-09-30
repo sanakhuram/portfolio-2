@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { headingFont, bodyFont } from "../app/lib/fonts";
+import DotsBackground from "./DotsBackground";
 
 
 const slides = [
@@ -54,56 +55,57 @@ export default function HeroSection() {
   };
 
   return (
-    <section
-      style={{ backgroundColor: slides[current].bg }}
-      className="h-screen w-screen flex flex-col items-center justify-center text-center relative transition-colors duration-700 px-4 md:px-0 overflow-hidden"
+  <section
+  style={{ backgroundColor: slides[current].bg }}
+  className="h-screen w-screen flex flex-col items-center justify-center text-center relative transition-colors duration-700 px-4 md:px-0 overflow-hidden"
+>
+  {/* Star dots background */}
+  <DotsBackground count={700} />
+
+  {/* Title */}
+  <AnimatePresence mode="wait">
+    <motion.h1
+      key={current}
+      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: -20, scale: 0.95 }}
+      transition={{ duration: 0.6 }}
+      className={`${headingFont.variable} text-5xl sm:text-6xl md:text-7xl font-extrabold text-white uppercase max-w-[30rem] md:max-w-[35rem] relative z-10`}
     >
+      {slides[current].title}
+    </motion.h1>
+  </AnimatePresence>
 
+  {/* Subtitle */}
+  <AnimatePresence mode="wait">
+    <motion.p
+      key={`sub-${current}`}
+      initial={{ opacity: 0, x: current % 2 === 0 ? -30 : 30 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: current % 2 === 0 ? 30 : -30 }}
+      transition={{ delay: 0.25, duration: 0.6 }}
+      style={{ color: getSubtitleColor(slides[current].bg) }}
+      className={`${bodyFont.variable} mt-4 text-lg sm:text-xl max-w-[22rem] md:max-w-[28rem] relative z-10`}
+    >
+      {slides[current].subtitle}
+    </motion.p>
+  </AnimatePresence>
 
+  {/* Dot navigation */}
+  <div className="flex gap-3 mt-6 relative z-10">
+    {slides.map((_, i) => (
+      <motion.button
+        key={i}
+        onClick={() => setCurrent(i)}
+        whileHover={{ scale: 1.3 }}
+        whileTap={{ scale: 0.9 }}
+        className={`w-4 h-4 rounded-full border-2 border-dashed border-white ${
+          i === current ? "bg-white" : "bg-transparent"
+        }`}
+      />
+    ))}
+  </div>
+</section>
 
-      {/* Title */}
-      <AnimatePresence mode="wait">
-        <motion.h1
-          key={current}
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -20, scale: 0.95 }}
-          transition={{ duration: 0.6 }}
-          className={`${headingFont.variable} text-5xl sm:text-6xl md:text-7xl font-extrabold text-white uppercase max-w-[30rem] md:max-w-[35rem] relative z-10`}
-        >
-          {slides[current].title}
-        </motion.h1>
-      </AnimatePresence>
-
-      {/* Subtitle */}
-      <AnimatePresence mode="wait">
-        <motion.p
-          key={`sub-${current}`}
-          initial={{ opacity: 0, x: current % 2 === 0 ? -30 : 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: current % 2 === 0 ? 30 : -30 }}
-          transition={{ delay: 0.25, duration: 0.6 }}
-          style={{ color: getSubtitleColor(slides[current].bg) }}
-          className={`${bodyFont.variable} mt-4 text-lg sm:text-xl max-w-[22rem] md:max-w-[28rem] relative z-10`}
-        >
-          {slides[current].subtitle}
-        </motion.p>
-      </AnimatePresence>
-
-      {/* Dot navigation */}
-      <div className="flex gap-3 mt-6 relative z-10">
-        {slides.map((_, i) => (
-          <motion.button
-            key={i}
-            onClick={() => setCurrent(i)}
-            whileHover={{ scale: 1.3 }}
-            whileTap={{ scale: 0.9 }}
-            className={`w-4 h-4 rounded-full border-2 border-dashed border-white ${
-              i === current ? "bg-white" : "bg-transparent"
-            }`}
-          />
-        ))}
-      </div>
-    </section>
   );
 }

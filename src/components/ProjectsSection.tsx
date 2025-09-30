@@ -18,13 +18,13 @@ export default function ProjectsSection({ bg = "" }: ProjectsSectionProps) {
       className={`w-full min-h-screen flex flex-col items-center justify-center ${bg} py-12 px-4`}
     >
       <h2
-        className={`${headingFont.variable} text-2xl md:text-3xl font-extrabold mb-8 text-center`}
+        className={`${headingFont.variable} text-2xl md:text-3xl font-extrabold mb-8 text-center text-white`}
       >
         Projects
       </h2>
 
       {/* Grid Container Centered */}
-      <div className="flex justify-center w-full">
+      <div className="flex justify-center w-full mb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center w-full max-w-4xl">
           {projects.map((project: Project) => (
             <Link

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { headingFont } from "../app/lib/fonts";
+import { headingFont ,bodyFont} from "../app/lib/fonts";
 
 export default function AwardsSection() {
   const [showPdf, setShowPdf] = useState(false);
@@ -10,12 +10,12 @@ export default function AwardsSection() {
     <section className="w-full min-h-screen flex flex-col items-center justify-center px-6 md:px-20 py-20 bg-yellow-500 text-white">
       <div className="flex flex-col items-center">
         <div className="mb-8 text-center">
-          <h2 className={`${headingFont.variable} text-4xl sm:text-5xl font-extrabold mb-2`}>
-            Awards & Recognition
-          </h2>
-          <p className={`${headingFont.variable} text-lg sm:text-xl max-w-2xl`}>
-            Honored to receive the Golden Egg Award for Best Student Work in Front-end Development (2025). A testament to my dedication and passion for creating exceptional digital experiences.
-          </p>
+ <h2 className={`${headingFont.variable} text-4xl sm:text-5xl font-extrabold mb-2`}>
+  Awards & Recognition
+</h2>
+<p className={`${bodyFont.variable} text-lg sm:text-xl max-w-2xl`}>
+  Honored to receive the Golden Egg Award for Best Student Work in Front-end Development (2025). A testament to my dedication and passion for creating exceptional digital experiences.
+</p>
         </div>
         </div>
       <button
