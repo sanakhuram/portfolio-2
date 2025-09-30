@@ -11,7 +11,8 @@ export default function AwardsSection() {
       <h2 className={`${headingFont.variable} text-4xl font-bold mb-12`}>Awards</h2>
 
       <h3 className="text-2xl font-semibold mb-2">Golden Egg Award</h3>
-      <p className="mb-6 text-lg font-medium">Online Best Student Work 2025</p>
+      <p className="mb-6 text-lg font-medium">Best Student Work
+ Front-end Development - Online 2025</p>
 
       {/* Toggle Button */}
       <button
