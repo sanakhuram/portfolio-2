@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { headingFont, bodyFont } from "../app/lib/fonts";
+import { headingFont, bodyFont } from '../app/lib/fonts';
 
 export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const form = e.currentTarget as HTMLFormElement; 
+    const form = e.currentTarget as HTMLFormElement;
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
     try {
-      await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
 
@@ -26,7 +26,6 @@ export default function ContactSection() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center bg-teal-400 px-4 sm:px-6 md:px-20 py-20">
       <div className="relative flex flex-col md:flex-row w-full max-w-6xl bg-teal-500 rounded-lg shadow-lg border-4 border-dashed border-white overflow-hidden p-6 sm:p-8">
-
         {/* SVG stamp */}
         <div className="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 text-white">
           <svg
@@ -43,11 +42,14 @@ export default function ContactSection() {
 
         {/* Contact info */}
         <div className="md:w-1/2 flex flex-col items-start justify-center border-b md:border-b-0 md:border-r border-white p-4 sm:p-6">
-          <h2 className={`${headingFont.variable} text-4xl sm:text-5xl text-white font-extrabold mb-4`}>
+          <h2
+            className={`${headingFont.variable} text-4xl sm:text-5xl text-white font-extrabold mb-4`}
+          >
             Contact Me
           </h2>
           <p className={`${bodyFont.variable} mb-3 text-white text-sm`}>
-            I’m open for web development projects, collaborations, and UX/UI design work. Feel free to reach out!
+            I’m open for web development projects, collaborations, and UX/UI design work. Feel free
+            to reach out!
           </p>
           <p className={`${bodyFont.variable} mb-2 text-white text-sm`}>
             Email: <strong>sana.khuram.baig@gmail.com</strong>
@@ -60,7 +62,6 @@ export default function ContactSection() {
         {/* Form */}
         <div className="md:w-1/2 flex flex-col gap-2 sm:gap-3 p-4 sm:p-6">
           <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-
             <label className="flex flex-col text-xs text-white font-semibold">
               Name: *
               <input
@@ -100,10 +101,8 @@ export default function ContactSection() {
             >
               Send →
             </button>
-
           </form>
         </div>
-
       </div>
     </section>
   );

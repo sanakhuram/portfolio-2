@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { headingFont, bodyFont } from "../app/lib/fonts";
+import { useState } from 'react';
+import { headingFont, bodyFont } from '../app/lib/fonts';
 
 export default function AwardsSection() {
   const [showPdf, setShowPdf] = useState(false);
@@ -14,15 +14,17 @@ export default function AwardsSection() {
             Awards & Recognition
           </h2>
           <p className={`${bodyFont.variable} text-sm sm:text-xl max-w-2xl`}>
-            Honored to receive the Golden Egg Award for Best Student Work in Front-end Development (2025). A testament to my dedication and passion for creating exceptional digital experiences.
+            Honored to receive the Golden Egg Award for Best Student Work in Front-end Development
+            (2025). A testament to my dedication and passion for creating exceptional digital
+            experiences.
           </p>
         </div>
       </div>
       <button
-        onClick={() => setShowPdf(prev => !prev)}
+        onClick={() => setShowPdf((prev) => !prev)}
         className="mt-4 px-8 py-2  text-white border-2 border-dotted font-bold rounded-lg hove:shadow-lg transition"
       >
-        {showPdf ? "Hide " : "View "}
+        {showPdf ? 'Hide ' : 'View '}
       </button>
       {showPdf && (
         <div className="w-full max-w-4xl h-[600px] bg-white rounded-lg shadow-lg overflow-hidden mt-6">
@@ -34,6 +36,5 @@ export default function AwardsSection() {
         </div>
       )}
     </section>
-
   );
 }

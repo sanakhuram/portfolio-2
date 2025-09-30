@@ -1,6 +1,6 @@
-"use client";
-import { motion } from "framer-motion";
-import { fadeSlide } from "@/utils/SectionData";
+'use client';
+import { motion } from 'framer-motion';
+import { fadeSlide } from '@/utils/SectionData';
 
 type SectionProps = {
   id: string;
@@ -17,7 +17,7 @@ export default function Section({ id, content, color }: SectionProps) {
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       {content}
     </motion.div>

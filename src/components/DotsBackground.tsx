@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 interface DotsBackgroundProps {
   count?: number;
@@ -24,7 +24,7 @@ const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 500 }) => {
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {dots.map(dot => (
+      {dots.map((dot) => (
         <div
           key={dot.id}
           className="bg-white rounded-full absolute"
@@ -34,7 +34,7 @@ const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 500 }) => {
             width: `${dot.size}px`,
             height: `${dot.size}px`,
             opacity: dot.opacity,
-            mixBlendMode: "soft-light",
+            mixBlendMode: 'soft-light',
           }}
         />
       ))}

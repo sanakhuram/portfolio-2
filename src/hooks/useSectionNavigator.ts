@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export function useSectionNavigator(total: number) {
   const [index, setIndex] = useState(0);

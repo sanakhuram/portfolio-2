@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { FiInfo } from "react-icons/fi";
-import { Project, projects } from "@/utils/projectData";
-import { headingFont, bodyFont } from "../app/lib/fonts";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { FiInfo } from 'react-icons/fi';
+import { Project, projects } from '@/utils/projectData';
+import { headingFont, bodyFont } from '../app/lib/fonts';
 
 type ProjectsSectionProps = {
   bg?: string;
 };
 
-export default function ProjectsSection({ bg = "" }: ProjectsSectionProps) {
+export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
   return (
     <section
       id="projects"
@@ -33,25 +33,16 @@ export default function ProjectsSection({ bg = "" }: ProjectsSectionProps) {
               className="group relative flex flex-col items-start bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden p-3 cursor-pointer w-72"
             >
               <div className="relative w-65 h-45 mb-3 border-3 border-gray-200 rounded-md overflow-hidden self-center">
-                <Image
-                  src={project.imageUrl}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
               </div>
 
               {/* Title */}
-              <h3
-                className={`${headingFont.variable} text-base md:text-lg font-bold mb-1`}
-              >
+              <h3 className={`${headingFont.variable} text-base md:text-lg font-bold mb-1`}>
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p
-                className={`${bodyFont.variable} text-gray-700 text-xs md:text-sm`}
-              >
+              <p className={`${bodyFont.variable} text-gray-700 text-xs md:text-sm`}>
                 {project.description}
               </p>
 
