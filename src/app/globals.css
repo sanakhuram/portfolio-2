@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: var(--font-limelight);
+  --font-body: var(--font-museomoderno);
+  --font-decorative: var(--font-sueellen);
+}
+
+/* Global styles */
+body {
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), cursive;
+}
+
+.decorative {
+  font-family: var(--font-decorative), cursive;
+}
+
+html, body, #__next {
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}

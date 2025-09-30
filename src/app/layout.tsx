@@ -1,0 +1,18 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { headingFont, bodyFont } from "@/app/lib/fonts";
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description: "My portfolio site",
+};
+
+export default function RootLayout({
+  children,
+}: { children: React.ReactNode }) {
+  return (
+    <html className={`${headingFont.variable} ${bodyFont.variable}`} lang="en">
+      <body className="antialiased font-body">{children}</body>
+    </html>
+  );
+}
