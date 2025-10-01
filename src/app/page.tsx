@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
@@ -14,55 +13,12 @@ import TechStackSection from '@/components/TechStackSection';
 import ContactSection from '@/components/ContactSection';
 import DotsBackground from '@/components/DotsBackground';
 import SectionNavArrows from '@/components/SectionNavArrows';
-import { useEffect } from 'react';
 
 export default function Portfolio() {
   const { index, setIndex } = useSectionNavigator(sections.length);
 
   const goToNext = () => setIndex((index + 1) % sections.length);
   const goToPrev = () => setIndex((index - 1 + sections.length) % sections.length);
-
-  // Swipe gestures
-  useEffect(() => {
-    let startX = 0;
-    let endX = 0;
-
-    const handleTouchStart = (e: TouchEvent) => {
-      startX = e.touches[0].clientX;
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      endX = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = () => {
-      const diff = startX - endX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) goToNext();
-        else goToPrev();
-      }
-    };
-
-    window.addEventListener('touchstart', handleTouchStart);
-    window.addEventListener('touchmove', handleTouchMove);
-    window.addEventListener('touchend', handleTouchEnd);
-
-    return () => {
-      window.removeEventListener('touchstart', handleTouchStart);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [index]);
-
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowRight') goToNext();
-      if (e.key === 'ArrowLeft') goToPrev();
-    };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [index]);
 
   const renderSection = () => {
     switch (sections[index].id) {
@@ -107,7 +63,7 @@ export default function Portfolio() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Floating fixed arrows */}
+      {/* Fixed left/right arrows */}
       <SectionNavArrows onPrev={goToPrev} onNext={goToNext} />
 
       {/* Footer */}

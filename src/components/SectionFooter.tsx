@@ -16,11 +16,11 @@ export default function Footer() {
   const [open, setOpen] = useState(false);
 
   const socials = [
-    { id: 'github', icon: FaGithub, link: 'https://github.com/yourusername' },
-    { id: 'linkedin', icon: FaLinkedin, link: 'https://linkedin.com/in/yourusername' },
-    { id: 'instagram', icon: FaInstagram, link: 'https://instagram.com/yourusername' },
+    { id: 'github', icon: FaGithub, link: 'https://github.com/sanakhuram' },
+    { id: 'linkedin', icon: FaLinkedin, link: 'https://www.linkedin.com/in/sana-khuram-157ba02b7/' },
+    { id: 'instagram', icon: FaInstagram, link: 'https://www.instagram.com/sana_khuram/?igsh=MTBneHhvd2d2eXB2dg%3D%3D#' },
     { id: 'cv', icon: FaFileAlt, link: '/path-to-your-cv.pdf' },
-    { id: 'email', icon: FaEnvelope, link: 'mailto:youremail@example.com' },
+    { id: 'email', icon: FaEnvelope, link: 'mailto:sana.khuram.baig@gmail.com' },
   ];
 
   return (
@@ -32,12 +32,12 @@ export default function Footer() {
       <div className="fixed bottom-6 right-4 sm:right-6 flex items-center z-50">
         <button
           onClick={() => setOpen(!open)}
-          className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center   transition-colors duration-300"
+          className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center  rounded-full transition-colors duration-300 hover:bg-gray-500/10"
         >
           {open ? (
-            <FaTimes className="text-white text-lg sm:text-xl" />
+            <FaTimes className="text-white text-lg sm:text-xl hover:text-gray-600 hover:bg-white rounded-full" />
           ) : (
-            <FaInfoCircle className="text-white text-lg sm:text-xl" />
+            <FaInfoCircle className="text-white text-lg sm:text-xl hover:text-gray-600 hover:bg-white rounded-full " />
           )}
         </button>
 
@@ -55,9 +55,9 @@ export default function Footer() {
                   href={s.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 sm:w-10 sm:h-10  flex items-center justify-center transition-colors duration-300"
+                  className="w-8 h-8 sm:w-10 sm:h-10  flex items-center justify-center transition-colors duration-300 hover:bg-gray-500/10 rounded-full"
                 >
-                  <s.icon className="text-white hover:text-gray-900 text-base sm:text-xl" />
+                  <s.icon className="text-white hover:text-white hover:animate-bounce text-base sm:text-xl" />
                 </a>
               ))}
             </motion.div>

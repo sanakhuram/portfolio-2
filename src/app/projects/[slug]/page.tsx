@@ -1,119 +1,158 @@
 'use client';
 
 import Image from 'next/image';
-import { use } from 'react';
+import { JSX, use } from 'react';
 import { useRouter } from 'next/navigation';
-import { projects, Project } from '@/utils/projectData';
+import { projects } from '@/utils/projectData';
 import { headingFont } from '../../lib/fonts';
-import { FiExternalLink } from 'react-icons/fi';
-import {
-  SiGithub,
-  SiJavascript,
-  SiTailwindcss,
-  SiVite,
-  SiReact,
-  SiNextdotjs,
-  SiHtml5,
-  SiJest,
-} from 'react-icons/si';
-import { JSX } from 'react';
-
-type ProjectParams = { slug: string };
+import { FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { SiGithub, SiJavascript, SiTailwindcss, SiVite, SiReact, SiNextdotjs, SiHtml5, SiJest } from 'react-icons/si';
+import { useState } from 'react';
 
 const techIcons: Record<string, JSX.Element> = {
   JavaScript: <SiJavascript className="w-5 h-5 text-yellow-400" />,
+  TypeScript: <span className="w-5 h-5 text-blue-600 font-bold text-xs">TS</span>,
   React: <SiReact className="w-5 h-5 text-blue-400" />,
   NextJS: <SiNextdotjs className="w-5 h-5 text-black" />,
   Tailwind: <SiTailwindcss className="w-5 h-5 text-teal-400" />,
   Vite: <SiVite className="w-5 h-5 text-purple-400" />,
   HTML: <SiHtml5 className="w-5 h-5 text-orange-500" />,
-  Jest: <SiJest className="w-5 h-5 text-red-500" />,
+  CSS: <span className="w-5 h-5 text-blue-500 font-bold text-xs">CSS</span>,
   API: <span className="w-5 h-5 text-gray-600 font-bold text-xs">API</span>,
+  Jest: <SiJest className="w-5 h-5 text-red-500" />,
 };
 
-export default function ProjectArticle({ params }: { params: Promise<ProjectParams> }) {
+
+export default function ProjectArticle({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
   const router = useRouter();
 
-  const project: Project | undefined = projects.find((p) => p.slug === slug);
+  const initialIndex = projects.findIndex(p => p.slug === slug);
+  const [currentIndex, setCurrentIndex] = useState(initialIndex >= 0 ? initialIndex : 0);
+  const project = projects[currentIndex];
+
   if (!project) return <p className="text-center mt-20 text-red-600">Project not found.</p>;
 
   const displayImage = project.detailImageUrl ?? project.imageUrl;
 
+  const prevProject = () => setCurrentIndex((currentIndex - 1 + projects.length) % projects.length);
+  const nextProject = () => setCurrentIndex((currentIndex + 1) % projects.length);
+
   return (
-    <div
-      className="min-h-screen px-6 md:px-12 py-12 flex items-center justify-center relative"
-      style={{ backgroundColor: '#D9D9D9' }}
-    >
-      <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-8 relative">
-        {/* Close Button */}
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-200 p-4 relative">
+
+      {/* Monitor Frame */}
+      <div className="relative w-full max-w-7xl bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
+
+        {/* Close Button (X) */}
         <button
           onClick={() => router.back()}
-          className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-2xl font-bold transition"
+          className="absolute top-6 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold z-20"
           aria-label="Close Project"
         >
           ×
         </button>
 
-        {/* Left: Project Image */}
-        <div className="flex-1 flex justify-center items-center">
-          <div className="relative w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-md overflow-hidden">
+        {/* Top Bar */}
+        <div className="flex items-center gap-2 px-4 py-2 bg-gray-300">
+          <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+          <span className="w-3 h-3 bg-yellow-400 rounded-full"></span>
+          <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+        </div>
+
+        {/* Screen Area */}
+        <div className="flex flex-col lg:flex-row bg-white p-4 md:p-6 gap-6">
+          {/* Left: Project Image */}
+          <div className="lg:flex-1 flex justify-center items-center">
             <Image
               src={displayImage}
               alt={project.title}
-              fill
-              className="object-contain rounded-md"
-              sizes="100vw"
+              width={800}
+              height={500}
+              className="w-full h-auto object-contain "
             />
           </div>
+
+          {/* Right: Description & Info */}
+          <div className="lg:flex-1 flex flex-col justify-between gap-4">
+            <div>
+              <h3 className="text-xs text-gray-500 font-medium">PROJECT</h3>
+              <h2 className={`${headingFont.variable} text-2xl sm:text-3xl font-bold text-gray-800 my-2`}>
+                {project.title}
+              </h2>
+
+              {/* Description */}
+              <div className="text-gray-600 text-sm space-y-2 max-h-[350px] overflow-y-auto pr-2">
+                <h3 className="font-medium">ABOUT</h3>
+                {project.detailedDescription.split('\n').map((line, idx) => (
+                  <p key={idx}>{line}</p>
+                ))}
+              </div>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {project.techStack.map((tech) => (
+                  <div
+                    key={tech}
+                    className="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full shadow-sm"
+                  >
+                    {techIcons[tech]}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 mt-4">
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1 px-3 py-1.5 rounded-md bg-gray-600 text-white text-xs font-semibold"
+              >
+                <FiExternalLink className="w-4 h-4" /> LAUNCH
+              </a>
+
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1 px-3 py-1.5 rounded-md bg-gray-900 text-white text-xs font-semibold"
+              >
+                <SiGithub className="w-4 h-4" /> REPO
+              </a>
+            </div>
+          </div>
         </div>
 
-        {/* Right: Project Info */}
-        <div className="flex-1 flex flex-col justify-start gap-4">
-          <h3 className="text-xs md:text-sm text-gray-500 font-medium">PROJECT</h3>
-          <h2
-            className={`${headingFont.variable} text-xl sm:text-2xl md:text-3xl text-gray-700 font-bold`}
+        {/* Navigation Arrows */}
+        <div className="flex justify-between items-center p-4 border-t border-gray-200">
+          <button
+            onClick={prevProject}
+            className="p-2 rounded-full hover:bg-gray-100 transition"
+            aria-label="Previous Project"
           >
-            {project.title}
-          </h2>
-
-          {/* Tech Stack */}
-          <div className="flex flex-wrap gap-2 mt-2">
-            {project.techStack.map((tech) => (
-              <div key={tech} className="flex items-center justify-center w-8 h-8 rounded-full">
-                {techIcons[tech]}
-              </div>
-            ))}
-          </div>
-
-          {/* Description */}
-          <div className="text-gray-700 text-sm flex flex-col gap-3 mt-3 overflow-y-auto max-h-[400px] sm:max-h-[500px] lg:max-h-[500px]">
-            {project.detailedDescription.split('\n').map((line, idx) => (
-              <p key={idx}>{line}</p>
-            ))}
-          </div>
-
-          {/* Links */}
-          <div className="flex flex-wrap gap-2 mt-4">
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-auto inline-flex items-center justify-center gap-2 bg-gray-800 text-white px-3 py-1.5 rounded-lg hover:bg-gray-900 transition text-sm min-w-[120px]"
-            >
-              <FiExternalLink /> Live Site
-            </a>
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-auto inline-flex items-center justify-center gap-2 bg-gray-800 text-white px-3 py-1.5 rounded-lg hover:bg-gray-900 transition text-sm min-w-[120px]"
-            >
-              <SiGithub /> GitHub
-            </a>
-          </div>
+            <FiChevronLeft size={24} />
+          </button>
+          <span className="text-sm text-gray-500">{currentIndex + 1}/{projects.length}</span>
+          <button
+            onClick={nextProject}
+            className="p-2 rounded-full hover:bg-gray-100 transition"
+            aria-label="Next Project"
+          >
+            <FiChevronRight size={24} />
+          </button>
         </div>
       </div>
+
+ {/* Monitor Stand */}
+<div className="flex justify-center ">
+  <div className="w-32 h-9 bg-gray-400 border-t-2 border-white "></div>
+</div>
+<div className="flex justify-center ">
+  <div className="w-45 h-2 bg-gray-400 border-b-2 border-white rounded-t-2xl "></div>
+</div>
+
     </div>
   );
 }

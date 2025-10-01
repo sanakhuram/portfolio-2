@@ -1,17 +1,20 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { FiInfo } from 'react-icons/fi';
-import { Project, projects } from '@/utils/projectData';
+import { FiInfo, FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import { projects, Project } from '@/utils/projectData';
 import { headingFont, bodyFont } from '../app/lib/fonts';
 
-type ProjectsSectionProps = {
-  bg?: string;
-};
+type ProjectsSectionProps = { bg?: string };
 
 export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+  const router = useRouter();
+
   return (
     <section
       id="projects"
@@ -23,21 +26,36 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
         Projects
       </h2>
 
-      {/* Grid Container Centered */}
-      <div className="flex justify-center w-full mb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center w-full max-w-4xl">
-          {projects.map((project: Project) => (
-            <Link
+      {/* Projects Grid */}
+      <motion.div
+        layout
+        className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4 w-full max-w-6xl mb-6 justify-items-center"
+      >
+        <AnimatePresence>
+          {displayedProjects.map((project: Project) => (
+            <motion.div
               key={project.slug}
-              href={`/projects/${project.slug}`}
-              className="group relative flex flex-col items-start bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden p-3 cursor-pointer w-72"
+              layout
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="group relative flex flex-col items-start bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden p-3 cursor-pointer w-full max-w-[250px]"
+              onClick={() => router.push(`/projects/${project.slug}`)}
             >
-              <div className="relative w-65 h-45 mb-3 border-3 border-gray-200 rounded-md overflow-hidden self-center">
-                <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
+              {/* Image */}
+              <div className="relative w-full h-48 mb-3 border-2 border-gray-200 rounded-md overflow-hidden">
+                <Image
+                  src={project.imageUrl}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 250px"
+                />
               </div>
 
               {/* Title */}
-              <h3 className={`${headingFont.variable} text-base md:text-lg font-bold mb-1`}>
+              <h3 className={`${headingFont.variable} text-gray-600 md:text-lg font-bold mb-1`}>
                 {project.title}
               </h3>
 
@@ -46,14 +64,23 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
                 {project.description}
               </p>
 
-              {/* Info Icon at bottom-right */}
-              <div className="absolute bottom-3 right-3 w-7 h-7 rounded-full flex items-center justify-center text-gray-400 text-base pt-5 group-hover:text-gray-600 transition-colors duration-200">
+              {/* Info Icon */}
+              <div className="absolute bottom-3 right-3 w-7 h-7 rounded-full flex items-center justify-center text-gray-400 text-base group-hover:text-white hover:bg-gray-500 transition-colors duration-200">
                 <FiInfo />
               </div>
-            </Link>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </AnimatePresence>
+      </motion.div>
+
+      {/* Toggle Button */}
+      <button
+        onClick={() => setShowAll(!showAll)}
+        className="mt-6 flex items-center gap-2 text-sm md:text-base font-semibold text-white underline hover:text-gray-600 transition-colors"
+      >
+        {showAll ? 'Show Less' : 'See All Projects'}
+        {showAll ? <FiChevronUp /> : <FiChevronDown />}
+      </button>
     </section>
   );
 }

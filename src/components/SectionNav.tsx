@@ -22,7 +22,7 @@ export default function Nav({ currentIndex, onSelect }: SimpleNavProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       style={{ fontFamily: headingFont.variable }}
-      className="absolute top-4 left-1/2 -translate-x-1/2 z-10 flex flex-nowrap items-center gap-1 text-white text-xs sm:text-sm"
+      className="absolute top-5 left-1/2 -translate-x-1/2 z-10 flex flex-nowrap items-center gap-1 text-white text-xs sm:text-sm"
     >
       {sections.map((section, i) => {
         const isActive = i === currentIndex;
