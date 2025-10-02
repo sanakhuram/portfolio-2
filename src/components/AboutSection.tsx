@@ -54,7 +54,7 @@ export default function AboutMeSlider() {
   const next = () => setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-4">
+    <section className="w-full min-h-screen flex items-center justify-center px-4 z-20">
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 max-w-[600px] w-full">
         <div className="flex-shrink-0 relative w-32 sm:w-40 md:w-48 aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
           <Image

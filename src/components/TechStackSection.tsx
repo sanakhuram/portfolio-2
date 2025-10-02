@@ -20,6 +20,7 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiTailwindcss,
+  SiChakraui,
   SiVite,
   SiVitest,
   SiCanva,
@@ -107,6 +108,11 @@ const secondarySkills = [
     description: 'Quick graphic designs for presentations and assets.',
   },
   {
+    name: 'Chakra UI',
+    icon: <SiChakraui color="#06B6D4" className="w-16 h-16" />,
+    description: 'Responsive and utility-first styling for websites.',
+  },
+  {
     name: 'UX/UI Design',
     icon: <FaPencilRuler color="#F59E0B" className="w-16 h-16" />,
     description: 'User interface and experience design for projects.',
@@ -171,9 +177,8 @@ export default function TechStackSection() {
               key={skill.name}
               whileHover={{ y: -4, backgroundColor: '#ffffff', color: '#111827' }}
               transition={{ type: 'spring', stiffness: 250, damping: 20 }}
-              className={`px-4 py-2 rounded-md border border-white text-sm font-medium transition-colors ${
-                selectedSkill === skill.name ? 'bg-white text-gray-900' : ''
-              }`}
+              className={`px-4 py-2 rounded-md border border-dotted border-white text-sm font-medium transition-colors ${selectedSkill === skill.name ? 'bg-white text-gray-900' : ''
+                }`}
               onClick={() => setSelectedSkill(selectedSkill === skill.name ? null : skill.name)}
             >
               {skill.name}

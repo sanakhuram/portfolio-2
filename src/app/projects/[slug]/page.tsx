@@ -45,13 +45,14 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
       <div className="relative w-full max-w-7xl bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
 
         {/* Close Button (X) */}
-        <button
-          onClick={() => router.back()}
-          className="absolute top-6 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold z-20"
-          aria-label="Close Project"
-        >
-          ×
-        </button>
+<button
+  onClick={() => router.back()}
+  className="absolute top-8 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 text-3xl font-bold transition-colors duration-300 hover:bg-gray-400 hover:text-white z-50"
+  aria-label="Close Project"
+>
+  ×
+</button>
+
 
         {/* Top Bar */}
         <div className="flex items-center gap-2 px-4 py-2 bg-gray-300">

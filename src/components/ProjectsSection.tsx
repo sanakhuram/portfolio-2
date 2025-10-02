@@ -40,19 +40,20 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="group relative flex flex-col items-start bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden p-3 cursor-pointer w-full max-w-[250px]"
+              className="group relative flex flex-col items-start bg-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden p-3 cursor-pointer w-full max-w-[250px]"
               onClick={() => router.push(`/projects/${project.slug}`)}
             >
               {/* Image */}
-              <div className="relative w-full h-48 mb-3 border-2 border-gray-200 rounded-md overflow-hidden">
+              <div className="relative w-full h-48 mb-3 border-2 border-gray-200 overflow-hidden group">
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transform transition-transform duration-300 group-hover:scale-95"
                   sizes="(max-width: 768px) 100vw, 250px"
                 />
               </div>
+
 
               {/* Title */}
               <h3 className={`${headingFont.variable} text-gray-600 md:text-lg font-bold mb-1`}>
@@ -76,7 +77,7 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
       {/* Toggle Button */}
       <button
         onClick={() => setShowAll(!showAll)}
-        className="mt-6 flex items-center gap-2 text-sm md:text-base font-semibold text-white underline hover:text-gray-600 transition-colors"
+        className="mt-6 flex items-center mb-10 gap-2 text-sm md:text-base font-semibold text-white underline hover:text-gray-600 transition-colors"
       >
         {showAll ? 'Show Less' : 'See All Projects'}
         {showAll ? <FiChevronUp /> : <FiChevronDown />}
