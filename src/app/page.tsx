@@ -23,7 +23,7 @@ export default function Portfolio() {
   const renderSection = () => {
     switch (sections[index].id) {
       case 'home':
-        return <HeroSection key="hero" />;
+        return <HeroSection key="hero" onViewMore={setIndex} />;
       case 'about':
         return <AboutSection key="about" />;
       case 'projects':

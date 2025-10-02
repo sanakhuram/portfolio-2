@@ -62,7 +62,7 @@ Key Features:
     liveUrl: 'https://jsfw-sanakhuram.vercel.app/',
     repoUrl: 'https://github.com/sanakhuram/jsfw-sanakhuram',
     detailedDescription: `
-Vibe Cart is a modern e-commerce platform built with Next.js, React, and TailwindCSS. Users can browse products, manage carts, and checkout efficiently.
+Vibe Cart is a modern e-commerce platform built with Next.js, React,TypeScript and TailwindCSS. Users can browse products, manage carts, and checkout efficiently.
 
 Key Features:
 - Product Listing & Search
@@ -72,7 +72,7 @@ Key Features:
 - Dark Mode
 - Contact Form
 `,
-    techStack: ['NextJS', 'React', 'Tailwind', 'Jest'],
+    techStack: ['NextJS', 'React', 'Tailwind', 'Jest', 'TypeScript'],
   },
 {
   title: 'Holidaze',
@@ -93,7 +93,7 @@ Key Features:
 - Dark Mode Support
 - Admin Dashboard for Managing Venues
 `,
-  techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'Vite'],
+  techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript'],
 },
 {
     title: 'Color Muse Blog',

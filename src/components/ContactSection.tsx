@@ -24,8 +24,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center bg-teal-400 px-4 sm:px-6 md:px-20 py-20">
-      <div className="relative flex flex-col md:flex-row w-full max-w-6xl bg-teal-500 rounded-lg shadow-lg border-4 border-dashed border-white overflow-hidden p-6 sm:p-8">
+    <section className="w-full min-h-screen flex items-center justify-center  px-4 sm:px-6 md:px-20 py-20">
+      <div className="relative flex flex-col md:flex-row w-full max-w-6xl rounded-lg shadow-lg border-4 border-dashed border-white overflow-hidden p-6 sm:p-8">
         {/* SVG stamp */}
         <div className="absolute top-4 right-4 w-16 h-16 md:w-20 md:h-20 text-white">
           <svg

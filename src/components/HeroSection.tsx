@@ -5,44 +5,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { headingFont, bodyFont } from '../app/lib/fonts';
 import DotsBackground from './DotsBackground';
 
+type HeroSectionProps = {
+  onViewMore?: (index: number) => void; // Pass a function to update section
+};
+
 const slides = [
-  {
-    title: 'Hi, I’m Sana',
-    subtitle:
-      'Frontend Developer & UX/UI Designer blending creativity and code to craft interactive experiences',
-    bg: '#FFC300',
-  },
-  {
-    title: 'User-Centric Design',
-    subtitle:
-      'I create experiences from start to finish that guide users through a journey full of surprises',
-    bg: '#333333',
-  },
-  {
-    title: 'Art + Technology',
-    subtitle:
-      'I combine my painting and design skills with frontend technology to build unique experiences',
-    bg: '#E59FB6',
-  },
-  {
-    title: 'Constant Learner',
-    subtitle: 'Eager to explore new tools, trends, and ways to bring art into technology',
-    bg: '#DCDCDC',
-  },
-  {
-    title: 'Let’s Create',
-    subtitle: 'I merge design, illustration, and code to craft experiences that delight users',
-    bg: '#14B8A6',
-  },
+  { title: 'Hi, I’m Sana', subtitle: 'Frontend Developer & UX/UI Designer blending creativity and code to craft interactive experiences', bg: '#adc178', targetIndex: -1 },
+  { title: 'User-Centric Design', subtitle: 'I create experiences from start to finish that guide users through a journey full of surprises', bg: '#DCDCDC', targetIndex: 2 },
+  { title: 'Art + Technology', subtitle: 'I combine my painting and design skills with frontend technology to build unique experiences', bg: '#edafb8', targetIndex: 1 },
+  { title: 'Constant Learner', subtitle: 'Eager to explore new tools, trends, and ways to bring art into technology', bg: '#333333', targetIndex: 4 },
+  { title: 'Let’s Create', subtitle: 'I merge design, illustration, and code to craft experiences that delight users', bg: '#77afc3', targetIndex: 5 },
 ];
 
-export default function HeroSection() {
+export default function HeroSection({ onViewMore }: HeroSectionProps) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 10000);
+    const interval = setInterval(() => setCurrent(prev => (prev + 1) % slides.length), 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -90,19 +69,33 @@ export default function HeroSection() {
         </motion.p>
       </AnimatePresence>
 
-      <div className="flex gap-3 mt-6 relative z-10">
-        {slides.map((_, i) => (
-          <motion.button
-            key={i}
-            onClick={() => setCurrent(i)}
-            whileHover={{ scale: 1.3 }}
-            whileTap={{ scale: 0.9 }}
-            className={`w-4 h-4 rounded-full border-2 border-dashed border-white ${
-              i === current ? 'bg-white' : 'bg-transparent'
-            }`}
-          />
-        ))}
-      </div>
+      {slides[current].targetIndex !== -1 && (
+        <motion.button
+          onClick={() => onViewMore?.(slides[current].targetIndex)}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-6 mb-4 px-6 py-1 border-2 border-dashed border-white text-white font-semibold uppercase rounded-lg animate-pulse relative z-10"
+        >
+          View More
+        </motion.button>
+      )}
+
+<div className="flex gap-3 mt-4 relative z-10">
+  {slides.map((slide, i) => (
+    <motion.button
+      key={i}
+      onClick={() => setCurrent(i)}
+      whileHover={{ scale: 1.3 }}
+      whileTap={{ scale: 0.9 }}
+      className={`w-4 h-4 rounded-full border-2 border-dashed border-white ${
+        i === current ? 'bg-white animate-pulse' : 'bg-transparent'
+      }`}
+      aria-label={`Go to slide ${i + 1}: ${slide.title}`} 
+      title={`Go to slide: ${slide.title}`}              
+    />
+  ))}
+</div>
+
     </section>
   );
 }

@@ -27,7 +27,6 @@ import {
 } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 
-// Primary / core tech (highlighted for recruiters)
 const mainSkills = [
   {
     name: 'React',
@@ -66,7 +65,6 @@ const mainSkills = [
   },
 ];
 
-// Secondary / additional skills (nice-to-have)
 const secondarySkills = [
   {
     name: 'HTML5',
@@ -135,18 +133,16 @@ export default function TechStackSection() {
   const skillData = [...mainSkills, ...secondarySkills].find((s) => s.name === selectedSkill);
 
   return (
-    <section className="w-full min-h-screen flex flex-col items-center justify-center relative text-white bg-gray-900 overflow-hidden px-6 md:px-20 py-20">
-      {/* Background SVG */}
+    <section className="w-full min-h-screen flex flex-col items-center justify-center relative text-white overflow-hidden px-6 md:px-20 py-20">
       <svg
         viewBox="0 0 512 512"
-        className="absolute inset-0 w-full h-full opacity-20 text-gray-400"
+        className="absolute inset-0 w-full h-full opacity-10 text-gray-400"
         fill="currentColor"
       >
         <path d="M0 448V64h18v384H0zm26.857-.273V64H36v383.727h-9.143zm27.143 0V64h8.857v383.727H54zm44.857 0V64h8.857v383.727h-8.857zm36 0V64h17.714v383.727h-17.714zm44.857 0V64h8.857v383.727h-8.857zm18 0V64h8.857v383.727h-8.857zm18 0V64h8.857v383.727h-8.857zm35.715 0V64h18v383.727h-18zm44.857 0V64h18v383.727h-18zm35.999 0V64h18.001v383.727h-18.001zm36.001 0V64h18.001v383.727h-18.001zm26.857 0V64h18v383.727h-18zm45.143 0V64h26.857v383.727h-26.857zm35.714 0V64h9.143v383.727H476zm18 .273V64h18v384h-18z" />
       </svg>
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl">
-        {/* Display icon and description */}
         {skillData && (
           <motion.div
             key={skillData.name}
@@ -163,7 +159,7 @@ export default function TechStackSection() {
           </motion.div>
         )}
         {!skillData && (
-          <h1 className="text-gray-200/10 mb-12 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none">
+          <h1 className="text-gray-100/10 mb-12 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none">
             Skills
           </h1>
         )}

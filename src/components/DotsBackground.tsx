@@ -27,7 +27,7 @@ const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 500 }) => {
       {dots.map((dot) => (
         <div
           key={dot.id}
-          className="bg-white rounded-full absolute"
+          className="bg-black rounded-full absolute"
           style={{
             top: `${dot.top}%`,
             left: `${dot.left}%`,
