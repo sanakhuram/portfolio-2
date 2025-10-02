@@ -47,7 +47,7 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
         {/* Close Button (X) */}
 <button
   onClick={() => router.back()}
-  className="absolute top-8 right-4 w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 text-3xl font-bold transition-colors duration-300 hover:bg-gray-400 hover:text-white z-50"
+  className="absolute  right-2 w-6 h-6 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 text-3xl font-bold transition-colors duration-300 hover:bg-gray-400 hover:text-white z-50"
   aria-label="Close Project"
 >
   ×
