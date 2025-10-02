@@ -5,6 +5,9 @@ import { headingFont, bodyFont } from '@/app/lib/fonts';
 export const metadata: Metadata = {
   title: 'Portfolio',
   description: 'My portfolio site',
+    icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
