@@ -93,7 +93,7 @@ Key Features:
 - Dark Mode Support
 - Admin Dashboard for Managing Venues
 `,
-  techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript'],
+  techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'API'],
 },
 {
     title: 'Color Muse Blog',
