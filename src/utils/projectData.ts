@@ -1,5 +1,6 @@
 export type Project = {
   title: string;
+  category: string; 
   description: string; // short description for list page
   imageUrl: string; // list page / thumbnail
   detailImageUrl?: string; // slug page image inside frame
@@ -9,52 +10,152 @@ export type Project = {
   detailedDescription: string; // text shown on slug page
   techStack: string[];
 };
-
 export const projects: Project[] = [
-  {
-    title: 'Auction Hub',
-    description: 'Online auction platform with bidding & listings.',
-    imageUrl: '/images/auction.jpg',
-    detailImageUrl: '/images/auction-detail.jpg',
-    slug: 'auction-hub',
-    liveUrl: 'https://auction-hub.netlify.app/',
-    repoUrl: 'https://github.com/sanakhuram/auction-hub-SP2',
-    detailedDescription: `
-Auction Hub is a professional online auction platform allowing users to buy and sell collectibles, artwork, and vintage items. It provides a seamless bidding experience with user authentication and profile management.
+{
+  category:'Academic Project',
+  title: 'Auction Hub',
+  description: 'Online auction platform with bidding, listings, and refined user features.',
+  imageUrl: '/images/auction.jpg',
+  detailImageUrl: '/images/auction-detail.jpg',
+  slug: 'auction-hub',
+  liveUrl: 'https://auction-hub.netlify.app/',
+  repoUrl: 'https://github.com/sanakhuram/auction-hub-SP2',
+  detailedDescription: `
+Project Overview:
+This project was built as part of the Semester 2 Project Exam for web development. Auction Hub is a professional online auction platform that allows registered users to create, edit, delete listings, place bids, track bid history, and view other users' profiles and bids. Non-registered users can browse listings only.
 
-Key Features:
-- User Authentication (secure login & registration)
-- Listing Management (create, edit, delete listings)
-- Bidding System (place bids, track history)
-- User Profiles (view seller info and bid history)
-- Guest Access (browse listings without registering)
-- Dark Mode (Tailwind-powered theme switching)
+Updated Tech Stack:
+- JavaScript (Vanilla): Core application logic and API handling
+- Vite.js: Fast frontend build tool
+- Tailwind CSS: Utility-first CSS framework for UI styling
+- LocalStorage: JWT token storage for authentication
+- Noroff API (REST API): Backend API for managing auctions
+- Netlify: Deployment and hosting
+- ESLint: Linting tool to enforce code quality
+- Prettier: Code formatter for consistent styling
+- Husky: Git hooks for pre-commit checks
+- Playwright: End-to-end testing framework
+
+Features:
+- User Authentication: Secure login and registration for buyers and sellers
+- Listing Management: Create, edit, and delete own listings
+- Bidding System: Place bids, track bid history, view highest bids, see winning bids
+- Profile Management: View and update your profile, avatar, and banner
+- Guest Access: Non-registered users can browse listings but cannot bid
+- Dark/Light Mode: Full theme toggle support
+- Search Functionality: Search for listings with refined filtering options
+- Scrollable Content: Smooth scrolling for long lists of auctions
+- Custom Styles: Custom color classes and shadows applied throughout the UI
+- Viewing Others: Logged-in users can view other profiles and their bid history
+
+How to Use the App:
+1. Sign Up/Login:
+   - Register using your stud.noroff.no email
+   - Receive 1,000 credits to start bidding
+   - Login to start bidding or selling
+
+2. Create a Listing:
+   - Add title, description, images, and deadline
+   - Earn credits when your item is sold
+
+3. Edit & Delete Listings:
+   - Modify title, description, images, or deadline
+   - Delete listings before they have bids
+
+4. Place a Bid:
+   - Enter a bid amount to compete
+   - Credits are deducted if you win
+
+5. Manage Profile:
+   - Update avatar, banner, and profile details
+   - Track own bids, winning bids, and balance
+
+6. View Others:
+   - View other users’ profiles and their bidding history
+
+7. Search & Browse:
+   - Refined search with filtering
+   - Scrollable listing view with smooth UI
+
 `,
-    techStack: ['JavaScript', 'Vite', 'Tailwind', 'API'],
-  },
+  techStack: [
+    'JavaScript',
+    'Vite',
+    'Tailwind',
+    'API',
+    'LocalStorage',
+    'Netlify',
+    'ESLint',
+    'Prettier',
+    'Husky',
+    'Playwright',
+  ],
+},
+
   {
     title: 'Sociogram',
-    description: 'Social media app with profiles & CRUD functionality.',
+    category:'Academic Project',
+    description: 'Social media app with full CRUD functionality and Tailwind CSS.',
     imageUrl: '/images/sociogram.jpg',
     detailImageUrl: '/images/sociogram-detail.jpg',
     slug: 'sociogram',
     liveUrl: 'https://sociogram-app.netlify.app/',
     repoUrl: 'https://github.com/sanakhuram/css-frameworks',
     detailedDescription: `
-Sociogram is a social media-style app with full CRUD operations and profile management. Users can create, like, comment on posts, follow/unfollow others, and search for content.
+Project Overview:
+This project is part of the CSS Frameworks Assignment, where Tailwind CSS was integrated into an existing JavaScript 2 Course Assignment (JS2CA). Sociogram is a client-side social media app allowing users to interact and manage content dynamically.
 
-Key Features:
-- User Authentication
-- Profile Management
-- Post CRUD (Create, Read, Update, Delete)
-- Engagement (Likes & Comments)
-- Search & Pagination
-- Dark Mode
+Core Functionality:
+- User Authentication: Register, Login, Logout using JWT stored in LocalStorage
+- Profile Management: View and update profile, change avatar and banner
+- Follow/Unfollow: Users can follow or unfollow other users
+- Post Management: Create, Edit, Delete, and View posts
+- Engagement: Like posts, comment on posts
+- View Others’ Profiles: See other users’ posts and profiles
+- Dark/Light Mode: Fully functional theme toggle for better UX
+
+Tailwind CSS Features:
+- Responsive Design: Optimized for mobile and desktop
+- Utility-First Styling: Uses Tailwind’s built-in classes
+- Custom Configurations:
+  - Custom color palette (darkBlue, lightBlue, red, etc.)
+  - Custom box shadows for UI enhancements
+  - Custom animations (writing, slide-in effects)
+
+Performance & Deployment:
+- Built with Vite for fast development and hot reloading
+- Uses LocalStorage for JWT authentication
+- Code quality ensured with Prettier and ESLint
+- Deployed on Netlify for live hosting
+
+How to Use the App:
+1. Sign Up/Login:
+   - Register a new account or login using existing credentials
+2. Profile Management:
+   - Update profile information, change avatar and banner images
+3. Create, Edit, Delete Posts:
+   - Add new posts, modify existing posts, or delete unwanted posts
+4. Engagement:
+   - Like and comment on other users’ posts
+   - Follow and unfollow other users
+5. Dark/Light Mode:
+   - Toggle the theme for comfortable viewing
 `,
-    techStack: ['JavaScript', 'Tailwind', 'Vite', 'API'],
+    techStack: [
+      'JavaScript',
+      'Tailwind',
+      'Vite',
+      'LocalStorage',
+      'Netlify',
+      'Prettier',
+      'ESLint',
+      'API'
+    ],
   },
+
   {
     title: 'Vibe Cart',
+    category:'Academic Project',
     description: 'Modern e-commerce platform with cart & checkout.',
     imageUrl: '/images/vibe-cart.jpg',
     detailImageUrl: '/images/vibe-cart-detail.jpg',
@@ -62,20 +163,52 @@ Key Features:
     liveUrl: 'https://jsfw-sanakhuram.vercel.app/',
     repoUrl: 'https://github.com/sanakhuram/jsfw-sanakhuram',
     detailedDescription: `
-Vibe Cart is a modern e-commerce platform built with Next.js, React,TypeScript and TailwindCSS. Users can browse products, manage carts, and checkout efficiently.
+Vibe Cart is a modern, fully functional e-commerce platform built with Next.js, React, TypeScript, and TailwindCSS. Users can browse products, add to favorites, manage cart items, and checkout efficiently. The platform includes a responsive layout, animations via Framer Motion, a contact form, and a Terms & Conditions page.
 
-Key Features:
-- Product Listing & Search
-- Cart Management
-- Checkout Flow
-- Reviews & Ratings
-- Dark Mode
-- Contact Form
+E-Commerce Functionality:
+- Add products to cart
+- Manage quantities & remove items
+- View detailed product info
+- Check reviews & ratings
+- Display discount badges
+
+Navigation & UI:
+- Animated hero section
+- Sticky header with cart & favourites
+- Responsive layout
+- Product sorting options
+- Real-time search bar
+- Pagination
+- Responsive footer
+
+Developer Setup:
+- Next.js App Router for routing
+- Context API for state management
+- Notifications via react-hot-toast
+- Animations with Framer Motion
+- ESLint + Prettier for code quality
+- Unit tests with Jest + React Testing Library
+
+Testing:
+- ProductCard
+- Header
+- AddToCartButton
+- SortSearchBar
+- Footer
+- BackToTopButton
+
+Additional Notes:
+- Consistent color themes and UI design
+- Contact form implemented with React
+- Suggested items feature included
+- Terms & Conditions page implemented
 `,
-    techStack: ['NextJS', 'React', 'Tailwind', 'Jest', 'TypeScript'],
+    techStack: ['NextJS', 'React', 'Tailwind', 'Jest', 'TypeScript','Vercel', 'Prettier', 'ESLint', 'API','Husky'],
   },
+
   {
     title: 'Holidaze',
+    category:'Academic Project',
     description: 'Venue booking platform .',
     imageUrl: '/images/holidaze.jpg',
     detailImageUrl: '/images/holidaze-detail.jpg',
@@ -93,10 +226,11 @@ Key Features:
 - Dark Mode Support
 - Admin Dashboard for Managing Venues
 `,
-    techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'API'],
+    techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'API', 'Vercel', 'Prettier', 'ESLint'],
   },
   {
     title: 'Color Muse Blog',
+    category:'Academic Project',
     description: 'A blog featuring CRUD.',
     imageUrl: '/images/color-muse-blog.jpg',
     slug: 'color-muse-blog',
@@ -120,6 +254,7 @@ Key Features:
   },
   {
     title: 'Follow The Steps',
+    category: 'Award Winning Project',
     description: 'Hiking & trail website.',
     imageUrl: '/images/follow-the-steps.jpg',
     slug: 'golden-egg-project',
@@ -142,6 +277,7 @@ Key Features:
   },
   {
     title: 'Brew & Bloom',
+    category: 'Learning Project',
     description: 'A modern coffee shop.',
     imageUrl: '/images/brew-bloom.jpg',
     slug: 'brew-bloom',
@@ -163,6 +299,7 @@ Key Features:
   },
   {
     title: 'Crypto Dashboard',
+    category: 'Learning Project',
     description: 'A cryptocurrency dashboard.',
     imageUrl: '/images/cypto-dashboard.jpg',
     slug: 'crypto-dashboard',
@@ -183,6 +320,7 @@ Key Features:
   },
   {
     title: 'Hope & Health Welfare Association',
+    category: 'Client Project',
     description: 'A Charity website.',
     imageUrl: '/images/hope-health.jpg',
     slug: 'hope-health',
@@ -208,6 +346,7 @@ Key Features:
   },
   {
     title: 'Square Eyes',
+    category:'Academic Project',
     description: 'A movie e-commerce website.',
     imageUrl: '/images/square-eyes.jpg',
     slug: 'square-eyes',
@@ -230,6 +369,7 @@ Key Features:
   },
   {
     title: 'Community Science Museum',
+    category:'Academic Project',
     description: 'An educational museum site.',
     imageUrl: '/images/community-science-museum.jpg',
     slug: 'community-science-museum',
@@ -250,6 +390,7 @@ Key Features:
   },
   {
     title: 'Rainy Days',
+    category: 'Learning Project',
     description: 'E-commerce website .',
     imageUrl: '/images/rainy-days.jpg',
     slug: 'rainy-days',

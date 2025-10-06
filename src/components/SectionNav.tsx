@@ -21,7 +21,7 @@ export default function Nav({ currentIndex, onSelect }: SimpleNavProps) {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`${headingFont.className} absolute top-5 left-1/2 -translate-x-1/2 z-10 flex flex-nowrap items-center gap-1 text-white text-base sm:text-lg `}
+      className={`${headingFont.className} absolute top-5 left-1/2 -translate-x-1/2 z-10 flex flex-nowrap items-center gap-1 text-white text-base sm:text-lg`}
     >
       {sections.map((section, i) => {
         const isActive = i === currentIndex;
@@ -35,7 +35,9 @@ export default function Nav({ currentIndex, onSelect }: SimpleNavProps) {
             >
               {section.id.replace('-', ' ')}
             </button>
-            {i < sections.length - 1 && <span className="mx-1">/</span>}
+            {i < sections.length - 1 && (
+              <span className="mx-1 w-1 h-1 bg-white rounded-full inline-block" />
+            )}
           </span>
         );
       })}

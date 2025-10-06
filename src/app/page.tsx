@@ -44,13 +44,8 @@ export default function Portfolio() {
       className="relative w-screen transition-colors duration-500 overflow-visible"
       style={{ backgroundColor: sections[index].bg, minHeight: '100vh' }}
     >
-      {/* Background dots */}
-      <DotsBackground count={200} />
-
-      {/* Section navigation labels */}
+      <DotsBackground count={150} />
       <Nav currentIndex={index} onSelect={setIndex} />
-
-      {/* Animated section */}
       <AnimatePresence mode="wait">
         <motion.div
           key={sections[index].id}
@@ -62,11 +57,7 @@ export default function Portfolio() {
           {renderSection()}
         </motion.div>
       </AnimatePresence>
-
-      {/* Fixed left/right arrows */}
       <SectionNavArrows onPrev={goToPrev} onNext={goToNext} />
-
-      {/* Footer */}
       <Footer />
     </div>
   );

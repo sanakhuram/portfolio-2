@@ -70,7 +70,7 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
       style={{ backgroundColor: slides[current].bg }}
       className="h-screen w-screen flex flex-col items-center justify-center text-center relative transition-colors duration-700 px-4 md:px-0 overflow-hidden"
     >
-      <DotsBackground count={700} />
+      <DotsBackground count={150} />
 
       {/* Heading */}
       <AnimatePresence mode="wait">
@@ -84,7 +84,8 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
           style={{
             fontSize: 'clamp(3rem, 10vw, 8rem)',
             maxWidth: 'clamp(20rem, 70vw, 60rem)',
-            lineHeight: '1.1',
+            lineHeight: 0.7, 
+            marginBottom: 0, 
           }}
         >
           {slides[current].title}
@@ -102,8 +103,9 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
           style={{
             fontSize: 'clamp(1.25rem, 2.5vw, 2rem)',
             color: getSubtitleColor(slides[current].bg),
+            marginTop: 0, 
           }}
-          className={`${bodyFont.variable} font-bold uppercase mt-4 text-center relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg`}
+          className={`${bodyFont.variable} font-bold uppercase text-center relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg`}
         >
           {slides[current].subtitle}
         </motion.p>
@@ -114,10 +116,10 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
         <motion.button
           onClick={() => onViewMore?.(slides[current].targetIndex)}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 mb-4 px-6 py-1 font-semibold uppercase rounded-lg relative z-10 overflow-hidden border-2 border-dashed border-white text-white
-      before:absolute before:top-[-100%] before:left-0 before:w-full before:h-full before:bg-gray-600/25 before:z-0
-      before:transition-transform before:duration-500 hover:before:translate-y-full
-      after:absolute after:inset-0 after:flex after:items-center after:justify-center after:z-10"
+          className="mt-4 mb-4 px-6 py-1 font-semibold uppercase rounded-lg relative z-10 overflow-hidden border-2 border-dashed border-white text-white
+          before:absolute before:top-[-100%] before:left-0 before:w-full before:h-full before:bg-gray-600/25 before:z-0
+          before:transition-transform before:duration-500 hover:before:translate-y-full
+          after:absolute after:inset-0 after:flex after:items-center after:justify-center after:z-10"
         >
           <span className="relative z-10">View More</span>
         </motion.button>

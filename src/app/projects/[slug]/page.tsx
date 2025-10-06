@@ -19,6 +19,22 @@ import {
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 
+// Reusable badge for missing techs
+const TechBadge = ({
+  name,
+  bgColor = 'bg-gray-300',
+  textColor = 'text-white',
+}: {
+  name: string;
+  bgColor?: string;
+  textColor?: string;
+}) => (
+  <div className={`px-2 py-1 rounded-full ${bgColor} flex items-center justify-center`}>
+    <span className={`font-semibold text-xs ${textColor}`}>{name}</span>
+  </div>
+);
+
+// Tech icons mapping
 const techIcons: Record<string, JSX.Element> = {
   JavaScript: <SiJavascript className="w-6 h-6 text-yellow-400" />,
   TypeScript: <span className="w-6 h-6 text-blue-600 font-bold text-sm">TS</span>,
@@ -30,6 +46,14 @@ const techIcons: Record<string, JSX.Element> = {
   CSS: <span className="w-6 h-6 text-blue-500 font-bold text-sm">CSS</span>,
   API: <span className="w-6 h-6 text-gray-600 font-bold text-sm">API</span>,
   Jest: <SiJest className="w-6 h-6 text-red-500" />,
+
+  // Missing techs with full-name badges
+  Husky: <TechBadge name="Husky" bgColor="bg-blue-800" />,
+  Prettier: <TechBadge name="Prettier" bgColor="bg-pink-500" />,
+  Playwright: <TechBadge name="Playwright" bgColor="bg-purple-700" />,
+  LocalStorage: <TechBadge name="LocalStorage" bgColor="bg-gray-500" />,
+  Netlify: <TechBadge name="Netlify" bgColor="bg-teal-600" />,
+  Vercel: <TechBadge name="Vercel" bgColor="bg-black" textColor="text-white" />,
 };
 
 export default function ProjectArticle({ params }: { params: Promise<{ slug: string }> }) {
@@ -56,7 +80,7 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-200 p-4 relative">
       {/* Monitor Frame */}
       <div className="relative w-full max-w-7xl bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
-        {/* Close Button (X) */}
+        {/* Close Button */}
         <button
           onClick={() => router.back()}
           className="absolute right-2 w-6 h-6 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 text-3xl font-bold transition-colors duration-300 hover:bg-gray-400 hover:text-white z-50"
@@ -88,14 +112,14 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
           {/* Right: Description & Info */}
           <div className="lg:flex-1 flex flex-col justify-between gap-4">
             <div>
-              <h3 className={`${bodyFont.variable} text-lg text-gray-500 font-medium`}>PROJECT</h3>
+             <h3 className={`${bodyFont.variable} text-lg text-gray-500 font-medium`}>
+  {project.category}
+</h3>
 
               {/* Title + Copy Link */}
               <div className="flex items-center gap-2">
-                <h2
-                  className={`${headingFont.variable} text-3xl sm:text-4xl font-bold text-gray-800 my-2`}
-                >
-                  <p className="mt-2 text-sm text-gray-500">{project.title}</p>
+                <h2 className={`${headingFont.variable} text-3xl sm:text-4xl font-bold text-gray-800 my-2`}>
+                  {project.title}
                 </h2>
                 <button
                   onClick={handleCopyLink}
@@ -105,23 +129,32 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
                   <FiCopy className="w-5 h-5 text-gray-700" />
                 </button>
               </div>
-
               {/* Description */}
               <div
                 className={`${bodyFont.variable} text-base sm:text-lg md:text-xl space-y-3 max-h-[400px] overflow-y-auto pr-2 text-gray-700`}
               >
-                <h3 className="font-semibold text-gray-600 text-lg">ABOUT</h3>
-                {project.detailedDescription.split('\n').map((line, idx) => (
-                  <p key={idx}>{line}</p>
-                ))}
+                {project.detailedDescription.split('\n').map((line, idx) => {
+                  if (!line.trim()) return null;
+                  if (line.endsWith(':')) {
+                    return (
+                      <h3
+                        key={idx}
+                        className={`${headingFont.variable} font-semibold text-lg text-gray-600 mt-4`}
+                      >
+                        {line.replace(':', '')}
+                      </h3>
+                    );
+                  }
+                  return <p key={idx}>{line}</p>;
+                })}
               </div>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mt-4">
+              <div className="flex flex-wrap gap-3 mt-4">
                 {project.techStack.map((tech) => (
                   <div
                     key={tech}
-                    className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full shadow-sm"
+                    className="flex items-center justify-center "
                   >
                     {techIcons[tech]}
                   </div>
