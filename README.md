@@ -1,4 +1,4 @@
-# Sana Khuram | Frontend Developer & Designer
+# Sana Khuram | Frontend Developer & Designer 
 
 Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with a strong artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.  
 
@@ -41,9 +41,9 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 
 > “Creativity is intelligence having fun.” – Albert Einstein
 
-Feel free to explore my projects and reach out via the contact section—I’m always excited to collaborate and bring creative ideas to life!
----
+![alt text](image.png)
 
-### 🔗 Explore My Code
-You can check out all my projects and source code on GitHub:  
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sanakhuram)
+Feel free to explore my projects and reach out via the contact section—I’m always excited to collaborate and bring creative ideas to life!
+
+
+
