@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
@@ -13,12 +14,21 @@ import TechStackSection from '@/components/TechStackSection';
 import ContactSection from '@/components/ContactSection';
 import DotsBackground from '@/components/DotsBackground';
 import SectionNavArrows from '@/components/SectionNavArrows';
+import { useSwipeable } from 'react-swipeable';
 
 export default function Portfolio() {
   const { index, setIndex } = useSectionNavigator(sections.length);
 
   const goToNext = () => setIndex((index + 1) % sections.length);
   const goToPrev = () => setIndex((index - 1 + sections.length) % sections.length);
+const handlers = useSwipeable({
+  onSwipedLeft: goToNext,
+  onSwipedRight: goToPrev,
+  // @ts-expect-error
+  preventDefaultTouchmoveEvent: true,
+  trackMouse: true,
+});
+
 
   const renderSection = () => {
     switch (sections[index].id) {
@@ -41,6 +51,7 @@ export default function Portfolio() {
 
   return (
     <div
+      {...handlers}  // attach swipe handlers here
       className="relative w-screen transition-colors duration-500 overflow-visible"
       style={{ backgroundColor: sections[index].bg, minHeight: '100vh' }}
     >
