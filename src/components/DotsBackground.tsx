@@ -3,24 +3,47 @@
 import React, { useState, useEffect } from 'react';
 
 interface DotsBackgroundProps {
-  count?: number; // Number of dots
+  count?: number; // default maximum count
 }
 
-const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 1500 }) => {
+const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 700 }) => {
   const [dots, setDots] = useState<
-    { id: number; top: number; left: number; width: number; height: number; opacity: number }[]
+    { id: number; top: number; left: number; size: number; opacity: number; color: string }[]
   >([]);
 
   useEffect(() => {
-    const generatedDots = Array.from({ length: count }, (_, i) => ({
+    // Determine responsive dot count
+    const isMobile = window.innerWidth < 768; 
+    const dotCount = isMobile ? Math.floor(count / 2) : count; 
+
+    const generatedDots = Array.from({ length: dotCount }, (_, i) => ({
       id: i,
       top: Math.random() * 100,
       left: Math.random() * 100,
-      width: Math.random() * 2 + 1, 
-      height: Math.random() * 2 + 1, 
-      opacity: Math.random() * 0.1 + 0.05, 
+      size: Math.random() * 2 + 2, 
+      opacity: Math.random() * 0.3 + 0.4, 
+      color: `rgb(${150 + Math.random() * 50}, ${150 + Math.random() * 50}, ${150 + Math.random() * 50})`,
     }));
+
     setDots(generatedDots);
+
+    const handleResize = () => {
+      const isMobileResize = window.innerWidth < 768;
+      const newCount = isMobileResize ? Math.floor(count / 4) : count;
+      const newDots = Array.from({ length: newCount }, (_, i) => ({
+        id: i,
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        size: Math.random() * 2 + 2,
+        opacity: Math.random() * 0.3 + 0.4,
+        color: `rgb(${150 + Math.random() * 50}, ${150 + Math.random() * 50}, ${150 + Math.random() * 50})`,
+      }));
+      setDots(newDots);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+
   }, [count]);
 
   return (
@@ -28,13 +51,14 @@ const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 1500 }) => {
       {dots.map((dot) => (
         <div
           key={dot.id}
-          className="bg-gray-400 rounded-full absolute" // softer gray
+          className="rounded-full absolute"
           style={{
             top: `${dot.top}%`,
             left: `${dot.left}%`,
-            width: `${dot.width}px`,
-            height: `${dot.height}px`,
+            width: `${dot.size}px`,
+            height: `${dot.size}px`,
             opacity: dot.opacity,
+            backgroundColor: dot.color,
           }}
         />
       ))}

@@ -11,7 +11,7 @@ type HeroSectionProps = {
 
 const slides = [
   {
-    title: 'Hey, I’m Sana',
+    title: 'Hey Im Sana',
     subtitle: 'Frontend Developer & UX/UI Designer creating interactive, user-focused experiences and open to collaboration',
     bg: '#adc178',
     targetIndex: -1,

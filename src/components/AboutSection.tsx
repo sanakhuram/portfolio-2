@@ -13,19 +13,19 @@ const aboutSections = [
       'I’m Sana, a frontend developer with a strong artistic background. I hold a BFA in Miniature Painting and a Master’s in Interior Design. I started as a freelance miniature artist, crafting detailed visuals, and eventually found my way into frontend development, where creativity meets code. For me, building a UI feels like painting on a canvas—balancing color, structure, and flow to create something engaging.',
   },
   {
-    title: 'Focus',
+    title: 'My Focus',
     description:
       'I’m deeply focused on crafting responsive, accessible, and visually engaging web experiences. I thrive on projects where design systems, UI/UX, and colors intersect with clean, efficient code. My approach is thoughtful and detail-oriented—I aim to create interfaces that feel intuitive and alive.',
   },
   {
     title: 'Exploration & Side Projects',
     description:
-      'I love exploring new ideas outside of client work—painting, experimenting with illustrations, or creating side projects that challenge my skills. This keeps my creativity fresh and often inspires innovative approaches in development.',
+      'I love exploring new ideas , experimenting with illustrations, or creating side projects that challenge my skills. This keeps my creativity fresh and often inspires innovative approaches in development.',
   },
   {
     title: 'Design Meets Development',
     description:
-      'I bridge the gap between design and code. I’m not a graphic designer or videographer; I’m a frontend developer who speaks the language of art and design. Bringing static designs to life and making them interactive is where I shine.',
+      'I bridge the gap between design and code. I’m a frontend developer who speaks the language of art and design. Bringing static designs to life and making them interactive is where I shine.',
   },
   {
     title: 'Passions Beyond Code',

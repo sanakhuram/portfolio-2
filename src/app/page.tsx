@@ -45,7 +45,7 @@ export default function Portfolio() {
       style={{ backgroundColor: sections[index].bg, minHeight: '100vh' }}
     >
       {/* Background dots */}
-      <DotsBackground count={150} />
+      <DotsBackground count={700} />
 
       {/* Section navigation labels */}
       <Nav currentIndex={index} onSelect={setIndex} />

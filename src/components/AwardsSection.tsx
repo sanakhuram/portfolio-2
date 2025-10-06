@@ -7,7 +7,7 @@ export default function AwardsSection() {
   const [showPdf, setShowPdf] = useState(false);
 
   return (
-    <section className="w-full min-h-screen flex flex-col items-center justify-center px-6 md:px-20 py-20 bg-yellow-400 text-white">
+    <section className="w-full min-h-screen flex flex-col items-center justify-center px-6 md:px-20 py-20  text-white">
       
       {/* Heading */}
       <div className="flex flex-col items-center text-center max-w-3xl">
