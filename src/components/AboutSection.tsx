@@ -70,13 +70,14 @@ export default function AboutMeSlider() {
         {/* Content */}
         <div className="flex-1 flex flex-col items-center md:items-start justify-center relative px-2 sm:px-4 md:px-0">
           {/* Switch mode button */}
-          <button
-            onClick={() => setMode(mode === 'about' ? 'education' : 'about')}
-            className="absolute -top-16 md:top-0 md:right-0 z-20 border border-white rounded-full p-2 shadow  hover:bg-gray-200 transition"
-            title={`Switch to ${mode === 'about' ? 'Education' : 'About'}`}
-          >
-            <FiRefreshCcw className="w-5 h-5 text-white hover:text-red-300" />
-          </button>
+<button
+  onClick={() => setMode(mode === 'about' ? 'education' : 'about')}
+  className="absolute top-0 right-0 md:top-0 md:right-0 z-20 border border-white rounded-full p-2 shadow hover:bg-gray-200 transition"
+  title={`Switch to ${mode === 'about' ? 'Education' : 'About'}`}
+>
+  <FiRefreshCcw className="w-5 h-5 text-white hover:text-red-300" />
+</button>
+
 
           {/* About / Education Content */}
           <AnimatePresence mode="wait">

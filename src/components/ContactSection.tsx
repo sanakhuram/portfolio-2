@@ -43,7 +43,6 @@ export default function ContactSection() {
             <path d="M12,5.5l-.234.513a1.5,1.5,0,0,0,.156,1.108v.01l.008.006,6.267,1.475a.25.25,0,0,0,.307-.243V6a.5.5,0,0,0-.5-.5Z" />
             <path d="M11.762,8.126a.25.25,0,0,0-.29.154L9.533,13.321A.5.5,0,0,0,10,14h1v1.5A1.5,1.5,0,0,0,12.5,17h2.25a.25.25,0,0,1,.25.25v1a.25.25,0,0,0,.25.25H18a.5.5,0,0,0,.5-.5V9.91a.251.251,0,0,0-.193-.244ZM14,9.75a.75.75,0,1,1-.75.75A.75.75,0,0,1,14,9.75Z" />
           </svg>
-          {/* SVG content */}
         </div>
 
         {/* Contact info */}
@@ -62,7 +61,6 @@ export default function ContactSection() {
           </p>
         </div>
 
-        {/* Form */}
         <div className="md:w-1/2 flex flex-col gap-2 sm:gap-3 p-4 sm:p-6">
           <form onSubmit={handleSubmit} className="flex flex-col gap-2">
             <label className={`${bodyFont.variable} flex flex-col text-sm sm:text-base text-white font-semibold`}>
