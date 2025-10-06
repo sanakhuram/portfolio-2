@@ -41,17 +41,7 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 
 > “Creativity is intelligence having fun.” – Albert Einstein
 
----
-
-## **Projects**
-
-| Project | Description | Links |
-|---------|-------------|-------|
-| **Vibe Cart** | E-commerce app with shopping cart, search, and filtering | [Live Demo](https://vibecart.vercel.app) | [GitHub](https://github.com/sanakhuram/vibecart) |
-| **Sociogram** | Social media platform for students with profiles and posts | [Live Demo](https://sociogram.vercel.app) | [GitHub](https://github.com/sanakhuram/sociogram) |
-| **Auction Hub** | Auction platform with dynamic listings and bidding | [Live Demo](https://auctionhub.vercel.app) | [GitHub](https://github.com/sanakhuram/auctionhub) |
-
----
+--- 
 
 ## **About Me / Fun Section**
 
