@@ -39,9 +39,9 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 
 ---
 
-> “Creativity is intelligence having fun.” – Albert Einstein
+### 💭 A Thought I Believe In
+> “The wanderer who dwells is never truly lost.” – Paulo Coelho
 
---- 
 
 ## **About Me / Fun Section**
 
