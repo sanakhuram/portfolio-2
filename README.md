@@ -41,9 +41,10 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 
 > “Creativity is intelligence having fun.” – Albert Einstein
 
-<img src="image.png" alt="Creative Animation" width="300" />
+<img src="image.png" alt="Creative Animation" width="180" />
 
 Feel free to explore my projects and reach out via the contact section—I’m always excited to collaborate and bring creative ideas to life!
+
 
 
 
