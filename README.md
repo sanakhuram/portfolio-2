@@ -42,9 +42,6 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 ### 💭 A Thought I Believe In
 > “The wanderer who dwells is never truly lost.” – Paulo Coelho
 
-
-## **About Me / Fun Section**
-
 <div style="display: flex; align-items: center; gap: 15px;">
   <img src="image.png" alt="Sana Khuram creative illustration" width="150" style="display:block;" />
   <div>
