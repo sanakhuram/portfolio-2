@@ -98,7 +98,7 @@ export default function ContactSection() {
 
             <button
               type="submit"
-              className={`${bodyFont.variable} self-end px-4 sm:px-6 py-2 sm:py-3 text-white font-bold rounded-md hover:bg-white/20 transition text-sm sm:text-base`}
+              className={`${bodyFont.variable} self-end px-4 sm:px-4 py-1 sm:py-1 hover:border hover:border-dotted text-white font-bold rounded-md hover:bg-white hover:text-gray-500 transition text-sm sm:text-base`}
             >
               Send →
             </button>
