@@ -88,7 +88,7 @@ const handleCopyLink = () => {
               {/* Title + Copy Link */}
               <div className="flex items-center gap-2">
                 <h2 className={`${headingFont.variable} text-3xl sm:text-4xl font-bold text-gray-800 my-2`}>
-                  {project.title}
+                  <p className="mt-2 text-sm text-gray-500">{project.title}</p>
                 </h2>
                 <button
                   onClick={handleCopyLink}
