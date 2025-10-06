@@ -57,7 +57,7 @@ export default function ContactSection() {
             Email: <strong>sana.khuram.baig@gmail.com</strong>
           </p>
           <p className={`${bodyFont.variable} text-white text-base sm:text-lg`}>
-            Phone: <strong>Currently in Norway</strong>
+            Phone: <strong>+4740140362</strong>
           </p>
         </div>
 
