@@ -3,11 +3,14 @@
 import Image from 'next/image';
 import { JSX, use } from 'react';
 import { useRouter } from 'next/navigation';
-import { projects } from '@/utils/projectData';
+import { projects} from '@/utils/projectData';
 import { headingFont, bodyFont } from '../../lib/fonts';
-import { FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiExternalLink, FiChevronLeft, FiChevronRight, FiCopy } from 'react-icons/fi';
 import { SiGithub, SiJavascript, SiTailwindcss, SiVite, SiReact, SiNextdotjs, SiHtml5, SiJest } from 'react-icons/si';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
+
+
 
 const techIcons: Record<string, JSX.Element> = {
   JavaScript: <SiJavascript className="w-6 h-6 text-yellow-400" />,
@@ -36,6 +39,11 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
 
   const prevProject = () => setCurrentIndex((currentIndex - 1 + projects.length) % projects.length);
   const nextProject = () => setCurrentIndex((currentIndex + 1) % projects.length);
+
+const handleCopyLink = () => {
+  navigator.clipboard.writeText(window.location.href);
+  toast.success('Project link copied!');
+};
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-200 p-4 relative">
@@ -76,9 +84,20 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
           <div className="lg:flex-1 flex flex-col justify-between gap-4">
             <div>
               <h3 className={`${bodyFont.variable} text-lg text-gray-500 font-medium`}>PROJECT</h3>
-              <h2 className={`${headingFont.variable} text-3xl sm:text-4xl font-bold text-gray-800 my-2`}>
-                {project.title}
-              </h2>
+
+              {/* Title + Copy Link */}
+              <div className="flex items-center gap-2">
+                <h2 className={`${headingFont.variable} text-3xl sm:text-4xl font-bold text-gray-800 my-2`}>
+                  {project.title}
+                </h2>
+                <button
+                  onClick={handleCopyLink}
+                  className="p-2 rounded-md hover:bg-gray-200 transition"
+                  title="Copy project link"
+                >
+                  <FiCopy className="w-5 h-5 text-gray-700" />
+                </button>
+              </div>
 
               {/* Description */}
               <div className={`${bodyFont.variable} text-base sm:text-lg md:text-xl space-y-3 max-h-[400px] overflow-y-auto pr-2 text-gray-700`}>
