@@ -6,37 +6,42 @@ import { headingFont, bodyFont } from '../app/lib/fonts';
 import DotsBackground from './DotsBackground';
 
 type HeroSectionProps = {
-  onViewMore?: (index: number) => void; 
+  onViewMore?: (index: number) => void;
 };
 
 const slides = [
   {
     title: 'Hey Im Sana',
-    subtitle: 'Frontend Developer & UX/UI Designer creating interactive, user-focused experiences and open to collaboration',
+    subtitle:
+      'Frontend Developer & UX/UI Designer creating interactive, user-focused experiences and open to collaboration',
     bg: '#adc178',
     targetIndex: -1,
   },
   {
     title: 'User-Centric Design',
-    subtitle: 'Designing experiences that guide users intuitively through digital journeys, combining creativity with usability',
+    subtitle:
+      'Designing experiences that guide users intuitively through digital journeys, combining creativity with usability',
     bg: '#DCDCDC',
     targetIndex: 2,
   },
   {
     title: 'Art + Technology',
-    subtitle: 'Blending my artistic side with frontend technology to create engaging, comforting, and user-inviting digital spaces',
+    subtitle:
+      'Blending my artistic side with frontend technology to create engaging, comforting, and user-inviting digital spaces',
     bg: '#edafb8',
     targetIndex: 1,
   },
   {
     title: 'Constant Learner',
-    subtitle: 'Always eager to explore new technologies, tools, and frameworks to enhance my development skills.',
+    subtitle:
+      'Always eager to explore new technologies, tools, and frameworks to enhance my development skills.',
     bg: '#333333',
     targetIndex: 4,
   },
   {
     title: 'Let Us Create',
-    subtitle: 'I’m looking forward to connecting and collaborating to bring creative ideas to life, lets just connect and create something exciting',
+    subtitle:
+      'I’m looking forward to connecting and collaborating to bring creative ideas to life, lets just connect and create something exciting',
     bg: '#77afc3',
     targetIndex: 5,
   },
@@ -104,20 +109,19 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
         </motion.p>
       </AnimatePresence>
 
-{/* View More Button */}
-{slides[current].targetIndex !== -1 && (
-  <motion.button
-    onClick={() => onViewMore?.(slides[current].targetIndex)}
-    whileTap={{ scale: 0.95 }}
-    className="mt-6 mb-4 px-6 py-1 font-semibold uppercase rounded-lg relative z-10 overflow-hidden border-2 border-dashed border-white text-white
+      {/* View More Button */}
+      {slides[current].targetIndex !== -1 && (
+        <motion.button
+          onClick={() => onViewMore?.(slides[current].targetIndex)}
+          whileTap={{ scale: 0.95 }}
+          className="mt-6 mb-4 px-6 py-1 font-semibold uppercase rounded-lg relative z-10 overflow-hidden border-2 border-dashed border-white text-white
       before:absolute before:top-[-100%] before:left-0 before:w-full before:h-full before:bg-gray-600/25 before:z-0
       before:transition-transform before:duration-500 hover:before:translate-y-full
       after:absolute after:inset-0 after:flex after:items-center after:justify-center after:z-10"
-  >
-    <span className="relative z-10">View More</span>
-  </motion.button>
-)}
-
+        >
+          <span className="relative z-10">View More</span>
+        </motion.button>
+      )}
 
       {/* Dots Navigation */}
       <div className="flex gap-3 mt-4 relative z-10">

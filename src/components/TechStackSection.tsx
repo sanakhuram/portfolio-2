@@ -163,12 +163,16 @@ export default function TechStackSection() {
             <h3 className={`${headingFont.variable} text-3xl sm:text-4xl md:text-5xl font-bold`}>
               {skillData.name}
             </h3>
-            <p className={`${bodyFont.variable} text-gray-300 text-lg sm:text-xl md:text-2xl max-w-xl`}>
+            <p
+              className={`${bodyFont.variable} text-gray-300 text-lg sm:text-xl md:text-2xl max-w-xl`}
+            >
               {skillData.description}
             </p>
           </motion.div>
         ) : (
-          <h1 className={`${headingFont.variable} text-gray-100/10 mb-12 text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none`}>
+          <h1
+            className={`${headingFont.variable} text-gray-100/10 mb-12 text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none`}
+          >
             Skills
           </h1>
         )}

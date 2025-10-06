@@ -47,11 +47,14 @@ export default function ContactSection() {
 
         {/* Contact info */}
         <div className="md:w-1/2 flex flex-col items-start justify-center border-b md:border-b-0 md:border-r border-white p-4 sm:p-6">
-          <h2 className={`${headingFont.variable} text-4xl sm:text-5xl md:text-6xl text-white font-extrabold mb-4`}>
+          <h2
+            className={`${headingFont.variable} text-4xl sm:text-5xl md:text-6xl text-white font-extrabold mb-4`}
+          >
             Contact Me
           </h2>
           <p className={`${bodyFont.variable} mb-3 text-white text-base sm:text-lg`}>
-            I’m open for web development projects, collaborations, and UX/UI design work. Feel free to reach out!
+            I’m open for web development projects, collaborations, and UX/UI design work. Feel free
+            to reach out!
           </p>
           <p className={`${bodyFont.variable} mb-2 text-white text-base sm:text-lg`}>
             Email: <strong>sana.khuram.baig@gmail.com</strong>
@@ -63,7 +66,9 @@ export default function ContactSection() {
 
         <div className="md:w-1/2 flex flex-col gap-2 sm:gap-3 p-4 sm:p-6">
           <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-            <label className={`${bodyFont.variable} flex flex-col text-sm sm:text-base text-white font-semibold`}>
+            <label
+              className={`${bodyFont.variable} flex flex-col text-sm sm:text-base text-white font-semibold`}
+            >
               Name: *
               <input
                 type="text"
@@ -74,7 +79,9 @@ export default function ContactSection() {
               />
             </label>
 
-            <label className={`${bodyFont.variable} flex flex-col text-sm sm:text-base text-white font-semibold`}>
+            <label
+              className={`${bodyFont.variable} flex flex-col text-sm sm:text-base text-white font-semibold`}
+            >
               Email: *
               <input
                 type="email"
@@ -85,7 +92,9 @@ export default function ContactSection() {
               />
             </label>
 
-            <label className={`${bodyFont.variable} flex flex-col text-sm sm:text-base text-white font-semibold`}>
+            <label
+              className={`${bodyFont.variable} flex flex-col text-sm sm:text-base text-white font-semibold`}
+            >
               Message: * (max 1000 characters)
               <textarea
                 name="message"

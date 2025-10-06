@@ -64,8 +64,8 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
                   whileHover={{ scale: 1.2 }}
                   className="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-500 rounded-full transition-colors duration-200 cursor-pointer"
                   onClick={(e) => {
-                    e.stopPropagation(); 
-                    router.push(`/projects/${project.slug}`); 
+                    e.stopPropagation();
+                    router.push(`/projects/${project.slug}`);
                   }}
                   title="More info"
                 >

@@ -18,8 +18,16 @@ export default function Footer() {
 
   const socials = [
     { id: 'GitHub', icon: FaGithub, link: 'https://github.com/sanakhuram' },
-    { id: 'LinkedIn', icon: FaLinkedin, link: 'https://www.linkedin.com/in/sana-khuram-157ba02b7/' },
-    { id: 'Instagram', icon: FaInstagram, link: 'https://www.instagram.com/sana_khuram/?igsh=MTBneHhvd2d2eXB2dg%3D%3D#' },
+    {
+      id: 'LinkedIn',
+      icon: FaLinkedin,
+      link: 'https://www.linkedin.com/in/sana-khuram-157ba02b7/',
+    },
+    {
+      id: 'Instagram',
+      icon: FaInstagram,
+      link: 'https://www.instagram.com/sana_khuram/?igsh=MTBneHhvd2d2eXB2dg%3D%3D#',
+    },
     { id: 'CV', icon: FaFileAlt, link: '/path-to-your-cv.pdf' },
     { id: 'Email', icon: FaEnvelope, link: 'mailto:sana.khuram.baig@gmail.com' },
   ];

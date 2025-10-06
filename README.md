@@ -1,12 +1,13 @@
 # Sana Khuram | Frontend Developer
 
-Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with a strong artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.  
+Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with a strong artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.
 
 This portfolio showcases my projects, skills, and personal design style. It is designed to be **focused, professional, and easy to navigate**, highlighting the work and experiences that best reflect my abilities.
 
 ---
 
 ## **Tech Stack**
+
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
@@ -19,27 +20,30 @@ This portfolio showcases my projects, skills, and personal design style. It is d
 ---
 
 ## **Sections Overview**
-- **Home / Hero:** Introduction, interactive hero section, and animated slides  
-- **About Me:** Artistic background, focus areas, and exploration of side projects  
-- **Projects:** Showcase of real-world projects with links to live demos and repositories  
-- **Awards:** Achievements and recognition highlights  
-- **Skills:** Frontend and design-related technical skills  
-- **Contact:** Contact form and collaboration opportunities  
+
+- **Home / Hero:** Introduction, interactive hero section, and animated slides
+- **About Me:** Artistic background, focus areas, and exploration of side projects
+- **Projects:** Showcase of real-world projects with links to live demos and repositories
+- **Awards:** Achievements and recognition highlights
+- **Skills:** Frontend and design-related technical skills
+- **Contact:** Contact form and collaboration opportunities
 
 ---
 
 ## **Key Highlights**
-- **Built 5+ interactive UI components and SPAs** with React, Next.js, and TailwindCSS  
-- **Designed fully responsive, accessible, and high-performance interfaces**  
-- **Created custom animations and transitions** using Framer Motion  
-- **Blended artistic sensibilities into frontend development**, integrating illustration and design with code  
-- **Curated and implemented icons and SVGs** from IconFinder and react-icons to enhance UI aesthetics  
+
+- **Built 5+ interactive UI components and SPAs** with React, Next.js, and TailwindCSS
+- **Designed fully responsive, accessible, and high-performance interfaces**
+- **Created custom animations and transitions** using Framer Motion
+- **Blended artistic sensibilities into frontend development**, integrating illustration and design with code
+- **Curated and implemented icons and SVGs** from IconFinder and react-icons to enhance UI aesthetics
 
 All layouts, color palettes, and typography are self-chosen. The goal is to provide a unique, immersive experience that reflects both my technical skills and creative vision.
 
 ---
 
 ### 💭 A Thought I Believe In
+
 > “The wanderer who dwells is never truly lost.” – Paulo Coelho
 
 <div style="display: flex; align-items: center; gap: 15px;">
@@ -53,10 +57,11 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 ---
 
 ## **Contact Me**
-- Email: [sana.khuram.baig@gmail.com](mailto:sana.khuram.baig@gmail.com)  
-- LinkedIn: [linkedin.com/in/sana-khuram-157ba02b7](https://www.linkedin.com/in/sana-khuram-157ba02b7/)  
+
+- Email: [sana.khuram.baig@gmail.com](mailto:sana.khuram.baig@gmail.com)
+- LinkedIn: [linkedin.com/in/sana-khuram-157ba02b7](https://www.linkedin.com/in/sana-khuram-157ba02b7/)
 - GitHub: [github.com/sanakhuram](https://github.com/sanakhuram)
 
 ---
 
-**© Sana Khuram 2025**  
+**© Sana Khuram 2025**

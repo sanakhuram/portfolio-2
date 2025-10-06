@@ -13,15 +13,15 @@ const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 700 }) => {
 
   useEffect(() => {
     // Determine responsive dot count
-    const isMobile = window.innerWidth < 768; 
-    const dotCount = isMobile ? Math.floor(count / 2) : count; 
+    const isMobile = window.innerWidth < 768;
+    const dotCount = isMobile ? Math.floor(count / 2) : count;
 
     const generatedDots = Array.from({ length: dotCount }, (_, i) => ({
       id: i,
       top: Math.random() * 100,
       left: Math.random() * 100,
-      size: Math.random() * 2 + 2, 
-      opacity: Math.random() * 0.3 + 0.4, 
+      size: Math.random() * 2 + 2,
+      opacity: Math.random() * 0.3 + 0.4,
       color: `rgb(${150 + Math.random() * 50}, ${150 + Math.random() * 50}, ${150 + Math.random() * 50})`,
     }));
 
@@ -43,7 +43,6 @@ const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 700 }) => {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-
   }, [count]);
 
   return (

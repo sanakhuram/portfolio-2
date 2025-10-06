@@ -17,13 +17,12 @@ export default function Nav({ currentIndex, onSelect }: SimpleNavProps) {
   };
 
   return (
-<motion.nav
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, ease: 'easeOut' }}
-  className={`${headingFont.className} absolute top-5 left-1/2 -translate-x-1/2 z-10 flex flex-nowrap items-center gap-1 text-white text-base sm:text-lg `}
->
-
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className={`${headingFont.className} absolute top-5 left-1/2 -translate-x-1/2 z-10 flex flex-nowrap items-center gap-1 text-white text-base sm:text-lg `}
+    >
       {sections.map((section, i) => {
         const isActive = i === currentIndex;
         return (

@@ -74,15 +74,15 @@ Key Features:
 `,
     techStack: ['NextJS', 'React', 'Tailwind', 'Jest', 'TypeScript'],
   },
-{
-  title: 'Holidaze',
-  description: 'Venue booking platform .',
-  imageUrl: '/images/holidaze.jpg',
-  detailImageUrl: '/images/holidaze-detail.jpg',
-  slug: 'holidaze',
-  liveUrl: 'https://holidaze-green.vercel.app/',
-  repoUrl: 'https://github.com/sanakhuram/holidaze',
-  detailedDescription: `
+  {
+    title: 'Holidaze',
+    description: 'Venue booking platform .',
+    imageUrl: '/images/holidaze.jpg',
+    detailImageUrl: '/images/holidaze-detail.jpg',
+    slug: 'holidaze',
+    liveUrl: 'https://holidaze-green.vercel.app/',
+    repoUrl: 'https://github.com/sanakhuram/holidaze',
+    detailedDescription: `
 Holidaze is a full-featured accommodation booking platform built with Next.js, React, and TailwindCSS. Users can search venues, view details, book accommodations, and manage their reservations efficiently.
 
 Key Features:
@@ -93,15 +93,15 @@ Key Features:
 - Dark Mode Support
 - Admin Dashboard for Managing Venues
 `,
-  techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'API'],
-},
-{
+    techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'API'],
+  },
+  {
     title: 'Color Muse Blog',
     description: 'A blog featuring CRUD.',
     imageUrl: '/images/color-muse-blog.jpg',
     slug: 'color-muse-blog',
     techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
-  
+
     liveUrl: 'https://color-muse-blog-project-exam-1.netlify.app/',
     repoUrl: 'https://github.com/your-username/color-muse-blog',
     detailedDescription: `
@@ -119,12 +119,11 @@ Key Features:
     detailImageUrl: '/images/color-muse-blog-detail.jpg',
   },
   {
-  title: 'Follow The Steps',
-  description:
-    'Hiking & trail website.',
-  imageUrl: '/images/follow-the-steps.jpg',
-  slug: 'golden-egg-project',
-  techStack: ['CSS', 'HTML', 'JavaScript', 'API'],
+    title: 'Follow The Steps',
+    description: 'Hiking & trail website.',
+    imageUrl: '/images/follow-the-steps.jpg',
+    slug: 'golden-egg-project',
+    techStack: ['CSS', 'HTML', 'JavaScript', 'API'],
     liveUrl: 'https://sanakhuram.github.io/follow-the-steps/',
     repoUrl: 'https://github.com/sanakhuram/follow-the-steps',
     detailedDescription: `
@@ -139,15 +138,14 @@ Key Features:
 - Contact Form
 - Book a tour feature
 `,
-  detailImageUrl: '/images/follow-the-steps-detail.jpg',
-},
+    detailImageUrl: '/images/follow-the-steps-detail.jpg',
+  },
   {
     title: 'Brew & Bloom',
-    description:
-      'A modern coffee shop.',
+    description: 'A modern coffee shop.',
     imageUrl: '/images/brew-bloom.jpg',
     slug: 'brew-bloom',
- techStack: ['React', 'NextJS', 'TypeScript', 'API', 'Tailwind'],
+    techStack: ['React', 'NextJS', 'TypeScript', 'API', 'Tailwind'],
     liveUrl: 'https://coffee-cafe-app.vercel.app',
     repoUrl: 'https://github.com/sanakhuram/coffee-cafe-app',
     detailedDescription: `
@@ -163,10 +161,9 @@ Key Features:
 `,
     detailImageUrl: '/images/brew-bloom-detail.jpg',
   },
-    {
+  {
     title: 'Crypto Dashboard',
-    description:
-      'A cryptocurrency dashboard.',
+    description: 'A cryptocurrency dashboard.',
     imageUrl: '/images/cypto-dashboard.jpg',
     slug: 'crypto-dashboard',
     techStack: ['API', 'React', 'TypeScript', 'NextJS', 'Tailwind'],
@@ -184,13 +181,12 @@ Key Features:
 `,
     detailImageUrl: '/images/crypto-dashboard-detail.jpg',
   },
-    {
+  {
     title: 'Hope & Health Welfare Association',
-    description:
-      'A Charity website.',
+    description: 'A Charity website.',
     imageUrl: '/images/hope-health.jpg',
     slug: 'hope-health',
-    techStack: [ 'HTML', 'CSS', 'JavaScript'],
+    techStack: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://hopeandhealthwelfareassociation.com/',
     repoUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations',
     detailedDescription: `
@@ -210,10 +206,9 @@ Key Features:
 `,
     detailImageUrl: '/images/hope-health-detail.jpg',
   },
-    {
+  {
     title: 'Square Eyes',
-    description:
-      'A movie e-commerce website.',
+    description: 'A movie e-commerce website.',
     imageUrl: '/images/square-eyes.jpg',
     slug: 'square-eyes',
     techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
@@ -233,10 +228,9 @@ Key Features:
 `,
     detailImageUrl: '/images/square-eyes-detail.jpg',
   },
-    {
+  {
     title: 'Community Science Museum',
-    description:
-      'An educational museum site.',
+    description: 'An educational museum site.',
     imageUrl: '/images/community-science-museum.jpg',
     slug: 'community-science-museum',
     techStack: ['HTML', 'CSS'],
@@ -255,14 +249,14 @@ Key Features:
     detailImageUrl: '/images/community-science-museum-detail.jpg',
   },
   {
-  title: 'Rainy Days',
-  description: 'E-commerce website .',
-  imageUrl: '/images/rainy-days.jpg',
-  slug: 'rainy-days',
-  techStack: ['JavaScript' , 'API', 'HTML', 'CSS'],
-  liveUrl: 'https://sanakhuram.github.io/Rainy-Days/',
-  repoUrl: 'https://github.com/sanakhuram/rainy-days',
-  detailedDescription: `
+    title: 'Rainy Days',
+    description: 'E-commerce website .',
+    imageUrl: '/images/rainy-days.jpg',
+    slug: 'rainy-days',
+    techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
+    liveUrl: 'https://sanakhuram.github.io/Rainy-Days/',
+    repoUrl: 'https://github.com/sanakhuram/rainy-days',
+    detailedDescription: `
 Rainy Days is a fully responsive e-commerce website focused on jackets and outerwear. The platform integrates with a product API to display a wide range of items, allowing users to browse, filter, and purchase jackets with ease.
 
 Key Features:
@@ -275,7 +269,6 @@ Key Features:
 - A Checkout Page with Form Validation
 - Policy & Terms of Service Pages
 `,
-  detailImageUrl: '/images/rainy-days-detail.jpg',
-}
-
+    detailImageUrl: '/images/rainy-days-detail.jpg',
+  },
 ];

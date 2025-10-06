@@ -6,7 +6,7 @@ import ToastProvider from '@/components/ToastProvider';
 export const metadata: Metadata = {
   title: 'Sana Khuram',
   description: 'Portfolio website of Sana Khuram Frontend Developer',
-    icons: {
+  icons: {
     icon: '/favicon.ico',
   },
 };
@@ -14,7 +14,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`${headingFont.variable} ${bodyFont.variable}`} lang="en">
-      <body className="antialiased font-body">{children}
+      <body className="antialiased font-body">
+        {children}
         <ToastProvider />
       </body>
     </html>
