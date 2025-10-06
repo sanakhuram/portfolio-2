@@ -11,32 +11,32 @@ type HeroSectionProps = {
 
 const slides = [
   {
-    title: 'Hey, Im Sana',
-    subtitle: 'Frontend Developer & UX/UI Designer blending creativity and code to craft interactive experiences',
+    title: 'Hey, I’m Sana',
+    subtitle: 'Frontend Developer & UX/UI Designer creating interactive, user-focused experiences and open to collaboration',
     bg: '#adc178',
     targetIndex: -1,
   },
   {
     title: 'User-Centric Design',
-    subtitle: 'I create experiences from start to finish that guide users through a journey full of surprises',
+    subtitle: 'Designing experiences that guide users intuitively through digital journeys, combining creativity with usability',
     bg: '#DCDCDC',
     targetIndex: 2,
   },
   {
     title: 'Art + Technology',
-    subtitle: 'I combine my painting and design skills with frontend technology to build unique experiences',
+    subtitle: 'Blending my artistic side with frontend technology to create engaging, comforting, and user-inviting digital spaces',
     bg: '#edafb8',
     targetIndex: 1,
   },
   {
     title: 'Constant Learner',
-    subtitle: 'Eager to explore new tools, trends, and ways to bring art into technology',
+    subtitle: 'Always eager to explore new technologies, tools, and frameworks to enhance my development skills.',
     bg: '#333333',
     targetIndex: 4,
   },
   {
-    title: 'Let US Create',
-    subtitle: 'I merge design, illustration, and code to craft experiences that delight users',
+    title: 'Let Us Create',
+    subtitle: 'I’m looking forward to connecting and collaborating to bring creative ideas to life, lets just connect and create something exciting',
     bg: '#77afc3',
     targetIndex: 5,
   },
@@ -98,23 +98,26 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
             fontSize: 'clamp(1.25rem, 2.5vw, 2rem)',
             color: getSubtitleColor(slides[current].bg),
           }}
-          className={`${bodyFont.variable} font-bold uppercase mt-4 text-center relative z-10 max-w-[400px]`}
+          className={`${bodyFont.variable} font-bold uppercase mt-4 text-center relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg`}
         >
           {slides[current].subtitle}
         </motion.p>
       </AnimatePresence>
 
-      {/* View More Button */}
-      {slides[current].targetIndex !== -1 && (
-        <motion.button
-          onClick={() => onViewMore?.(slides[current].targetIndex)}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-6 mb-4 px-6 py-1 border-2 border-dashed border-white text-white font-semibold uppercase rounded-lg animate-pulse relative z-10"
-        >
-          View More
-        </motion.button>
-      )}
+{/* View More Button */}
+{slides[current].targetIndex !== -1 && (
+  <motion.button
+    onClick={() => onViewMore?.(slides[current].targetIndex)}
+    whileTap={{ scale: 0.95 }}
+    className="mt-6 mb-4 px-6 py-1 font-semibold uppercase rounded-lg relative z-10 overflow-hidden border-2 border-dashed border-white text-white
+      before:absolute before:top-[-100%] before:left-0 before:w-full before:h-full before:bg-gray-600/25 before:z-0
+      before:transition-transform before:duration-500 hover:before:translate-y-full
+      after:absolute after:inset-0 after:flex after:items-center after:justify-center after:z-10"
+  >
+    <span className="relative z-10">View More</span>
+  </motion.button>
+)}
+
 
       {/* Dots Navigation */}
       <div className="flex gap-3 mt-4 relative z-10">
