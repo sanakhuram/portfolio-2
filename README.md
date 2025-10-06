@@ -1,9 +1,7 @@
 # Sana Khuram | Frontend Developer & Designer 
 
 Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with a strong artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.  
-
-I have a **BFA in Miniature Painting** and a **Master’s in Interior Design**, which deeply informs my approach to UI/UX. Every interface I create is treated like a canvas—balancing color, layout, and flow to make digital experiences intuitive and captivating.  
-
+  
 This portfolio showcases my projects, skills, and personal design style. It is designed to be **focused, professional, and easy to navigate**, highlighting the work and experiences that best reflect my abilities.  
 
 ---
