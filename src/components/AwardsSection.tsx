@@ -11,13 +11,13 @@ export default function AwardsSection() {
       
       {/* Heading */}
       <div className="flex flex-col items-center text-center max-w-3xl">
-        <h2 className={`${headingFont.variable} text-3xl sm:text-4xl font-semibold mb-4`}>
-          Awards & Recognition
+        <h2 className={`${headingFont.variable} text-4xl sm:text-5xl md:text-6xl font-semibold mb-4`}>
+          Award & Recognition
         </h2>
-        <p className={`${bodyFont.variable} text-base sm:text-lg leading-relaxed mb-2`}>
+        <p className={`${bodyFont.variable} text-lg sm:text-xl md:text-2xl leading-relaxed mb-2`}>
           Honored to receive the <span className="font-bold">Golden Egg Award</span> for Best Student Work in Front-end Development (2025).
         </p>
-        <p className={`${bodyFont.variable} text-base sm:text-lg leading-relaxed`}>
+        <p className={`${bodyFont.variable} text-lg sm:text-xl md:text-2xl leading-relaxed`}>
           This award is a testament to my dedication and passion for creating exceptional digital experiences.
         </p>
       </div>
@@ -25,7 +25,7 @@ export default function AwardsSection() {
       {/* View/Hide PDF Button */}
       <button
         onClick={() => setShowPdf((prev) => !prev)}
-        className="mt-8 px-8 py-2 text-white border-2 border-dotted font-medium rounded-lg hover:shadow-lg transition-all duration-200"
+        className="mt-8 px-8 py-3 text-white border-2 border-dotted font-medium rounded-lg hover:shadow-lg transition-all duration-200 text-lg sm:text-xl"
       >
         {showPdf ? 'Hide Diploma' : 'View Diploma'}
       </button>

@@ -1,9 +1,8 @@
 @import 'tailwindcss';
 
 :root {
-  --font-heading: var(--font-limelight);
-  --font-body: var(--font-museomoderno);
-  --font-decorative: var(--font-sueellen);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
 /* Global styles */
@@ -20,10 +19,6 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading), cursive;
-}
-
-.decorative {
-  font-family: var(--font-decorative), cursive;
 }
 
 html,

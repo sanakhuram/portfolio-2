@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { bodyFont } from '../app/lib/fonts';
+import { bodyFont, headingFont } from '../app/lib/fonts';
 import {
   FaReact,
   FaHtml5,
@@ -149,7 +149,7 @@ export default function TechStackSection() {
       </svg>
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl">
-        {skillData && (
+        {skillData ? (
           <motion.div
             key={skillData.name}
             initial={{ opacity: 0, y: 20 }}
@@ -160,12 +160,15 @@ export default function TechStackSection() {
             <motion.div whileHover={{ y: -5, scale: 1.1 }} className="mb-4">
               {skillData.icon}
             </motion.div>
-            <h3 className="text-2xl font-semibold">{skillData.name}</h3>
-            <p className={`${bodyFont.variable} text-gray-300 max-w-xl`}>{skillData.description}</p>
+            <h3 className={`${headingFont.variable} text-3xl sm:text-4xl md:text-5xl font-bold`}>
+              {skillData.name}
+            </h3>
+            <p className={`${bodyFont.variable} text-gray-300 text-lg sm:text-xl md:text-2xl max-w-xl`}>
+              {skillData.description}
+            </p>
           </motion.div>
-        )}
-        {!skillData && (
-          <h1 className="text-gray-100/10 mb-12 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none">
+        ) : (
+          <h1 className={`${headingFont.variable} text-gray-100/10 mb-12 text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider select-none`}>
             Skills
           </h1>
         )}
@@ -177,8 +180,9 @@ export default function TechStackSection() {
               key={skill.name}
               whileHover={{ y: -4, backgroundColor: '#ffffff', color: '#111827' }}
               transition={{ type: 'spring', stiffness: 250, damping: 20 }}
-              className={`px-4 py-2 rounded-md border border-dotted border-white text-sm font-medium transition-colors ${selectedSkill === skill.name ? 'bg-white text-gray-900' : ''
-                }`}
+              className={`px-4 py-2 rounded-md border border-dotted border-white text-sm sm:text-base md:text-lg font-medium transition-colors ${
+                selectedSkill === skill.name ? 'bg-white text-gray-900' : ''
+              }`}
               onClick={() => setSelectedSkill(selectedSkill === skill.name ? null : skill.name)}
             >
               {skill.name}

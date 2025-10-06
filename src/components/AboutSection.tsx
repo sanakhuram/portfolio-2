@@ -55,7 +55,8 @@ export default function AboutMeSlider() {
 
   return (
     <section className="w-full min-h-screen flex items-center justify-center px-4 z-20">
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 max-w-[600px] w-full">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 max-w-[700px] w-full relative">
+        {/* Image */}
         <div className="flex-shrink-0 relative w-32 sm:w-40 md:w-48 aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/images/sana.jpg"
@@ -66,15 +67,18 @@ export default function AboutMeSlider() {
           />
         </div>
 
-        <div className="flex-1 flex flex-col items-start justify-center relative px-2 sm:px-4 md:px-0">
+        {/* Content */}
+        <div className="flex-1 flex flex-col items-center md:items-start justify-center relative px-2 sm:px-4 md:px-0">
+          {/* Switch mode button */}
           <button
             onClick={() => setMode(mode === 'about' ? 'education' : 'about')}
-            className="absolute right-0 top-0 border border-white rounded-full p-2 shadow hover:bg-gray-100 transition"
+            className="absolute -top-16 md:top-0 md:right-0 z-20 border border-white rounded-full p-2 shadow  hover:bg-gray-200 transition"
             title={`Switch to ${mode === 'about' ? 'Education' : 'About'}`}
           >
-            <FiRefreshCcw className="w-5 h-5 text-white hover:bg-white hover:text-red-300" />
+            <FiRefreshCcw className="w-5 h-5 text-white hover:text-red-300" />
           </button>
 
+          {/* About / Education Content */}
           <AnimatePresence mode="wait">
             {mode === 'about' && (
               <motion.div
@@ -83,13 +87,16 @@ export default function AboutMeSlider() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
+                className="flex flex-col items-center md:items-start"
               >
                 <h2
-                  className={`${headingFont.variable} text-2xl md:text-3xl font-bold mb-4 text-white`}
+                  className={`${headingFont.variable} text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white text-center md:text-left`}
                 >
                   {aboutSections[currentSlide].title}
                 </h2>
-                <p className={`${bodyFont.variable} text-sm md:text-base text-white`}>
+                <p
+                  className={`${bodyFont.variable} text-base sm:text-lg md:text-xl text-white leading-relaxed text-center md:text-left`}
+                >
                   {aboutSections[currentSlide].description}
                 </p>
 
@@ -117,16 +124,17 @@ export default function AboutMeSlider() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
+                className="flex flex-col items-center md:items-start"
               >
                 {educationSections.map((edu, idx) => (
-                  <div key={idx}>
+                  <div key={idx} className="w-full">
                     <h2
-                      className={`${headingFont.variable} text-2xl md:text-3xl font-bold mb-4 text-white`}
+                      className={`${headingFont.variable} text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white text-center md:text-left`}
                     >
                       {edu.title}
                     </h2>
                     <ul
-                      className={`${bodyFont.variable} text-sm md:text-base text-white list-disc list-inside space-y-1`}
+                      className={`${bodyFont.variable} text-base sm:text-lg md:text-xl text-white list-disc list-inside space-y-1 leading-relaxed text-center md:text-left`}
                     >
                       {edu.description.map((item, i) => (
                         <li key={i} dangerouslySetInnerHTML={{ __html: item }} />

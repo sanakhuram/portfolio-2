@@ -4,24 +4,23 @@ import Image from 'next/image';
 import { JSX, use } from 'react';
 import { useRouter } from 'next/navigation';
 import { projects } from '@/utils/projectData';
-import { headingFont } from '../../lib/fonts';
+import { headingFont, bodyFont } from '../../lib/fonts';
 import { FiExternalLink, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { SiGithub, SiJavascript, SiTailwindcss, SiVite, SiReact, SiNextdotjs, SiHtml5, SiJest } from 'react-icons/si';
 import { useState } from 'react';
 
 const techIcons: Record<string, JSX.Element> = {
-  JavaScript: <SiJavascript className="w-5 h-5 text-yellow-400" />,
-  TypeScript: <span className="w-5 h-5 text-blue-600 font-bold text-xs">TS</span>,
-  React: <SiReact className="w-5 h-5 text-blue-400" />,
-  NextJS: <SiNextdotjs className="w-5 h-5 text-black" />,
-  Tailwind: <SiTailwindcss className="w-5 h-5 text-teal-400" />,
-  Vite: <SiVite className="w-5 h-5 text-purple-400" />,
-  HTML: <SiHtml5 className="w-5 h-5 text-orange-500" />,
-  CSS: <span className="w-5 h-5 text-blue-500 font-bold text-xs">CSS</span>,
-  API: <span className="w-5 h-5 text-gray-600 font-bold text-xs">API</span>,
-  Jest: <SiJest className="w-5 h-5 text-red-500" />,
+  JavaScript: <SiJavascript className="w-6 h-6 text-yellow-400" />,
+  TypeScript: <span className="w-6 h-6 text-blue-600 font-bold text-sm">TS</span>,
+  React: <SiReact className="w-6 h-6 text-blue-400" />,
+  NextJS: <SiNextdotjs className="w-6 h-6 text-black" />,
+  Tailwind: <SiTailwindcss className="w-6 h-6 text-teal-400" />,
+  Vite: <SiVite className="w-6 h-6 text-purple-400" />,
+  HTML: <SiHtml5 className="w-6 h-6 text-orange-500" />,
+  CSS: <span className="w-6 h-6 text-blue-500 font-bold text-sm">CSS</span>,
+  API: <span className="w-6 h-6 text-gray-600 font-bold text-sm">API</span>,
+  Jest: <SiJest className="w-6 h-6 text-red-500" />,
 };
-
 
 export default function ProjectArticle({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
@@ -45,14 +44,13 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
       <div className="relative w-full max-w-7xl bg-gray-100 rounded-2xl shadow-xl overflow-hidden">
 
         {/* Close Button (X) */}
-<button
-  onClick={() => router.back()}
-  className="absolute  right-2 w-6 h-6 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 text-3xl font-bold transition-colors duration-300 hover:bg-gray-400 hover:text-white z-50"
-  aria-label="Close Project"
->
-  ×
-</button>
-
+        <button
+          onClick={() => router.back()}
+          className="absolute right-2 w-6 h-6 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 text-3xl font-bold transition-colors duration-300 hover:bg-gray-400 hover:text-white z-50"
+          aria-label="Close Project"
+        >
+          ×
+        </button>
 
         {/* Top Bar */}
         <div className="flex items-center gap-2 px-4 py-2 bg-gray-300">
@@ -70,21 +68,21 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
               alt={project.title}
               width={800}
               height={500}
-              className="w-full h-auto object-contain "
+              className="w-full h-auto object-contain"
             />
           </div>
 
           {/* Right: Description & Info */}
           <div className="lg:flex-1 flex flex-col justify-between gap-4">
             <div>
-              <h3 className="text-xs text-gray-500 font-medium">PROJECT</h3>
-              <h2 className={`${headingFont.variable} text-2xl sm:text-3xl font-bold text-gray-800 my-2`}>
+              <h3 className={`${bodyFont.variable} text-lg text-gray-500 font-medium`}>PROJECT</h3>
+              <h2 className={`${headingFont.variable} text-3xl sm:text-4xl font-bold text-gray-800 my-2`}>
                 {project.title}
               </h2>
 
               {/* Description */}
-              <div className="text-gray-600 text-sm space-y-2 max-h-[350px] overflow-y-auto pr-2">
-                <h3 className="font-medium">ABOUT</h3>
+              <div className={`${bodyFont.variable} text-base sm:text-lg md:text-xl space-y-3 max-h-[400px] overflow-y-auto pr-2 text-gray-700`}>
+                <h3 className="font-semibold text-gray-600 text-lg">ABOUT</h3>
                 {project.detailedDescription.split('\n').map((line, idx) => (
                   <p key={idx}>{line}</p>
                 ))}
@@ -95,7 +93,7 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
                 {project.techStack.map((tech) => (
                   <div
                     key={tech}
-                    className="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full shadow-sm"
+                    className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full shadow-sm"
                   >
                     {techIcons[tech]}
                   </div>
@@ -109,18 +107,18 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1 px-3 py-1.5 rounded-md bg-gray-600 text-white text-xs font-semibold"
+                className={`${bodyFont.variable} inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gray-600 text-white text-sm font-semibold`}
               >
-                <FiExternalLink className="w-4 h-4" /> LAUNCH
+                <FiExternalLink className="w-5 h-5" /> LAUNCH
               </a>
 
               <a
                 href={project.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1 px-3 py-1.5 rounded-md bg-gray-900 text-white text-xs font-semibold"
+                className={`${bodyFont.variable} inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-semibold`}
               >
-                <SiGithub className="w-4 h-4" /> REPO
+                <SiGithub className="w-5 h-5" /> REPO
               </a>
             </div>
           </div>
@@ -133,27 +131,28 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
             className="p-2 rounded-full hover:bg-gray-100 transition"
             aria-label="Previous Project"
           >
-            <FiChevronLeft size={24} />
+            <FiChevronLeft size={28} />
           </button>
-          <span className="text-sm text-gray-500">{currentIndex + 1}/{projects.length}</span>
+          <span className={`${bodyFont.variable} text-base text-gray-500`}>
+            {currentIndex + 1}/{projects.length}
+          </span>
           <button
             onClick={nextProject}
             className="p-2 rounded-full hover:bg-gray-100 transition"
             aria-label="Next Project"
           >
-            <FiChevronRight size={24} />
+            <FiChevronRight size={28} />
           </button>
         </div>
       </div>
 
- {/* Monitor Stand */}
-<div className="flex justify-center ">
-  <div className="w-32 h-9 bg-gray-400 border-t-2 border-white "></div>
-</div>
-<div className="flex justify-center ">
-  <div className="w-45 h-2 bg-gray-400 border-b-2 border-white rounded-t-2xl "></div>
-</div>
-
+      {/* Monitor Stand */}
+      <div className="flex justify-center">
+        <div className="w-32 h-9 bg-gray-400 border-t-2 border-white"></div>
+      </div>
+      <div className="flex justify-center">
+        <div className="w-45 h-2 bg-gray-400 border-b-2 border-white rounded-t-2xl"></div>
+      </div>
     </div>
   );
 }

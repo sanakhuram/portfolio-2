@@ -29,7 +29,7 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
       {/* Projects Grid */}
       <motion.div
         layout
-        className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4 w-full max-w-6xl mb-6 justify-items-center"
+        className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6 w-full max-w-6xl mb-6 justify-items-center"
       >
         <AnimatePresence>
           {displayedProjects.map((project: Project) => (
@@ -44,7 +44,7 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
               onClick={() => router.push(`/projects/${project.slug}`)}
             >
               {/* Image */}
-              <div className="relative w-full h-48 mb-3 border-2 border-gray-200 overflow-hidden group">
+              <div className="relative w-full h-48 mb-3 border-2 border-gray-200 overflow-hidden">
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
@@ -54,21 +54,29 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
                 />
               </div>
 
+              {/* Title + Info Icon */}
+              <div className="flex items-center justify-between w-full mb-1">
+                <h3 className={`${headingFont.variable} text-gray-600 md:text-lg font-bold`}>
+                  {project.title}
+                </h3>
 
-              {/* Title */}
-              <h3 className={`${headingFont.variable} text-gray-600 md:text-lg font-bold mb-1`}>
-                {project.title}
-              </h3>
+                <motion.div
+                  whileHover={{ scale: 1.2 }}
+                  className="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-500 rounded-full transition-colors duration-200 cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation(); 
+                    router.push(`/projects/${project.slug}`); 
+                  }}
+                  title="More info"
+                >
+                  <FiInfo />
+                </motion.div>
+              </div>
 
               {/* Description */}
               <p className={`${bodyFont.variable} text-gray-700 text-xs md:text-sm`}>
                 {project.description}
               </p>
-
-              {/* Info Icon */}
-              <div className="absolute bottom-3 right-3 w-7 h-7 rounded-full flex items-center justify-center text-gray-400 text-base group-hover:text-white hover:bg-gray-500 transition-colors duration-200">
-                <FiInfo />
-              </div>
             </motion.div>
           ))}
         </AnimatePresence>
