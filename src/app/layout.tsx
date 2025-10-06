@@ -4,8 +4,8 @@ import { headingFont, bodyFont } from '@/app/lib/fonts';
 import ToastProvider from '@/components/ToastProvider';
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'My portfolio site',
+  title: 'Sana Khuram',
+  description: 'Portfolio website of Sana Khuram Frontend Developer',
     icons: {
     icon: '/favicon.ico',
   },
