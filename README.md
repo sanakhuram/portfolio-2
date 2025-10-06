@@ -41,9 +41,18 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 
 > “Creativity is intelligence having fun.” – Albert Einstein
 
-<img src="image.png" alt="Creative Animation" width="180" />
+<table>
+  <tr>
+    <td>
+      <img src="image.png" alt="Creative Animation" width="150" />
+    </td>
+    <td style="padding-left: 15px; vertical-align: middle;">
+      <p>🐱 I’m a playful frontend dev, always ready to mix creativity and code!<br>
+      Feel free to explore my projects and reach out via the contact section—I’m always excited to collaborate and bring creative ideas to life!</p>
+    </td>
+  </tr>
+</table>
 
-Feel free to explore my projects and reach out via the contact section—I’m always excited to collaborate and bring creative ideas to life!
 
 
 
