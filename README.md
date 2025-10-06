@@ -43,7 +43,7 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 > “The wanderer who dwells is never truly lost.” – Paulo Coelho
 
 <div style="display: flex; align-items: center; gap: 15px;">
-  <img src="image.png" alt="Sana Khuram creative illustration" width="150" style="display:block;" />
+  <img src="image.png" alt="illustration" width="150" style="display:block;" />
   <div>
     I’m a playful frontend dev, always ready to mix creativity and code!<br>
     Feel free to explore my projects and reach out via the contact section—I’m always excited to collaborate and bring creative ideas to life!
