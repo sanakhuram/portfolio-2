@@ -1,4 +1,4 @@
-# Sana Khuram | Frontend Developer & Designer
+# Sana Khuram | Frontend Developer
 
 Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with a strong artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.  
 
