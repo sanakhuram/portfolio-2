@@ -7,6 +7,7 @@ export type Project = {
   slug: string;
   liveUrl: string;
   repoUrl: string;
+  readUrl: string;
   detailedDescription: string; // text shown on slug page
   techStack: string[];
 };
@@ -20,23 +21,12 @@ export const projects: Project[] = [
   slug: 'auction-hub',
   liveUrl: 'https://auction-hub.netlify.app/',
   repoUrl: 'https://github.com/sanakhuram/auction-hub-SP2',
+  readUrl: 'https://github.com/sanakhuram/auction-hub-SP2/blob/main/README.md',
   detailedDescription: `
 Project Overview:
 This project was built as part of the Semester 2 Project Exam for web development. Auction Hub is a professional online auction platform that allows registered users to create, edit, delete listings, place bids, track bid history, and view other users' profiles and bids. Non-registered users can browse listings only.
 
-Updated Tech Stack:
-- JavaScript (Vanilla): Core application logic and API handling
-- Vite.js: Fast frontend build tool
-- Tailwind CSS: Utility-first CSS framework for UI styling
-- LocalStorage: JWT token storage for authentication
-- Noroff API (REST API): Backend API for managing auctions
-- Netlify: Deployment and hosting
-- ESLint: Linting tool to enforce code quality
-- Prettier: Code formatter for consistent styling
-- Husky: Git hooks for pre-commit checks
-- Playwright: End-to-end testing framework
-
-Features:
+Key Features:
 - User Authentication: Secure login and registration for buyers and sellers
 - Listing Management: Create, edit, and delete own listings
 - Bidding System: Place bids, track bid history, view highest bids, see winning bids
@@ -47,6 +37,18 @@ Features:
 - Scrollable Content: Smooth scrolling for long lists of auctions
 - Custom Styles: Custom color classes and shadows applied throughout the UI
 - Viewing Others: Logged-in users can view other profiles and their bid history
+
+Tech Stack:
+- JavaScript (Vanilla): Core application logic and API handling
+- Vite.js: Fast frontend build tool
+- Tailwind CSS: Utility-first CSS framework for UI styling
+- LocalStorage: JWT token storage for authentication
+- Noroff API (REST API): Backend API for managing auctions
+- Netlify: Deployment and hosting
+- ESLint: Linting tool to enforce code quality
+- Prettier: Code formatter for consistent styling
+- Husky: Git hooks for pre-commit checks
+- Playwright: End-to-end testing framework
 
 How to Use the App:
 1. Sign Up/Login:
@@ -101,6 +103,7 @@ How to Use the App:
     slug: 'sociogram',
     liveUrl: 'https://sociogram-app.netlify.app/',
     repoUrl: 'https://github.com/sanakhuram/css-frameworks',
+    readUrl: 'https://github.com/sanakhuram/css-frameworks/blob/main/README.md',
     detailedDescription: `
 Project Overview:
 This project is part of the CSS Frameworks Assignment, where Tailwind CSS was integrated into an existing JavaScript 2 Course Assignment (JS2CA). Sociogram is a client-side social media app allowing users to interact and manage content dynamically.
@@ -162,6 +165,7 @@ How to Use the App:
     slug: 'vibe-cart',
     liveUrl: 'https://jsfw-sanakhuram.vercel.app/',
     repoUrl: 'https://github.com/sanakhuram/jsfw-sanakhuram',
+    readUrl: 'https://github.com/sanakhuram/jsfw-sanakhuram/blob/master/README.md',
     detailedDescription: `
 Vibe Cart is a modern, fully functional e-commerce platform built with Next.js, React, TypeScript, and TailwindCSS. Users can browse products, add to favorites, manage cart items, and checkout efficiently. The platform includes a responsive layout, animations via Framer Motion, a contact form, and a Terms & Conditions page.
 
@@ -215,6 +219,7 @@ Additional Notes:
     slug: 'holidaze',
     liveUrl: 'https://holidaze-green.vercel.app/',
     repoUrl: 'https://github.com/sanakhuram/holidaze',
+    readUrl : 'https://github.com/sanakhuram/holidaze/blob/master/README.md',
     detailedDescription: `
 Holidaze is a full-featured accommodation booking platform built with Next.js, React, and TailwindCSS. Users can search venues, view details, book accommodations, and manage their reservations efficiently.
 
@@ -237,7 +242,8 @@ Key Features:
     techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
 
     liveUrl: 'https://color-muse-blog-project-exam-1.netlify.app/',
-    repoUrl: 'https://github.com/your-username/color-muse-blog',
+    repoUrl: 'https://github.com/sanakhuram/FED-PE1-SanaKhuram-color-muse-blog-',
+    readUrl: 'https://github.com/sanakhuram/FED-PE1-SanaKhuram-color-muse-blog-/blob/main/README.md',
     detailedDescription: `
 Color Muse Blog is a responsive blogging platform that allows users to create, read, update, and delete blog posts. The application features a carousel to showcase featured posts and provides a user-friendly interface for managing content.
 
@@ -261,6 +267,7 @@ Key Features:
     techStack: ['CSS', 'HTML', 'JavaScript', 'API'],
     liveUrl: 'https://sanakhuram.github.io/follow-the-steps/',
     repoUrl: 'https://github.com/sanakhuram/follow-the-steps',
+    readUrl: 'https://github.com/sanakhuram/follow-the-steps/blob/main/README.md',
     detailedDescription: `
 Follow the Steps is a hiking and trails discovery website focused on the Trondheim area. It features interactive maps and detailed trail information using OpenStreetMap API. Winner of Noroff’s Golden Egg Award 2025 ,.
 
@@ -284,6 +291,7 @@ Key Features:
     techStack: ['React', 'NextJS', 'TypeScript', 'API', 'Tailwind'],
     liveUrl: 'https://coffee-cafe-app.vercel.app',
     repoUrl: 'https://github.com/sanakhuram/coffee-cafe-app',
+    readUrl: 'https://github.com/sanakhuram/coffee-cafe-app/blob/master/README.md',
     detailedDescription: `
 Brew & Bloom is a modern coffee shop web application that allows users to browse the menu, place orders, and manage their profiles. The app features a custom-built API for handling menu items, orders, and user interactions.
 
@@ -306,6 +314,7 @@ Key Features:
     techStack: ['API', 'React', 'TypeScript', 'NextJS', 'Tailwind'],
     liveUrl: 'https://crypto-dashboard-nine-gilt.vercel.app',
     repoUrl: 'https://github.com/sanakhuram/crypto-dashboard',
+    readUrl: 'https://github.com/sanakhuram/crypto-dashboard/blob/master/README.md',
     detailedDescription: `
 Crypto Dashboard is a real-time cryptocurrency dashboard that provides users with up-to-date information on various cryptocurrencies. The app utilizes the CoinGecko API to fetch data and is built with React, TypeScript, and TailwindCSS.
 
@@ -327,6 +336,7 @@ Key Features:
   techStack: ['HTML', 'CSS', 'JavaScript', 'EmailJS'],
   liveUrl: 'https://hopeandhealthwelfareassociation.com/',
   repoUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations',
+  readUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations/blob/main/README.md',
   detailedDescription: `
 Hope & Health Welfare Association is a non-profit organization dedicated to improving community health, education, and social welfare in Okara, Pakistan, with a special focus on empowering underprivileged girls. This website was designed from Figma to code, including custom logo and branding, responsive layout, and integration with donation and shop features.
 
@@ -374,6 +384,7 @@ Key Features:
   techStack: ['API', 'HTML', 'JavaScript', 'Tailwind'],
   liveUrl: 'https://sanakhuram.github.io/Food-Blog/',
   repoUrl: 'https://github.com/sanakhuram/Food-Blog',
+  readUrl: 'https://github.com/sanakhuram/Food-Blog/blob/main/README.md',
   detailedDescription: `
 Food Blog is a responsive website where users can search for recipes using the Spoonacular API. The search functionality displays up to 10 recipes at a time. 
 
@@ -407,6 +418,7 @@ Key Features:
   techStack: ['JavaScript', 'API', 'HTML', 'CSS', 'FIGMA'],
   liveUrl: 'https://sanakhuram.github.io/squareEyes-js/',
   repoUrl: 'https://github.com/sanakhuram/squareEyes-js',
+  readUrl: 'https://github.com/sanakhuram/squareEyes-js/blob/main/READme.md',
   detailedDescription: `
 Square Eyes is a responsive e-commerce website designed for movie enthusiasts. The project was built from Figma to code, featuring CSS gradients, shadows, and modern interactive UI elements using HTML, CSS, and JavaScript. It integrates with the Noroff API to display a wide selection of movies across various genres.
 
@@ -447,6 +459,7 @@ Key Features:
     techStack: ['HTML', 'CSS'],
     liveUrl: 'https://sanakhuram.github.io/semester-project-sana-khuram/',
     repoUrl: 'https://github.com/sanakhuram/semester-project-sana-khuram',
+    readUrl: 'https://github.com/sanakhuram/semester-project-sana-khuram/blob/main/README.md',
     detailedDescription: `
 Community Science Museum is an educational website designed for primary and middle school children (ages 7–15) and their families. The site provides interactive exhibits, educational resources, and fun activities to engage young minds in the wonders of science.
 
@@ -468,6 +481,7 @@ Key Features:
     techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
     liveUrl: 'https://sanakhuram.github.io/Rainy-Days/',
     repoUrl: 'https://github.com/sanakhuram/rainy-days',
+    readUrl: 'https://github.com/sanakhuram/Rainy-Days/blob/main/README.md',
     detailedDescription: `
 Rainy Days is a fully responsive e-commerce website focused on jackets and outerwear. The platform integrates with a product API to display a wide range of items, allowing users to browse, filter, and purchase jackets with ease.
 
@@ -492,6 +506,7 @@ Key Features:
   techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
   liveUrl: 'https://sanakhuram.github.io/BilblioTint/',
   repoUrl: 'https://github.com/sanakhuram/BilblioTint',
+  readUrl: 'https://github.com/sanakhuram/BilblioTint/blob/main/README.md',
   detailedDescription: `
 BiblioTint is a responsive web application that allows users to search for books, explore new authors, and view detailed information for each book using the Google Books API.
 

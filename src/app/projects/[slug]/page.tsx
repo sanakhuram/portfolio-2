@@ -15,6 +15,7 @@ import {
   SiNextdotjs,
   SiHtml5,
   SiJest,
+  SiReadme,
 } from 'react-icons/si';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
@@ -150,7 +151,7 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
               </div>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-3 mt-4">
+              <div className="flex flex-wrap gap-3 mt-5">
                 {project.techStack.map((tech) => (
                   <div
                     key={tech}
@@ -162,26 +163,51 @@ export default function ProjectArticle({ params }: { params: Promise<{ slug: str
               </div>
             </div>
 
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 mt-4">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${bodyFont.variable} inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gray-600 text-white text-sm font-semibold`}
-              >
-                <FiExternalLink className="w-5 h-5" /> LAUNCH
-              </a>
+          {/* Buttons */}
+<div className="flex flex-col sm:flex-row gap-3 mt-4">
+  {/* LAUNCH */}
+  <a
+    href={project.liveUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`${bodyFont.variable} relative group inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gray-500 text-white text-sm font-semibold overflow-hidden border border-transparent transition-all duration-300 group-hover:border-dotted group-hover:border-gray-800`}
+  >
+    {/* Curtain */}
+    <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
 
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${bodyFont.variable} inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-semibold`}
-              >
-                <SiGithub className="w-5 h-5" /> REPO
-              </a>
-            </div>
+    {/* Text + Icon */}
+    <span className="relative z-10 inline-flex items-center gap-1 group-hover:text-gray-800">
+      <FiExternalLink className="w-5 h-5" /> LAUNCH
+    </span>
+  </a>
+
+  {/* REPO */}
+  <a
+    href={project.repoUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`${bodyFont.variable} relative group inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gray-700 text-white text-sm font-semibold overflow-hidden border border-transparent transition-all duration-300 group-hover:border-dotted group-hover:border-gray-800`}
+  >
+    <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+    <span className="relative z-10 inline-flex items-center gap-1 group-hover:text-gray-800">
+      <SiGithub className="w-5 h-5" /> REPO
+    </span>
+  </a>
+
+  {/* READ */}
+  <a
+    href={project.readUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`${bodyFont.variable} relative group inline-flex items-center justify-center gap-1 px-4 py-2 rounded-md bg-gray-900 text-white text-sm font-semibold overflow-hidden border border-transparent transition-all duration-300 group-hover:border-dotted group-hover:border-gray-800`}
+  >
+    <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
+    <span className="relative z-10 inline-flex items-center gap-1 group-hover:text-gray-800">
+      <SiReadme className="w-5 h-5" /> READ
+    </span>
+  </a>
+</div>
+
           </div>
         </div>
 

@@ -14,7 +14,7 @@ const slides = [
     title: 'Hey Im Sana',
     subtitle:
       'Frontend Developer & UX/UI Designer creating interactive, user-focused experiences and open to collaboration',
-    bg: '#adc178',
+    bg: '#77afc3',
     targetIndex: -1,
   },
   {
@@ -42,7 +42,7 @@ const slides = [
     title: 'Let Us Create',
     subtitle:
       'I’m looking forward to connecting and collaborating to bring creative ideas to life, lets just connect and create something exciting',
-    bg: '#77afc3',
+    bg: '#adc178',
     targetIndex: 5,
   },
 ];
@@ -80,7 +80,7 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: -20, scale: 0.95 }}
           transition={{ duration: 0.6 }}
-          className={`${headingFont.variable} font-extrabold uppercase text-center text-white relative z-10`}
+          className={`${headingFont.variable} font-extrabold uppercase text-center text-white relative z-10 mt-15`}
           style={{
             fontSize: 'clamp(3rem, 10vw, 8rem)',
             maxWidth: 'clamp(20rem, 70vw, 60rem)',
