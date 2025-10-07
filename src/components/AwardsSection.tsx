@@ -16,7 +16,7 @@ export default function AwardsSection() {
           Award & Recognition
         </h2>
         <p className={`${bodyFont.variable} text-lg sm:text-xl md:text-2xl leading-relaxed mb-2`}>
-          Honored to receive the <span className="font-bold">Golden Egg Award</span> for Best
+          Honored to receive the <span className="font-bold text-yellow-500">Golden Egg Award</span> for Best
           Student Work in Front-end Development (2025).
         </p>
         <p className={`${bodyFont.variable} text-lg sm:text-xl md:text-2xl leading-relaxed`}>
