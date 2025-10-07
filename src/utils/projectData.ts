@@ -14,7 +14,7 @@ export const projects: Project[] = [
 {
   category:'Academic Project',
   title: 'Auction Hub',
-  description: 'Online auction platform with bidding, listings, and refined user features.',
+  description: 'Online auction platform with CURD functionality',
   imageUrl: '/images/auction.jpg',
   detailImageUrl: '/images/auction-detail.jpg',
   slug: 'auction-hub',
@@ -95,7 +95,7 @@ How to Use the App:
   {
     title: 'Sociogram',
     category:'Academic Project',
-    description: 'Social media app with full CRUD functionality and Tailwind CSS.',
+    description: 'Social media app with full CRUD functionality.',
     imageUrl: '/images/sociogram.jpg',
     detailImageUrl: '/images/sociogram-detail.jpg',
     slug: 'sociogram',
@@ -319,54 +319,125 @@ Key Features:
     detailImageUrl: '/images/crypto-dashboard-detail.jpg',
   },
   {
-    title: 'Hope & Health Welfare Association',
-    category: 'Client Project',
-    description: 'A Charity website.',
-    imageUrl: '/images/hope-health.jpg',
-    slug: 'hope-health',
-    techStack: ['HTML', 'CSS', 'JavaScript'],
-    liveUrl: 'https://hopeandhealthwelfareassociation.com/',
-    repoUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations',
-    detailedDescription: `
-Hope & Health Welfare Association is a non-profit organization dedicated to improving community health and well-being. The website is designed with accessibility and user-friendliness in mind, ensuring that all users can easily navigate and access information about the organization's mission, programs, and events.
+  title: 'Hope & Health Welfare Association',
+  category: 'Client Project',
+  description: 'A responsive charity website.',
+  imageUrl: '/images/hope-health.jpg',
+  slug: 'hope-health',
+  techStack: ['HTML', 'CSS', 'JavaScript', 'EmailJS'],
+  liveUrl: 'https://hopeandhealthwelfareassociation.com/',
+  repoUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations',
+  detailedDescription: `
+Hope & Health Welfare Association is a non-profit organization dedicated to improving community health, education, and social welfare in Okara, Pakistan, with a special focus on empowering underprivileged girls. This website was designed from Figma to code, including custom logo and branding, responsive layout, and integration with donation and shop features.
 
 Key Features:
-- Accessibility-Focused Design
-- Responsive Layout
-- Informational Pages
-- Contact Forms
--  donation Integration
-- language Support (English & Urdu)
-- Volunteer Sign-Up
-- Event Calendar
-- Newsletter Subscription
-- Stichbox an online store for handicrafts
+
+1. Multi-Page Website:
+- Home, About Us, Our Work, Donations, Get Involved, Shop, News & Updates, Contact Us.
+- Fully responsive design for mobile, tablet, and desktop.
+
+2. Donations & Shop:
+- Integrated donation page for fundraising.
+- Online store ("Stitchbox") selling handmade items by the girls, with proceeds supporting the charity.
+
+3. Interactive & Dynamic Features:
+- JavaScript-driven UI enhancements.
+- EmailJS integration for contact forms, volunteer sign-ups, and donation inquiries.
+
+4. Accessibility & Language Support:
+- Website designed for accessibility.
+- Supports English & Urdu translations.
+
+5. Visual Design:
+- Logo and branding designed with Canva.
+- Images and videos provided by the charity organization.
+- Color palette chosen to reflect women empowerment and community focus.
+
+6. Content Integration:
+- Text content created collaboratively with the charity’s administration.
+- Galleries and video sections showcasing programs and events.
+
+7. Impact:
+- Since launch, donation insights have increased.
+- Website serves as a central platform for community engagement, volunteer coordination, and fundraising.
 `,
-    detailImageUrl: '/images/hope-health-detail.jpg',
-  },
-  {
-    title: 'Square Eyes',
-    category:'Academic Project',
-    description: 'A movie e-commerce website.',
-    imageUrl: '/images/square-eyes.jpg',
-    slug: 'square-eyes',
-    techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
-    liveUrl: 'https://sanakhuram.github.io/squareEyes-js/',
-    repoUrl: 'https://github.com/sanakhuram/squareEyes-js',
-    detailedDescription: `
-Square Eyes is a responsive e-commerce website designed for movie enthusiasts. The platform integrates with the Noroff API to offer a wide selection of movie genres, allowing users to browse, search, and purchase their favorite films.
+  detailImageUrl: '/images/hope-health-detail.jpg',
+},
+
+
+{
+  title: 'Food Blog',
+  category: 'Learning Project',
+  description: 'A responsive food blog website.',
+  imageUrl: '/images/food-blog.jpg',
+  slug: 'food-blog',
+  techStack: ['API', 'HTML', 'JavaScript', 'Tailwind'],
+  liveUrl: 'https://sanakhuram.github.io/Food-Blog/',
+  repoUrl: 'https://github.com/sanakhuram/Food-Blog',
+  detailedDescription: `
+Food Blog is a responsive website where users can search for recipes using the Spoonacular API. The search functionality displays up to 10 recipes at a time. 
 
 Key Features:
-- Responsive Design
-- Movie Browsing & Search
-- Genre Filtering
-- User Reviews & Ratings
-- Add to Cart Functionality
-- A Checkout Page with Form Validation
-- Policy & Terms of Service Pages
+
+1. Home Page:
+- Displays a search filter where users can type recipe names.
+- Shows 10 results per search with recipe title and image.
+- Fully responsive design for mobile, tablet, and desktop.
+
+2. Recipe Details:
+- Clicking a recipe opens a detailed page.
+- Includes step-by-step instructions, ingredients, and other recipe information.
+
+3. API Integration:
+- Uses Spoonacular API to fetch real recipe data dynamically.
+- Ensures up-to-date information and variety of recipes.
+
+4. Styling:
+- Built with Tailwind CSS for modern, responsive, utility-first styling.
+- Clean and interactive UI with dynamic JavaScript elements.
 `,
-    detailImageUrl: '/images/square-eyes-detail.jpg',
-  },
+  detailImageUrl: '/images/food-blog-detail.jpg',
+},
+{
+  title: 'Square Eyes',
+  category: 'Academic Project',
+  description: 'A responsive movie e-commerce website.',
+  imageUrl: '/images/square-eyes.jpg',
+  slug: 'square-eyes',
+  techStack: ['JavaScript', 'API', 'HTML', 'CSS', 'FIGMA'],
+  liveUrl: 'https://sanakhuram.github.io/squareEyes-js/',
+  repoUrl: 'https://github.com/sanakhuram/squareEyes-js',
+  detailedDescription: `
+Square Eyes is a responsive e-commerce website designed for movie enthusiasts. The project was built from Figma to code, featuring CSS gradients, shadows, and modern interactive UI elements using HTML, CSS, and JavaScript. It integrates with the Noroff API to display a wide selection of movies across various genres.
+
+Key Features:
+
+1. Movie Browsing & Genre Filtering:
+- Users can browse movies and filter by genres like Action, Drama, Comedy, Horror, and Kids.
+- Provides an intuitive and accessible browsing experience.
+
+2. Movie Details:
+- Clicking a movie shows detailed information, including title, description, rating, and other relevant data fetched from the Noroff API.
+
+3. Add to Cart & Checkout:
+- Users can select movies, add them to a shopping cart, and proceed to checkout.
+- Checkout page includes form validation for a smooth transaction process.
+
+4. Responsive Design & Accessibility:
+- Fully responsive across mobile, tablet, and desktop devices.
+- Designed with accessibility in mind, following WCAG best practices and tested with WAVE tool.
+
+5. API Integration:
+- Connects to the Noroff Dev API to fetch real movie data dynamically.
+- Ensures interactive and up-to-date content for users.
+
+6. Design & Development:
+- UI/UX designed in Figma with attention to color gradients, shadows, and usability.
+- Semantic HTML5, CSS3 Grid & Flexbox for layout, and JavaScript for dynamic features.
+`,
+  detailImageUrl: '/images/square-eyes-detail.jpg',
+},
+
   {
     title: 'Community Science Museum',
     category:'Academic Project',
@@ -412,4 +483,44 @@ Key Features:
 `,
     detailImageUrl: '/images/rainy-days-detail.jpg',
   },
+{
+  title: 'BiblioTint',
+  category: 'Learning Project',
+  description: 'A responsive book search website.',
+  imageUrl: '/images/BiblioTint.jpg',
+  slug: 'biblio-tint',
+  techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
+  liveUrl: 'https://sanakhuram.github.io/BilblioTint/',
+  repoUrl: 'https://github.com/sanakhuram/BilblioTint',
+  detailedDescription: `
+BiblioTint is a responsive web application that allows users to search for books, explore new authors, and view detailed information for each book using the Google Books API.
+
+Key Features:
+
+1. Search for Books:
+- Users can search by book title, author, or keyword.
+- Displays a list of results including book covers, titles, authors, and short descriptions.
+- Shows up to 10 results per query for a clean, user-friendly interface.
+
+2. Book Details:
+- Clicking a book displays more detailed information, such as a full description, publisher, published date, and preview link.
+- Designed to make browsing and discovering books seamless.
+
+3. Responsive Design:
+- Fully responsive layout optimized for mobile, tablet, and desktop screens.
+- Ensures usability across all devices with consistent styling.
+
+4. API Integration:
+- Powered by the Google Books API to fetch real-time book data.
+- Dynamic content allows users to explore thousands of books instantly.
+
+5. Built With:
+- HTML5: Semantic and accessible structure.
+- CSS3: Styling, layout, and responsive design using Flexbox and Grid.
+- JavaScript: Handles interactivity and API calls.
+- Google Books API: Provides all book data for search and details.
+`,
+  detailImageUrl: '/images/BiblioTint-detail.jpg',
+},
+
 ];
