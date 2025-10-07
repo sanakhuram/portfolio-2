@@ -8,7 +8,7 @@ export const sections = [
   { id: 'home', content: 'Home', bg: '#adc178' },
   { id: 'about', content: 'About Me', bg: '#edafb8' },
   { id: 'projects', content: 'Projects', bg: '#D9D9D9' },
-  { id: 'awards', content: 'Awards', bg: '#F09B50' },
+  { id: 'awards', content: 'Awards', bg: '#947EA6' },
   { id: 'skills', content: 'Skills', bg: '#333333' },
   { id: 'contact', content: 'Contact Me', bg: '#77afc3' },
 ];
