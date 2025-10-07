@@ -5,6 +5,21 @@ Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with a stro
 This portfolio showcases my projects, skills, and personal design style. It is designed to be **focused, professional, and easy to navigate**, highlighting the work and experiences that best reflect my abilities.
 
 ---
+## 🎨 My Color Philosophy
+
+Colors tell stories. They evoke feelings, memories, and moods. In this portfolio, every hue has a purpose:
+
+- **Earthy Green:** Growth, grounding, and connection with nature.  
+- **Sky Blue:** Openness, clarity, and endless curiosity.  
+- **Purple:** Creativity, introspection, and the mysterious depth of ideas.  
+- **Feminist Pink:** Passion, empowerment, and warmth.  
+- **Gray:** Balance, neutrality, and quiet reflection.  
+- **Charcoal:** Strength, depth, and subtle seriousness.  
+- **Hints of Memory & Emptiness:** Soft accents that evoke nostalgia and thoughtfulness.  
+
+I believe in **color-graphy**—using colors as a narrative tool, not just decoration. This portfolio is my story, told through code, design, and a palette that feels *me*.
+
+---
 
 ## **Tech Stack**
 
