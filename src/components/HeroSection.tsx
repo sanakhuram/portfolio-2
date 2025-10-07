@@ -21,7 +21,7 @@ const slides = [
     title: 'User-Centric Design',
     subtitle:
       'Designing experiences that guide users intuitively through digital journeys, combining creativity with usability',
-    bg: '#DCDCDC',
+    bg: '#C0C0C0',
     targetIndex: 2,
   },
   {
@@ -38,6 +38,14 @@ const slides = [
     bg: '#333333',
     targetIndex: 4,
   },
+  {
+  title: 'Learning in Action',
+  subtitle:
+    'Side projects and explorations that challenged me, honed my skills, and earned recognition along the way.',
+  bg: '#947EA6', // deep purple to fit your palette
+  targetIndex: 3,
+},
+
   {
     title: 'Let Us Create',
     subtitle:
