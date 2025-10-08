@@ -21,14 +21,13 @@ export default function Portfolio() {
 
   const goToNext = () => setIndex((index + 1) % sections.length);
   const goToPrev = () => setIndex((index - 1 + sections.length) % sections.length);
-const handlers = useSwipeable({
-  onSwipedLeft: goToNext,
-  onSwipedRight: goToPrev,
-  // @ts-expect-error
-  preventDefaultTouchmoveEvent: true,
-  trackMouse: true,
-});
-
+  const handlers = useSwipeable({
+    onSwipedLeft: goToNext,
+    onSwipedRight: goToPrev,
+    // @ts-expect-error
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
 
   const renderSection = () => {
     switch (sections[index].id) {
@@ -51,7 +50,7 @@ const handlers = useSwipeable({
 
   return (
     <div
-      {...handlers}  // attach swipe handlers here
+      {...handlers}
       className="relative w-screen transition-colors duration-500 overflow-visible"
       style={{ backgroundColor: sections[index].bg, minHeight: '100vh' }}
     >

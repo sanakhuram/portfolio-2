@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface DotsBackgroundProps {
-  count?: number; // default maximum count
+  count?: number;
 }
 
 const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 700 }) => {
@@ -12,7 +12,6 @@ const DotsBackground: React.FC<DotsBackgroundProps> = ({ count = 700 }) => {
   >([]);
 
   useEffect(() => {
-    // Determine responsive dot count
     const isMobile = window.innerWidth < 768;
     const dotCount = isMobile ? Math.floor(count / 2) : count;
 

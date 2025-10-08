@@ -56,7 +56,6 @@ export default function AboutMeSlider() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center px-4 z-20">
       <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 max-w-[700px] w-full relative">
-        {/* Image */}
         <div className="flex-shrink-0 relative w-32 sm:w-40 md:w-48 aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
           <Image
             src="/images/sana.jpg"
@@ -67,9 +66,7 @@ export default function AboutMeSlider() {
           />
         </div>
 
-        {/* Content */}
         <div className="flex-1 flex flex-col items-center md:items-start justify-center relative px-2 sm:px-4 md:px-0">
-          {/* Switch mode button */}
           <button
             onClick={() => setMode(mode === 'about' ? 'education' : 'about')}
             className="absolute top-0 right-0 md:top-0 md:right-0 z-20 border border-white rounded-full p-2 shadow hover:bg-gray-200 transition"

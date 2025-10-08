@@ -53,7 +53,6 @@ export default function ProjectsSection({ bg = '' }: ProjectsSectionProps) {
                 />
               </div>
 
-              {/* Title + Info Icon */}
               <div className="flex items-center justify-between w-full mb-1">
                 <h3 className={`${headingFont.variable} text-gray-600 md:text-lg font-bold`}>
                   {project.title}

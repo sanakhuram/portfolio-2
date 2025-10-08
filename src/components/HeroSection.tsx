@@ -39,12 +39,12 @@ const slides = [
     targetIndex: 4,
   },
   {
-  title: 'Learning in Action',
-  subtitle:
-    'Side projects and explorations that challenged me, honed my skills, and earned recognition along the way.',
-  bg: '#947EA6', // deep purple to fit your palette
-  targetIndex: 3,
-},
+    title: 'Learning in Action',
+    subtitle:
+      'Side projects and explorations that challenged me, honed my skills, and earned recognition along the way.',
+    bg: '#947EA6',
+    targetIndex: 3,
+  },
 
   {
     title: 'Let Us Create',
@@ -92,8 +92,8 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
           style={{
             fontSize: 'clamp(3rem, 10vw, 8rem)',
             maxWidth: 'clamp(20rem, 70vw, 60rem)',
-            lineHeight: 0.7, 
-            marginBottom: 0, 
+            lineHeight: 0.7,
+            marginBottom: 0,
           }}
         >
           {slides[current].title}
@@ -111,7 +111,7 @@ export default function HeroSection({ onViewMore }: HeroSectionProps) {
           style={{
             fontSize: 'clamp(1.25rem, 2.5vw, 2rem)',
             color: getSubtitleColor(slides[current].bg),
-            marginTop: 0, 
+            marginTop: 0,
           }}
           className={`${bodyFont.variable} font-bold uppercase text-center relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg`}
         >

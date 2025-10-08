@@ -51,10 +51,8 @@ export default function Footer() {
         )}
       </AnimatePresence>
 
-      {/* Left: copyright */}
       <div className="text-white text-xs sm:text-sm z-10">© 2025</div>
 
-      {/* Right: info + social icons */}
       <div className="flex items-center gap-2 sm:gap-3 z-10">
         {/* Info button */}
         <button

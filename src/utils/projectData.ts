@@ -1,6 +1,6 @@
 export type Project = {
   title: string;
-  category: string; 
+  category: string;
   description: string; // short description for list page
   imageUrl: string; // list page / thumbnail
   detailImageUrl?: string; // slug page image inside frame
@@ -12,17 +12,17 @@ export type Project = {
   techStack: string[];
 };
 export const projects: Project[] = [
-{
-  category:'Academic Project',
-  title: 'Auction Hub',
-  description: 'Online auction platform with CURD functionality',
-  imageUrl: '/images/auction.jpg',
-  detailImageUrl: '/images/auction-detail.jpg',
-  slug: 'auction-hub',
-  liveUrl: 'https://auction-hub.netlify.app/',
-  repoUrl: 'https://github.com/sanakhuram/auction-hub-SP2',
-  readUrl: 'https://github.com/sanakhuram/auction-hub-SP2/blob/main/README.md',
-  detailedDescription: `
+  {
+    category: 'Academic Project',
+    title: 'Auction Hub',
+    description: 'Online auction platform with CURD functionality',
+    imageUrl: '/images/auction.jpg',
+    detailImageUrl: '/images/auction-detail.jpg',
+    slug: 'auction-hub',
+    liveUrl: 'https://auction-hub.netlify.app/',
+    repoUrl: 'https://github.com/sanakhuram/auction-hub-SP2',
+    readUrl: 'https://github.com/sanakhuram/auction-hub-SP2/blob/main/README.md',
+    detailedDescription: `
 Project Overview:
 This project was built as part of the Semester 2 Project Exam for web development. Auction Hub is a professional online auction platform that allows registered users to create, edit, delete listings, place bids, track bid history, and view other users' profiles and bids. Non-registered users can browse listings only.
 
@@ -80,23 +80,23 @@ How to Use the App:
    - Scrollable listing view with smooth UI
 
 `,
-  techStack: [
-    'JavaScript',
-    'Vite',
-    'Tailwind',
-    'API',
-    'LocalStorage',
-    'Netlify',
-    'ESLint',
-    'Prettier',
-    'Husky',
-    'Playwright',
-  ],
-},
+    techStack: [
+      'JavaScript',
+      'Vite',
+      'Tailwind',
+      'API',
+      'LocalStorage',
+      'Netlify',
+      'ESLint',
+      'Prettier',
+      'Husky',
+      'Playwright',
+    ],
+  },
 
   {
     title: 'Sociogram',
-    category:'Academic Project',
+    category: 'Academic Project',
     description: 'Social media app with full CRUD functionality.',
     imageUrl: '/images/sociogram.jpg',
     detailImageUrl: '/images/sociogram-detail.jpg',
@@ -152,13 +152,13 @@ How to Use the App:
       'Netlify',
       'Prettier',
       'ESLint',
-      'API'
+      'API',
     ],
   },
 
   {
     title: 'Vibe Cart',
-    category:'Academic Project',
+    category: 'Academic Project',
     description: 'Modern e-commerce platform with cart & checkout.',
     imageUrl: '/images/vibe-cart.jpg',
     detailImageUrl: '/images/vibe-cart-detail.jpg',
@@ -207,19 +207,30 @@ Additional Notes:
 - Suggested items feature included
 - Terms & Conditions page implemented
 `,
-    techStack: ['NextJS', 'React', 'Tailwind', 'Jest', 'TypeScript','Vercel', 'Prettier', 'ESLint', 'API','Husky'],
+    techStack: [
+      'NextJS',
+      'React',
+      'Tailwind',
+      'Jest',
+      'TypeScript',
+      'Vercel',
+      'Prettier',
+      'ESLint',
+      'API',
+      'Husky',
+    ],
   },
 
   {
     title: 'Holidaze',
-    category:'Academic Project',
+    category: 'Academic Project',
     description: 'Venue booking platform .',
     imageUrl: '/images/holidaze.jpg',
     detailImageUrl: '/images/holidaze-detail.jpg',
     slug: 'holidaze',
     liveUrl: 'https://holidaze-green.vercel.app/',
     repoUrl: 'https://github.com/sanakhuram/holidaze',
-    readUrl : 'https://github.com/sanakhuram/holidaze/blob/master/README.md',
+    readUrl: 'https://github.com/sanakhuram/holidaze/blob/master/README.md',
     detailedDescription: `
 Holidaze is a full-featured accommodation booking platform built with Next.js, React, and TailwindCSS. Users can search venues, view details, book accommodations, and manage their reservations efficiently.
 
@@ -235,7 +246,7 @@ Key Features:
   },
   {
     title: 'Color Muse Blog',
-    category:'Academic Project',
+    category: 'Academic Project',
     description: 'A blog featuring CRUD.',
     imageUrl: '/images/color-muse-blog.jpg',
     slug: 'color-muse-blog',
@@ -243,7 +254,8 @@ Key Features:
 
     liveUrl: 'https://color-muse-blog-project-exam-1.netlify.app/',
     repoUrl: 'https://github.com/sanakhuram/FED-PE1-SanaKhuram-color-muse-blog-',
-    readUrl: 'https://github.com/sanakhuram/FED-PE1-SanaKhuram-color-muse-blog-/blob/main/README.md',
+    readUrl:
+      'https://github.com/sanakhuram/FED-PE1-SanaKhuram-color-muse-blog-/blob/main/README.md',
     detailedDescription: `
 Color Muse Blog is a responsive blogging platform that allows users to create, read, update, and delete blog posts. The application features a carousel to showcase featured posts and provides a user-friendly interface for managing content.
 
@@ -328,16 +340,16 @@ Key Features:
     detailImageUrl: '/images/crypto-dashboard-detail.jpg',
   },
   {
-  title: 'Hope & Health Welfare Association',
-  category: 'Client Project',
-  description: 'A responsive charity website.',
-  imageUrl: '/images/hope-health.jpg',
-  slug: 'hope-health',
-  techStack: ['HTML', 'CSS', 'JavaScript', 'EmailJS'],
-  liveUrl: 'https://hopeandhealthwelfareassociation.com/',
-  repoUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations',
-  readUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations/blob/main/README.md',
-  detailedDescription: `
+    title: 'Hope & Health Welfare Association',
+    category: 'Client Project',
+    description: 'A responsive charity website.',
+    imageUrl: '/images/hope-health.jpg',
+    slug: 'hope-health',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'EmailJS'],
+    liveUrl: 'https://hopeandhealthwelfareassociation.com/',
+    repoUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations',
+    readUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations/blob/main/README.md',
+    detailedDescription: `
 Hope & Health Welfare Association is a non-profit organization dedicated to improving community health, education, and social welfare in Okara, Pakistan, with a special focus on empowering underprivileged girls. This website was designed from Figma to code, including custom logo and branding, responsive layout, and integration with donation and shop features.
 
 Key Features:
@@ -371,21 +383,20 @@ Key Features:
 - Since launch, donation insights have increased.
 - Website serves as a central platform for community engagement, volunteer coordination, and fundraising.
 `,
-  detailImageUrl: '/images/hope-health-detail.jpg',
-},
+    detailImageUrl: '/images/hope-health-detail.jpg',
+  },
 
-
-{
-  title: 'Food Blog',
-  category: 'Learning Project',
-  description: 'A responsive food blog website.',
-  imageUrl: '/images/food-blog.jpg',
-  slug: 'food-blog',
-  techStack: ['API', 'HTML', 'JavaScript', 'Tailwind'],
-  liveUrl: 'https://sanakhuram.github.io/Food-Blog/',
-  repoUrl: 'https://github.com/sanakhuram/Food-Blog',
-  readUrl: 'https://github.com/sanakhuram/Food-Blog/blob/main/README.md',
-  detailedDescription: `
+  {
+    title: 'Food Blog',
+    category: 'Learning Project',
+    description: 'A responsive food blog website.',
+    imageUrl: '/images/food-blog.jpg',
+    slug: 'food-blog',
+    techStack: ['API', 'HTML', 'JavaScript', 'Tailwind'],
+    liveUrl: 'https://sanakhuram.github.io/Food-Blog/',
+    repoUrl: 'https://github.com/sanakhuram/Food-Blog',
+    readUrl: 'https://github.com/sanakhuram/Food-Blog/blob/main/README.md',
+    detailedDescription: `
 Food Blog is a responsive website where users can search for recipes using the Spoonacular API. The search functionality displays up to 10 recipes at a time. 
 
 Key Features:
@@ -407,19 +418,19 @@ Key Features:
 - Built with Tailwind CSS for modern, responsive, utility-first styling.
 - Clean and interactive UI with dynamic JavaScript elements.
 `,
-  detailImageUrl: '/images/food-blog-detail.jpg',
-},
-{
-  title: 'Square Eyes',
-  category: 'Academic Project',
-  description: 'A responsive movie e-commerce website.',
-  imageUrl: '/images/square-eyes.jpg',
-  slug: 'square-eyes',
-  techStack: ['JavaScript', 'API', 'HTML', 'CSS', 'FIGMA'],
-  liveUrl: 'https://sanakhuram.github.io/squareEyes-js/',
-  repoUrl: 'https://github.com/sanakhuram/squareEyes-js',
-  readUrl: 'https://github.com/sanakhuram/squareEyes-js/blob/main/READme.md',
-  detailedDescription: `
+    detailImageUrl: '/images/food-blog-detail.jpg',
+  },
+  {
+    title: 'Square Eyes',
+    category: 'Academic Project',
+    description: 'A responsive movie e-commerce website.',
+    imageUrl: '/images/square-eyes.jpg',
+    slug: 'square-eyes',
+    techStack: ['JavaScript', 'API', 'HTML', 'CSS', 'FIGMA'],
+    liveUrl: 'https://sanakhuram.github.io/squareEyes-js/',
+    repoUrl: 'https://github.com/sanakhuram/squareEyes-js',
+    readUrl: 'https://github.com/sanakhuram/squareEyes-js/blob/main/READme.md',
+    detailedDescription: `
 Square Eyes is a responsive e-commerce website designed for movie enthusiasts. The project was built from Figma to code, featuring CSS gradients, shadows, and modern interactive UI elements using HTML, CSS, and JavaScript. It integrates with the Noroff API to display a wide selection of movies across various genres.
 
 Key Features:
@@ -447,12 +458,12 @@ Key Features:
 - UI/UX designed in Figma with attention to color gradients, shadows, and usability.
 - Semantic HTML5, CSS3 Grid & Flexbox for layout, and JavaScript for dynamic features.
 `,
-  detailImageUrl: '/images/square-eyes-detail.jpg',
-},
+    detailImageUrl: '/images/square-eyes-detail.jpg',
+  },
 
   {
     title: 'Community Science Museum',
-    category:'Academic Project',
+    category: 'Academic Project',
     description: 'An educational museum site.',
     imageUrl: '/images/community-science-museum.jpg',
     slug: 'community-science-museum',
@@ -497,17 +508,17 @@ Key Features:
 `,
     detailImageUrl: '/images/rainy-days-detail.jpg',
   },
-{
-  title: 'BiblioTint',
-  category: 'Learning Project',
-  description: 'A responsive book search website.',
-  imageUrl: '/images/BiblioTint.jpg',
-  slug: 'biblio-tint',
-  techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
-  liveUrl: 'https://sanakhuram.github.io/BilblioTint/',
-  repoUrl: 'https://github.com/sanakhuram/BilblioTint',
-  readUrl: 'https://github.com/sanakhuram/BilblioTint/blob/main/README.md',
-  detailedDescription: `
+  {
+    title: 'BiblioTint',
+    category: 'Learning Project',
+    description: 'A responsive book search website.',
+    imageUrl: '/images/BiblioTint.jpg',
+    slug: 'biblio-tint',
+    techStack: ['JavaScript', 'API', 'HTML', 'CSS'],
+    liveUrl: 'https://sanakhuram.github.io/BilblioTint/',
+    repoUrl: 'https://github.com/sanakhuram/BilblioTint',
+    readUrl: 'https://github.com/sanakhuram/BilblioTint/blob/main/README.md',
+    detailedDescription: `
 BiblioTint is a responsive web application that allows users to search for books, explore new authors, and view detailed information for each book using the Google Books API.
 
 Key Features:
@@ -535,7 +546,6 @@ Key Features:
 - JavaScript: Handles interactivity and API calls.
 - Google Books API: Provides all book data for search and details.
 `,
-  detailImageUrl: '/images/BiblioTint-detail.jpg',
-},
-
+    detailImageUrl: '/images/BiblioTint-detail.jpg',
+  },
 ];
