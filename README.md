@@ -1,4 +1,5 @@
-# Sana Khuram | Frontend Developer
+#  <img width="50" height="50" alt="android-chrome-192x192" src="https://github.com/user-attachments/assets/55d832e5-ccfd-414f-9393-6323d1a53f45" /> Sana Khuram | Frontend Developer
+
 
 Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with an artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.
 
