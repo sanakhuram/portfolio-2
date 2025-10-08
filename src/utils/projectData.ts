@@ -548,17 +548,18 @@ Key Features:
 `,
     detailImageUrl: '/images/BiblioTint-detail.jpg',
   },
-{
-  title: 'Portfolio Page',
-  category: 'Academic Project',
-  description: 'A responsive portfolio website showcasing my front-end development skills, projects, and background.',
-  imageUrl: '/images/portfolio-1.jpg',
-  slug: 'portfolio-page',
-  techStack: ['JavaScript', 'HTML', 'CSS'],
-  liveUrl: 'https://sanakhuram.netlify.app/',
-  repoUrl: 'https://github.com/sanakhuram/Portfolio-SanaKhuram',
-  readUrl: 'https://github.com/sanakhuram/Portfolio-SanaKhuram/blob/main/README.md',
-  detailedDescription: `
+  {
+    title: 'Portfolio Page',
+    category: 'Academic Project',
+    description:
+      'A responsive portfolio website showcasing my front-end development skills, projects, and background.',
+    imageUrl: '/images/portfolio-1.jpg',
+    slug: 'portfolio-page',
+    techStack: ['JavaScript', 'HTML', 'CSS'],
+    liveUrl: 'https://sanakhuram.netlify.app/',
+    repoUrl: 'https://github.com/sanakhuram/Portfolio-SanaKhuram',
+    readUrl: 'https://github.com/sanakhuram/Portfolio-SanaKhuram/blob/main/README.md',
+    detailedDescription: `
 This portfolio website showcases my work as a Front-End Developer, highlighting my skills, projects, and design approach. Built with HTML, CSS, and JavaScript, it features a responsive and user-friendly layout for desktop, tablet, and mobile devices.
 
 Key Features:
@@ -572,7 +573,6 @@ Key Features:
 
 This project represents my first-year work and will be updated over time to reflect ongoing growth and new projects in front-end development.
 `,
-  detailImageUrl: '/images/portfolio-detail.jpg',
-}
-
+    detailImageUrl: '/images/portfolio-detail.jpg',
+  },
 ];
