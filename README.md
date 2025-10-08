@@ -10,13 +10,14 @@ This portfolio showcases my projects, skills, and personal design style. It is d
 
 Colors tell stories. They evoke feelings, memories, and moods. In this portfolio, every hue has a purpose:
 
-- **Earthy Green:** Growth, grounding, and connection with nature.
-- **Sky Blue:** Openness, clarity, and endless curiosity.
-- **Purple:** Creativity, introspection, and the mysterious depth of ideas.
-- **Feminist Pink:** Passion, empowerment, and warmth.
-- **Gray:** Balance, neutrality, and quiet reflection.
-- **Charcoal:** Strength, depth, and subtle seriousness.
-- **Hints of Memory & Emptiness:** Soft accents that evoke nostalgia and thoughtfulness.
+- <span style="display:inline-block; width:15px; height:15px; background:#adc178; margin-right:8px;"></span> **Earthy Green:** Growth, grounding, and connection with nature.
+- <span style="display:inline-block; width:15px; height:15px; background:#87CEEB; margin-right:8px;"></span> **Sky Blue:** Openness, clarity, and endless curiosity.
+- <span style="display:inline-block; width:15px; height:15px; background:#947EA6; margin-right:8px;"></span> **Purple:** Creativity, introspection, and the mysterious depth of ideas.
+- <span style="display:inline-block; width:15px; height:15px; background:#edafb8; margin-right:8px;"></span> **Feminist Pink:** Passion, empowerment, and warmth.
+- <span style="display:inline-block; width:15px; height:15px; background:#C0C0C0; margin-right:8px;"></span> **Gray:** Balance, neutrality, and quiet reflection.
+- <span style="display:inline-block; width:15px; height:15px; background:#333333; margin-right:8px;"></span> **Charcoal:** Strength, depth, and subtle seriousness.
+- <span style="display:inline-block; width:15px; height:15px; background:#f5f5f5; margin-right:8px;"></span> **Hints of Memory & Emptiness:** Soft accents that evoke nostalgia and thoughtfulness.
+
 
 I believe in **color-graphy**—using colors as a narrative tool, not just decoration. This portfolio is my story, told through code, design, and a palette that feels _me_.
 
