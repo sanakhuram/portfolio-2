@@ -1,6 +1,6 @@
 # Sana Khuram | Frontend Developer
 
-Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with a strong artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.
+Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with an artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.
 
 This portfolio showcases my projects, skills, and personal design style. It is designed to be **focused, professional, and easy to navigate**, highlighting the work and experiences that best reflect my abilities.
 
@@ -20,7 +20,7 @@ Colors tell stories. They evoke feelings, memories, and moods. In this portfolio
 
 I believe in **color-graphy**—using colors as a narrative tool, not just decoration. This portfolio is my story, told through code, design, and a palette that feels _me_.
 
-_The design and functionality are inspired by modern frontend practices and the work of developers I admire, while maintaining my unique artistic touch._
+*The design and functionality are inspired by modern frontend practices and the work of developers I admire, while maintaining my unique artistic touch.*
 
 ---
 
@@ -51,7 +51,7 @@ _The design and functionality are inspired by modern frontend practices and the 
 
 ## **Key Highlights**
 
-- **Built 5+ interactive UI components and SPAs** with React, Next.js, and TailwindCSS
+- **Built 5+ interactive UI components** with React, Next.js, and TailwindCSS
 - **Designed fully responsive, accessible, and high-performance interfaces**
 - **Created custom animations and transitions** using Framer Motion
 - **Blended artistic sensibilities into frontend development**, integrating illustration and design with code
@@ -65,13 +65,8 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 
 > “The wanderer who dwells is never truly lost.” – Paulo Coelho
 
-<div style="display: flex; align-items: center; gap: 15px;">
-  <img src="image.png" alt="illustration" width="150" style="display:block;" />
-  <div>
-    I’m a playful frontend dev, always ready to mix creativity and code!<br>
-    Feel free to explore my projects and reach out via the contact section—I’m always excited to collaborate and bring creative ideas to life!
-  </div>
-</div>
+I’m a *playful frontend dev*, always ready to mix *creativity and code*.  
+Feel free to explore my projects and reach out via the contact section—I’m always excited to **collaborate** and bring creative ideas to life!
 
 ---
 
