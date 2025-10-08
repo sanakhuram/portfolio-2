@@ -20,6 +20,7 @@ Colors tell stories. They evoke feelings, memories, and moods. In this portfolio
 
 I believe in **color-graphy**—using colors as a narrative tool, not just decoration. This portfolio is my story, told through code, design, and a palette that feels _me_.
 
+The design and functionality are inspired by modern frontend practices and the work of developers I admire, while maintaining my unique artistic touch.
 ---
 
 ## **Tech Stack**
