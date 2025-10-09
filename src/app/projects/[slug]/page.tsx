@@ -16,11 +16,14 @@ import {
   SiHtml5,
   SiJest,
   SiReadme,
+  SiPrettier,
+  SiNetlify,
+  SiVercel,
+  SiCss3,
 } from 'react-icons/si';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 
-// Reusable badge for missing techs
 const TechBadge = ({
   name,
   bgColor = 'bg-gray-300',
@@ -44,15 +47,19 @@ const techIcons: Record<string, JSX.Element> = {
   Tailwind: <SiTailwindcss className="w-6 h-6 text-teal-400" />,
   Vite: <SiVite className="w-6 h-6 text-purple-400" />,
   HTML: <SiHtml5 className="w-6 h-6 text-orange-500" />,
-  CSS: <span className="w-6 h-6 text-blue-500 font-bold text-sm">CSS</span>,
-  API: <span className="w-6 h-6 text-gray-600 font-bold text-sm">API</span>,
+  CSS: <SiCss3 className="w-6 h-6 text-blue-500" />,
+  API: (
+    <span className="flex items-center justify-center w-6 h-6 text-[0.8rem] font-bold text-gray-700 bg-pink-300 rounded-sm">
+      API
+    </span>
+  ),
   Jest: <SiJest className="w-6 h-6 text-red-500" />,
-  Husky: <TechBadge name="Husky" bgColor="bg-blue-800" />,
-  Prettier: <TechBadge name="Prettier" bgColor="bg-pink-500" />,
-  Playwright: <TechBadge name="Playwright" bgColor="bg-purple-700" />,
-  LocalStorage: <TechBadge name="LocalStorage" bgColor="bg-gray-500" />,
-  Netlify: <TechBadge name="Netlify" bgColor="bg-teal-600" />,
-  Vercel: <TechBadge name="Vercel" bgColor="bg-black" textColor="text-white" />,
+  Husky: <TechBadge name="Husky" bgColor="bg-blue-400" />,
+  Prettier: <SiPrettier className="w-6 h-6 text-pink-500" />,
+  Playwright: <TechBadge name="Playwright" bgColor="bg-purple-500" />,
+  LocalStorage: <TechBadge name="LocalStorage" bgColor="bg-red-400" />,
+  Netlify: <SiNetlify className="w-6 h-6 text-teal-500" />,
+  Vercel: <SiVercel className="w-6 h-6 text-black dark:text-white" />,
 };
 
 export default function ProjectArticle({ params }: { params: Promise<{ slug: string }> }) {

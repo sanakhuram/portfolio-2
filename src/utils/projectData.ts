@@ -551,8 +551,7 @@ Key Features:
   {
     title: 'Portfolio Page',
     category: 'Academic Project',
-    description:
-      'A responsive portfolio website.',
+    description: 'A responsive portfolio website.',
     imageUrl: '/images/portfolio-1.jpg',
     slug: 'portfolio-page',
     techStack: ['JavaScript', 'HTML', 'CSS'],

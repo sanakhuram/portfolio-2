@@ -1,5 +1,4 @@
-#  <img width="50" height="50" alt="android-chrome-192x192" src="https://github.com/user-attachments/assets/55d832e5-ccfd-414f-9393-6323d1a53f45" /> Sana Khuram | Frontend Developer
-
+# <img width="50" height="50" alt="android-chrome-192x192" src="https://github.com/user-attachments/assets/55d832e5-ccfd-414f-9393-6323d1a53f45" /> Sana Khuram | Frontend Developer
 
 Welcome to my portfolio! I’m **Sana Khuram**, a frontend developer with an artistic background. My work combines **creativity, design, and code** to build interactive, responsive, and visually engaging web experiences.
 
@@ -21,7 +20,7 @@ Colors tell stories. They evoke feelings, memories, and moods. In this portfolio
 
 I believe in **color-graphy**—using colors as a narrative tool, not just decoration. This portfolio is my story, told through code, design, and a palette that feels _me_.
 
-*The design and functionality are inspired by modern frontend practices and the work of developers I admire, while maintaining my unique artistic touch.*
+_The design and functionality are inspired by modern frontend practices and the work of developers I admire, while maintaining my unique artistic touch._
 
 ---
 
@@ -66,7 +65,7 @@ All layouts, color palettes, and typography are self-chosen. The goal is to prov
 
 > “The wanderer who dwells is never truly lost.” – Paulo Coelho
 
-I’m a *playful frontend dev*, always ready to mix *creativity and code*.  
+I’m a _playful frontend dev_, always ready to mix _creativity and code_.  
 Feel free to explore my projects and reach out via the contact section—I’m always excited to **collaborate** and bring creative ideas to life!
 
 ---
