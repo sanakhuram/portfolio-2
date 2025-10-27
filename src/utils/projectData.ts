@@ -12,6 +12,95 @@ export type Project = {
   techStack: string[];
 };
 export const projects: Project[] = [
+   {
+    title: 'Holidaze',
+    category: 'Academic Project',
+    description: 'Venue booking platform .',
+    imageUrl: '/images/holidaze.jpg',
+    detailImageUrl: '/images/holidaze-detail.jpg',
+    slug: 'holidaze',
+    liveUrl: 'https://holidaze-green.vercel.app/',
+    repoUrl: 'https://github.com/sanakhuram/holidaze',
+    readUrl: 'https://github.com/sanakhuram/holidaze/blob/master/README.md',
+    detailedDescription: `
+Holidaze is a full-featured accommodation booking platform built with Next.js, React, and TailwindCSS. Users can search venues, view details, book accommodations, and manage their reservations efficiently.
+
+Key Features:
+- Venue Listing & Search Filters
+- Booking Flow with Calendar Selection
+- Map Integration with OpenStreetMap
+- User Authentication & Profiles
+- Dark Mode Support
+- Admin Dashboard for Managing Venues
+`,
+    techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'API', 'Vercel', 'Prettier', 'ESLint'],
+  },
+
+    {
+    title: 'Vibe Cart',
+    category: 'Academic Project',
+    description: 'Modern e-commerce platform with cart & checkout.',
+    imageUrl: '/images/vibe-cart.jpg',
+    detailImageUrl: '/images/vibe-cart-detail.jpg',
+    slug: 'vibe-cart',
+    liveUrl: 'https://jsfw-sanakhuram.vercel.app/',
+    repoUrl: 'https://github.com/sanakhuram/jsfw-sanakhuram',
+    readUrl: 'https://github.com/sanakhuram/jsfw-sanakhuram/blob/master/README.md',
+    detailedDescription: `
+Vibe Cart is a modern, fully functional e-commerce platform built with Next.js, React, TypeScript, and TailwindCSS. Users can browse products, add to favorites, manage cart items, and checkout efficiently. The platform includes a responsive layout, animations via Framer Motion, a contact form, and a Terms & Conditions page.
+
+E-Commerce Functionality:
+- Add products to cart
+- Manage quantities & remove items
+- View detailed product info
+- Check reviews & ratings
+- Display discount badges
+
+Navigation & UI:
+- Animated hero section
+- Sticky header with cart & favourites
+- Responsive layout
+- Product sorting options
+- Real-time search bar
+- Pagination
+- Responsive footer
+
+Developer Setup:
+- Next.js App Router for routing
+- Context API for state management
+- Notifications via react-hot-toast
+- Animations with Framer Motion
+- ESLint + Prettier for code quality
+- Unit tests with Jest + React Testing Library
+
+Testing:
+- ProductCard
+- Header
+- AddToCartButton
+- SortSearchBar
+- Footer
+- BackToTopButton
+
+Additional Notes:
+- Consistent color themes and UI design
+- Contact form implemented with React
+- Suggested items feature included
+- Terms & Conditions page implemented
+`,
+    techStack: [
+      'NextJS',
+      'React',
+      'Tailwind',
+      'Jest',
+      'TypeScript',
+      'Vercel',
+      'Prettier',
+      'ESLint',
+      'API',
+      'Husky',
+    ],
+  },
+
   {
     category: 'Academic Project',
     title: 'Auction Hub',
@@ -94,156 +183,6 @@ How to Use the App:
     ],
   },
 
-  {
-    title: 'Sociogram',
-    category: 'Academic Project',
-    description: 'Social media app with full CRUD functionality.',
-    imageUrl: '/images/sociogram.jpg',
-    detailImageUrl: '/images/sociogram-detail.jpg',
-    slug: 'sociogram',
-    liveUrl: 'https://sociogram-app.netlify.app/',
-    repoUrl: 'https://github.com/sanakhuram/css-frameworks',
-    readUrl: 'https://github.com/sanakhuram/css-frameworks/blob/main/README.md',
-    detailedDescription: `
-Project Overview:
-This project is part of the CSS Frameworks Assignment, where Tailwind CSS was integrated into an existing JavaScript 2 Course Assignment (JS2CA). Sociogram is a client-side social media app allowing users to interact and manage content dynamically.
-
-Core Functionality:
-- User Authentication: Register, Login, Logout using JWT stored in LocalStorage
-- Profile Management: View and update profile, change avatar and banner
-- Follow/Unfollow: Users can follow or unfollow other users
-- Post Management: Create, Edit, Delete, and View posts
-- Engagement: Like posts, comment on posts
-- View Others’ Profiles: See other users’ posts and profiles
-- Dark/Light Mode: Fully functional theme toggle for better UX
-
-Tailwind CSS Features:
-- Responsive Design: Optimized for mobile and desktop
-- Utility-First Styling: Uses Tailwind’s built-in classes
-- Custom Configurations:
-  - Custom color palette (darkBlue, lightBlue, red, etc.)
-  - Custom box shadows for UI enhancements
-  - Custom animations (writing, slide-in effects)
-
-Performance & Deployment:
-- Built with Vite for fast development and hot reloading
-- Uses LocalStorage for JWT authentication
-- Code quality ensured with Prettier and ESLint
-- Deployed on Netlify for live hosting
-
-How to Use the App:
-1. Sign Up/Login:
-   - Register a new account or login using existing credentials
-2. Profile Management:
-   - Update profile information, change avatar and banner images
-3. Create, Edit, Delete Posts:
-   - Add new posts, modify existing posts, or delete unwanted posts
-4. Engagement:
-   - Like and comment on other users’ posts
-   - Follow and unfollow other users
-5. Dark/Light Mode:
-   - Toggle the theme for comfortable viewing
-`,
-    techStack: [
-      'JavaScript',
-      'Tailwind',
-      'Vite',
-      'LocalStorage',
-      'Netlify',
-      'Prettier',
-      'ESLint',
-      'API',
-    ],
-  },
-
-  {
-    title: 'Vibe Cart',
-    category: 'Academic Project',
-    description: 'Modern e-commerce platform with cart & checkout.',
-    imageUrl: '/images/vibe-cart.jpg',
-    detailImageUrl: '/images/vibe-cart-detail.jpg',
-    slug: 'vibe-cart',
-    liveUrl: 'https://jsfw-sanakhuram.vercel.app/',
-    repoUrl: 'https://github.com/sanakhuram/jsfw-sanakhuram',
-    readUrl: 'https://github.com/sanakhuram/jsfw-sanakhuram/blob/master/README.md',
-    detailedDescription: `
-Vibe Cart is a modern, fully functional e-commerce platform built with Next.js, React, TypeScript, and TailwindCSS. Users can browse products, add to favorites, manage cart items, and checkout efficiently. The platform includes a responsive layout, animations via Framer Motion, a contact form, and a Terms & Conditions page.
-
-E-Commerce Functionality:
-- Add products to cart
-- Manage quantities & remove items
-- View detailed product info
-- Check reviews & ratings
-- Display discount badges
-
-Navigation & UI:
-- Animated hero section
-- Sticky header with cart & favourites
-- Responsive layout
-- Product sorting options
-- Real-time search bar
-- Pagination
-- Responsive footer
-
-Developer Setup:
-- Next.js App Router for routing
-- Context API for state management
-- Notifications via react-hot-toast
-- Animations with Framer Motion
-- ESLint + Prettier for code quality
-- Unit tests with Jest + React Testing Library
-
-Testing:
-- ProductCard
-- Header
-- AddToCartButton
-- SortSearchBar
-- Footer
-- BackToTopButton
-
-Additional Notes:
-- Consistent color themes and UI design
-- Contact form implemented with React
-- Suggested items feature included
-- Terms & Conditions page implemented
-`,
-    techStack: [
-      'NextJS',
-      'React',
-      'Tailwind',
-      'Jest',
-      'TypeScript',
-      'Vercel',
-      'Prettier',
-      'ESLint',
-      'API',
-      'Husky',
-    ],
-  },
-
-  {
-    title: 'Holidaze',
-    category: 'Academic Project',
-    description: 'Venue booking platform .',
-    imageUrl: '/images/holidaze.jpg',
-    detailImageUrl: '/images/holidaze-detail.jpg',
-    slug: 'holidaze',
-    liveUrl: 'https://holidaze-green.vercel.app/',
-    repoUrl: 'https://github.com/sanakhuram/holidaze',
-    readUrl: 'https://github.com/sanakhuram/holidaze/blob/master/README.md',
-    detailedDescription: `
-Holidaze is a full-featured accommodation booking platform built with Next.js, React, and TailwindCSS. Users can search venues, view details, book accommodations, and manage their reservations efficiently.
-
-Key Features:
-- Venue Listing & Search Filters
-- Booking Flow with Calendar Selection
-- Map Integration with OpenStreetMap
-- User Authentication & Profiles
-- Dark Mode Support
-- Admin Dashboard for Managing Venues
-`,
-    techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'API', 'Vercel', 'Prettier', 'ESLint'],
-  },
   {
     title: 'Color Muse Blog',
     category: 'Academic Project',
@@ -459,6 +398,67 @@ Key Features:
 - Semantic HTML5, CSS3 Grid & Flexbox for layout, and JavaScript for dynamic features.
 `,
     detailImageUrl: '/images/square-eyes-detail.jpg',
+  },
+{
+    title: 'Sociogram',
+    category: 'Academic Project',
+    description: 'Social media app with full CRUD functionality.',
+    imageUrl: '/images/sociogram.jpg',
+    detailImageUrl: '/images/sociogram-detail.jpg',
+    slug: 'sociogram',
+    liveUrl: 'https://sociogram-app.netlify.app/',
+    repoUrl: 'https://github.com/sanakhuram/css-frameworks',
+    readUrl: 'https://github.com/sanakhuram/css-frameworks/blob/main/README.md',
+    detailedDescription: `
+Project Overview:
+This project is part of the CSS Frameworks Assignment, where Tailwind CSS was integrated into an existing JavaScript 2 Course Assignment (JS2CA). Sociogram is a client-side social media app allowing users to interact and manage content dynamically.
+
+Core Functionality:
+- User Authentication: Register, Login, Logout using JWT stored in LocalStorage
+- Profile Management: View and update profile, change avatar and banner
+- Follow/Unfollow: Users can follow or unfollow other users
+- Post Management: Create, Edit, Delete, and View posts
+- Engagement: Like posts, comment on posts
+- View Others’ Profiles: See other users’ posts and profiles
+- Dark/Light Mode: Fully functional theme toggle for better UX
+
+Tailwind CSS Features:
+- Responsive Design: Optimized for mobile and desktop
+- Utility-First Styling: Uses Tailwind’s built-in classes
+- Custom Configurations:
+  - Custom color palette (darkBlue, lightBlue, red, etc.)
+  - Custom box shadows for UI enhancements
+  - Custom animations (writing, slide-in effects)
+
+Performance & Deployment:
+- Built with Vite for fast development and hot reloading
+- Uses LocalStorage for JWT authentication
+- Code quality ensured with Prettier and ESLint
+- Deployed on Netlify for live hosting
+
+How to Use the App:
+1. Sign Up/Login:
+   - Register a new account or login using existing credentials
+2. Profile Management:
+   - Update profile information, change avatar and banner images
+3. Create, Edit, Delete Posts:
+   - Add new posts, modify existing posts, or delete unwanted posts
+4. Engagement:
+   - Like and comment on other users’ posts
+   - Follow and unfollow other users
+5. Dark/Light Mode:
+   - Toggle the theme for comfortable viewing
+`,
+    techStack: [
+      'JavaScript',
+      'Tailwind',
+      'Vite',
+      'LocalStorage',
+      'Netlify',
+      'Prettier',
+      'ESLint',
+      'API',
+    ],
   },
 
   {
