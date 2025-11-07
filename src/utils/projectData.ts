@@ -416,7 +416,7 @@ Key Features:
     liveUrl: 'https://sociogram-app.netlify.app/',
     repoUrl: 'https://github.com/sanakhuram/css-frameworks',
     readUrl: 'https://github.com/sanakhuram/css-frameworks/blob/main/README.md',
-    figmaUrl: 'https://www.figma.com/proto/ijLGCoP3BLjsPRy5WoozrK/CSS-Frameworks--sanaKhuram-?page-id=56%3A2&node-id=56-3&starting-point-node-id=56%3A3&t=njv1l3ToW9wrIe8u-1',
+    figmaUrl: 'https://www.figma.com/design/ijLGCoP3BLjsPRy5WoozrK/CSS-Frameworks--sanaKhuram-?node-id=31-4&t=XJF8SvAbnGUaqrEo-1',
     detailedDescription: `
 Project Overview:
 This project is part of the CSS Frameworks Assignment, where Tailwind CSS was integrated into an existing JavaScript 2 Course Assignment (JS2CA). Sociogram is a client-side social media app allowing users to interact and manage content dynamically.
