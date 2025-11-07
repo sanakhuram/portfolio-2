@@ -13,7 +13,7 @@ export type Project = {
   techStack: string[];
 };
 export const projects: Project[] = [
-   {
+  {
     title: 'Holidaze',
     category: 'Academic Project',
     description: 'Venue booking platform .',
@@ -23,7 +23,8 @@ export const projects: Project[] = [
     liveUrl: 'https://holidaze-green.vercel.app/',
     repoUrl: 'https://github.com/sanakhuram/holidaze',
     readUrl: 'https://github.com/sanakhuram/holidaze/blob/master/README.md',
-    figmaUrl: 'https://www.figma.com/design/4ya7bUgAL0onYXAJuJklb1/Holidaze?node-id=0-1&t=nLpVSkf8G4FYrLoI-1',
+    figmaUrl:
+      'https://www.figma.com/design/4ya7bUgAL0onYXAJuJklb1/Holidaze?node-id=0-1&t=nLpVSkf8G4FYrLoI-1',
     detailedDescription: `
 Holidaze is a full-featured accommodation booking platform built with Next.js, React, and TailwindCSS. Users can search venues, view details, book accommodations, and manage their reservations efficiently.
 
@@ -38,7 +39,7 @@ Key Features:
     techStack: ['NextJS', 'React', 'Tailwind', 'TypeScript', 'API', 'Vercel', 'Prettier', 'ESLint'],
   },
 
-    {
+  {
     title: 'Vibe Cart',
     category: 'Academic Project',
     description: 'Modern e-commerce platform with cart & checkout.',
@@ -113,7 +114,8 @@ Additional Notes:
     liveUrl: 'https://auction-hub.netlify.app/',
     repoUrl: 'https://github.com/sanakhuram/auction-hub-SP2',
     readUrl: 'https://github.com/sanakhuram/auction-hub-SP2/blob/main/README.md',
-    figmaUrl: 'https://www.figma.com/design/KNSBShYJcA6w3ROnkKjCRL/Semester-Project-2?m=auto&t=RLNBAtBSzdfFDwgL-1',
+    figmaUrl:
+      'https://www.figma.com/design/KNSBShYJcA6w3ROnkKjCRL/Semester-Project-2?m=auto&t=RLNBAtBSzdfFDwgL-1',
     detailedDescription: `
 Project Overview:
 This project was built as part of the Semester 2 Project Exam for web development. Auction Hub is a professional online auction platform that allows registered users to create, edit, delete listings, place bids, track bid history, and view other users' profiles and bids. Non-registered users can browse listings only.
@@ -198,7 +200,8 @@ How to Use the App:
     repoUrl: 'https://github.com/sanakhuram/FED-PE1-SanaKhuram-color-muse-blog-',
     readUrl:
       'https://github.com/sanakhuram/FED-PE1-SanaKhuram-color-muse-blog-/blob/main/README.md',
-      figmaUrl: 'https://www.figma.com/design/x5HWYrvYzliBv8n56oIKrj/Project-Exam-1?m=auto&t=RLNBAtBSzdfFDwgL-1',
+    figmaUrl:
+      'https://www.figma.com/design/x5HWYrvYzliBv8n56oIKrj/Project-Exam-1?m=auto&t=RLNBAtBSzdfFDwgL-1',
     detailedDescription: `
 Color Muse Blog is a responsive blogging platform that allows users to create, read, update, and delete blog posts. The application features a carousel to showcase featured posts and provides a user-friendly interface for managing content.
 
@@ -223,7 +226,8 @@ Key Features:
     liveUrl: 'https://sanakhuram.github.io/follow-the-steps/',
     repoUrl: 'https://github.com/sanakhuram/follow-the-steps',
     readUrl: 'https://github.com/sanakhuram/follow-the-steps/blob/main/README.md',
-    figmaUrl: 'https://www.figma.com/design/eTzSjfsQKaUxmdkTmi8HpY/Follow-the-Steps-Hiking-Trails-?m=auto&t=RLNBAtBSzdfFDwgL-1',
+    figmaUrl:
+      'https://www.figma.com/design/eTzSjfsQKaUxmdkTmi8HpY/Follow-the-Steps-Hiking-Trails-?m=auto&t=RLNBAtBSzdfFDwgL-1',
     detailedDescription: `
 Follow the Steps is a hiking and trails discovery website focused on the Trondheim area. It features interactive maps and detailed trail information using OpenStreetMap API. Winner of Noroff’s Golden Egg Award 2025 ,.
 
@@ -293,7 +297,8 @@ Key Features:
     liveUrl: 'https://hopeandhealthwelfareassociation.com/',
     repoUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations',
     readUrl: 'https://github.com/sanakhuram/hope-health-welfare-associations/blob/main/README.md',
-    figmaUrl : 'https://www.figma.com/design/6ebVeQhnJs6pIRPn1TE8NB/UX-Design-Figma?m=auto&t=RLNBAtBSzdfFDwgL-1',
+    figmaUrl:
+      'https://www.figma.com/design/6ebVeQhnJs6pIRPn1TE8NB/UX-Design-Figma?m=auto&t=RLNBAtBSzdfFDwgL-1',
     detailedDescription: `
 Hope & Health Welfare Association is a non-profit organization dedicated to improving community health, education, and social welfare in Okara, Pakistan, with a special focus on empowering underprivileged girls. This website was designed from Figma to code, including custom logo and branding, responsive layout, and integration with donation and shop features.
 
@@ -375,7 +380,8 @@ Key Features:
     liveUrl: 'https://sanakhuram.github.io/squareEyes-js/',
     repoUrl: 'https://github.com/sanakhuram/squareEyes-js',
     readUrl: 'https://github.com/sanakhuram/squareEyes-js/blob/main/READme.md',
-    figmaUrl: 'https://www.figma.com/design/wsuRfl0hV1O5CNZQUtr6hu/Square-Eyes?m=auto&t=RLNBAtBSzdfFDwgL-1',
+    figmaUrl:
+      'https://www.figma.com/design/wsuRfl0hV1O5CNZQUtr6hu/Square-Eyes?m=auto&t=RLNBAtBSzdfFDwgL-1',
     detailedDescription: `
 Square Eyes is a responsive e-commerce website designed for movie enthusiasts. The project was built from Figma to code, featuring CSS gradients, shadows, and modern interactive UI elements using HTML, CSS, and JavaScript. It integrates with the Noroff API to display a wide selection of movies across various genres.
 
@@ -406,7 +412,7 @@ Key Features:
 `,
     detailImageUrl: '/images/square-eyes-detail.jpg',
   },
-{
+  {
     title: 'Sociogram',
     category: 'Academic Project',
     description: 'Social media app with full CRUD functionality.',
@@ -416,7 +422,8 @@ Key Features:
     liveUrl: 'https://sociogram-app.netlify.app/',
     repoUrl: 'https://github.com/sanakhuram/css-frameworks',
     readUrl: 'https://github.com/sanakhuram/css-frameworks/blob/main/README.md',
-    figmaUrl: 'https://www.figma.com/design/ijLGCoP3BLjsPRy5WoozrK/CSS-Frameworks--sanaKhuram-?node-id=31-4&t=XJF8SvAbnGUaqrEo-1',
+    figmaUrl:
+      'https://www.figma.com/design/ijLGCoP3BLjsPRy5WoozrK/CSS-Frameworks--sanaKhuram-?node-id=31-4&t=XJF8SvAbnGUaqrEo-1',
     detailedDescription: `
 Project Overview:
 This project is part of the CSS Frameworks Assignment, where Tailwind CSS was integrated into an existing JavaScript 2 Course Assignment (JS2CA). Sociogram is a client-side social media app allowing users to interact and manage content dynamically.
@@ -479,7 +486,8 @@ How to Use the App:
     liveUrl: 'https://sanakhuram.github.io/semester-project-sana-khuram/',
     repoUrl: 'https://github.com/sanakhuram/semester-project-sana-khuram',
     readUrl: 'https://github.com/sanakhuram/semester-project-sana-khuram/blob/main/README.md',
-    figmaUrl : ' https://www.figma.com/design/yOPfl94ZxmHg4lmsAaznZe/COmmunity-science-museum?m=auto&t=RLNBAtBSzdfFDwgL-1',
+    figmaUrl:
+      ' https://www.figma.com/design/yOPfl94ZxmHg4lmsAaznZe/COmmunity-science-museum?m=auto&t=RLNBAtBSzdfFDwgL-1',
     detailedDescription: `
 Community Science Museum is an educational website designed for primary and middle school children (ages 7–15) and their families. The site provides interactive exhibits, educational resources, and fun activities to engage young minds in the wonders of science.
 
@@ -502,7 +510,8 @@ Key Features:
     liveUrl: 'https://sanakhuram.github.io/Rainy-Days/',
     repoUrl: 'https://github.com/sanakhuram/rainy-days',
     readUrl: 'https://github.com/sanakhuram/Rainy-Days/blob/main/README.md',
-    figmaUrl: 'https://www.figma.com/design/TGc0Shu3zvyX4xbLaspwu1/Rainy-days?node-id=0-1&t=w7fGGxVoOSeNwTjw-1',
+    figmaUrl:
+      'https://www.figma.com/design/TGc0Shu3zvyX4xbLaspwu1/Rainy-days?node-id=0-1&t=w7fGGxVoOSeNwTjw-1',
     detailedDescription: `
 Rainy Days is a fully responsive e-commerce website focused on jackets and outerwear. The platform integrates with a product API to display a wide range of items, allowing users to browse, filter, and purchase jackets with ease.
 
@@ -568,7 +577,8 @@ Key Features:
     liveUrl: 'https://sanakhuram.netlify.app/',
     repoUrl: 'https://github.com/sanakhuram/Portfolio-SanaKhuram',
     readUrl: 'https://github.com/sanakhuram/Portfolio-SanaKhuram/blob/main/README.md',
-    figmaUrl: 'https://www.figma.com/design/4OdVrLcROntY0OY0xpFAg9/Portfolio?node-id=0-1&t=abpjBVTuBB9sasMt-1',
+    figmaUrl:
+      'https://www.figma.com/design/4OdVrLcROntY0OY0xpFAg9/Portfolio?node-id=0-1&t=abpjBVTuBB9sasMt-1',
     detailedDescription: `
 This portfolio website showcases my work as a Front-End Developer, highlighting my skills, projects, and design approach. Built with HTML, CSS, and JavaScript, it features a responsive and user-friendly layout for desktop, tablet, and mobile devices.
 
