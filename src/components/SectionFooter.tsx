@@ -104,8 +104,8 @@ export default function Footer() {
                     <Image
                       src={s.image}
                       alt={s.id}
-                      width={25}
-                      height={25}
+                      width={20}
+                      height={20}
                       className="opacity-90 hover:opacity-100 bg-amber-50 rounded-full border-amber-400"
                     />
                   )}
