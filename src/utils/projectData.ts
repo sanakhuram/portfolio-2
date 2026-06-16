@@ -574,7 +574,7 @@ Key Features:
     imageUrl: '/images/portfolio-1.jpg',
     slug: 'portfolio-page',
     techStack: ['JavaScript', 'HTML', 'CSS'],
-    liveUrl: 'https://sanakhuram.netlify.app/',
+    liveUrl: 'https://sanakhuram.github.io/Portfolio-SanaKhuram/',
     repoUrl: 'https://github.com/sanakhuram/Portfolio-SanaKhuram',
     readUrl: 'https://github.com/sanakhuram/Portfolio-SanaKhuram/blob/main/README.md',
     figmaUrl:
